@@ -9,7 +9,7 @@ class Program:
     def read_csv(self, file_path):
         # Function to read CSV files
         data = []
-        with open(file_path, 'r') as file:
+        with open(file_path, 'r', encoding='utf-8') as file:
             reader = csv.reader(file)
             header = next(reader)  # Skip the header row
             for row in reader:
@@ -31,12 +31,12 @@ class Program:
                 self.blocked_hours[day] = []
             self.blocked_hours[day].append(time_range)
 
-    def schedule_exams(self, student_list, classroom_capacities):
+    def schedule_exams(self, class_list, classroom_capacities):
         # Greedy Algorithm to schedule exams
         time = datetime.strptime("9:00 AM", "%I:%M %p")
         days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-        for student in student_list:
-            student_id, professor, course_id, exam_duration = student
+        for clss in class_list:
+            class_id, professor, course_id, exam_duration = clss
             for day in days:
                 if day not in self.blocked_hours or f"{day}" not in self.schedule:
                     self.schedule[f"{day}"] = []
@@ -69,8 +69,8 @@ class Program:
                 print(time_range)                
 
 def main():
-    student_list_data = Program().read_csv('student_list.csv')
-    for i in student_list_data:
+    class_list_data = Program().read_csv('class_list.csv')
+    for i in class_list_data:
         print(i)
     classroom_capacities_data = Program().read_csv('classroom_capacities.csv')
     for i in classroom_capacities_data:
@@ -79,7 +79,7 @@ def main():
 
     exam_program = Program()
     exam_program.user_input_blocked_hours()
-    exam_program.schedule_exams(student_list_data, classroom_capacities_data)
+    exam_program.schedule_exams(class_list_data, classroom_capacities_data)
     exam_program.print_schedule()
 
 if __name__ == "__main__":
