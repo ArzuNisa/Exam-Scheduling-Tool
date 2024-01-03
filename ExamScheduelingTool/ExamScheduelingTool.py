@@ -25,6 +25,8 @@ class Program:
                 break
             if day not in days:
                 print("Invalid day. Please try again.")
+
+                
                 continue
             time_range = input(f"Enter blocked time range for {day} (e.g., 2:00 PM - 4:00 PM): ")
             if day not in self.blocked_hours:
