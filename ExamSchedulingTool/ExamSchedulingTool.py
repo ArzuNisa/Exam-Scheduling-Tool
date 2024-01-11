@@ -49,31 +49,26 @@ class ExamSchedulingTool:
                 self.empty_schedule[day][time] = {"course": "", "room": "", "end time":""}
                 time = pd.to_datetime(time, format="%H.%M") + pd.DateOffset(minutes=30)
                 time = time.strftime("%H.%M")
-                
-    def first_random_state(self, schedule):
-        temp_schedule = copy.deepcopy(schedule)
 
-        for course in self.class_list["CourseID"].unique().tolist():
-            random_day = np.random.choice(list(temp_schedule.keys()))
-            random_time = np.random.choice(list(temp_schedule[random_day].keys()))
-            
-            # If same day and time is not empty then try again
-            while temp_schedule[random_day][random_time]["course"] != "":
-                random_day = np.random.choice(list(temp_schedule.keys()))
-                random_time = np.random.choice(list(temp_schedule[random_day].keys()))
-            
-            # If empty then assign course
-            temp_schedule[random_day][random_time]["course"] = course
-            # Get exam duration in minutes
-            exam_duration = self.class_list[self.class_list["CourseID"] == course]["ExamDuration(in mins)"].unique()[0]
-            # Add exam duration to time to get end time
-            end_time = pd.to_datetime(random_time, format="%H.%M") + pd.DateOffset(minutes=exam_duration)
-            # Assign end time to schedule
-            temp_schedule[random_day][random_time]["end time"] = end_time.strftime("%H.%M")
+    def student_has_two_exams_at_same_time(self, student_id, course1, course2):
+        student_courses = self.get_all_courses_of_student(student_id)
+        if course1 in student_courses and course2 in student_courses:
+            return True
+        
+        return False
+    
+    def get_all_courses_of_student(self, student_id):
+        return self.class_list[self.class_list["StudentID"] == student_id]["CourseID"].tolist()
+    
+    def professor_has_two_exams_at_same_time(self, professor_name, courseID1, courseID2):
+        professor_courses = self.get_all_courses_of_professor(professor_name, self.class_list)
+        if courseID1 in professor_courses and courseID2 in professor_courses:
+            return True
+        
+        return False
+    
+    def get_all_courses_of_professor(self, professor_name):
+        return self.class_list[self.class_list["Professor Name"] == professor_name]["CourseID"].unique().tolist()
 
-            #print(course, random_day, random_time, end_time.strftime("%H.%M"), "exam duration: ", exam_duration)
-
-        return temp_schedule
-
-
-
+    def get_num_students_take_course(self, courseID):
+        return self.class_list[self.class_list["CourseID"] == courseID]["CourseID"].count()
