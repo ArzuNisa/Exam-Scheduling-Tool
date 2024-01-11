@@ -49,3 +49,31 @@ class ExamSchedulingTool:
                 self.empty_schedule[day][time] = {"course": "", "room": "", "end time":""}
                 time = pd.to_datetime(time, format="%H.%M") + pd.DateOffset(minutes=30)
                 time = time.strftime("%H.%M")
+                
+    def first_random_state(self, schedule):
+        temp_schedule = copy.deepcopy(schedule)
+
+        for course in self.class_list["CourseID"].unique().tolist():
+            random_day = np.random.choice(list(temp_schedule.keys()))
+            random_time = np.random.choice(list(temp_schedule[random_day].keys()))
+            
+            # If same day and time is not empty then try again
+            while temp_schedule[random_day][random_time]["course"] != "":
+                random_day = np.random.choice(list(temp_schedule.keys()))
+                random_time = np.random.choice(list(temp_schedule[random_day].keys()))
+            
+            # If empty then assign course
+            temp_schedule[random_day][random_time]["course"] = course
+            # Get exam duration in minutes
+            exam_duration = self.class_list[self.class_list["CourseID"] == course]["ExamDuration(in mins)"].unique()[0]
+            # Add exam duration to time to get end time
+            end_time = pd.to_datetime(random_time, format="%H.%M") + pd.DateOffset(minutes=exam_duration)
+            # Assign end time to schedule
+            temp_schedule[random_day][random_time]["end time"] = end_time.strftime("%H.%M")
+
+            #print(course, random_day, random_time, end_time.strftime("%H.%M"), "exam duration: ", exam_duration)
+
+        return temp_schedule
+
+
+
