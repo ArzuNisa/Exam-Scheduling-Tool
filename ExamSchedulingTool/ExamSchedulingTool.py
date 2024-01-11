@@ -17,6 +17,7 @@ class ExamSchedulingTool:
         self.all_professor_names = self.class_list["Professor Name"].unique().tolist()
 
         self.init_classroom_capacities()
+        self.init_empty_schedule()
 
     def init_classroom_capacities(self):
         # Get a copy of the classroom data
@@ -30,3 +31,21 @@ class ExamSchedulingTool:
 
         # Sort the classrooms by capacity
         self.classroom_real_capacities.sort_values(by=['Capacity'], inplace=True, ascending=False)
+
+    def init_empty_schedule(self):
+        # Set the empty schedule to the default schedule
+        self.empty_schedule = {"Monday":{"09.00":{"course":"", "room":"", "end time":""}},
+            "Tuesday":{"09.00":{"course":"", "room":"", "end time":""}},
+            "Wednesday":{"09.00":{"course":"", "room":"", "end time":""}},
+            "Thursday":{"09.00":{"course":"", "room":"", "end time":""}},
+            "Friday":{"09.00":{"course":"", "room":"", "end time":""}},
+            "Saturday":{"09.00":{"course":"", "room":"", "end time":""}}
+            }
+        
+        # Add the rest of the times - every 30 minutes 
+        for day in self.empty_schedule:
+            time = "09.00"
+            while time != "18.30":
+                self.empty_schedule[day][time] = {"course": "", "room": "", "end time":""}
+                time = pd.to_datetime(time, format="%H.%M") + pd.DateOffset(minutes=30)
+                time = time.strftime("%H.%M")
