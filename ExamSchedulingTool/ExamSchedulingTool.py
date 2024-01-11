@@ -239,6 +239,21 @@ class ExamSchedulingTool:
                                         if num_students_course2 > 0:
                                             cost += 1
                                             break
+
+                                        for i in range(len(classroom_real_capacity_dict)):
+                                            if num_students <= classroom_real_capacity_dict.iloc[i, 1]:
+                                                if classroom_real_capacity_dict.iloc[i, 2] == False:
+                                                    classroom_real_capacity_dict.iloc[i, 2] = True
+                                                    schedule[day][other_time]["room"] = classroom_real_capacity_dict.iloc[i, 0]
+                                                    break
+
+                                            if i == len(classroom_real_capacity_dict) - 1:
+                                                if classroom_real_capacity_dict.iloc[i, 2] == False:
+                                                    classroom_real_capacity_dict.iloc[i, 2] = True
+                                                    num_students -= classroom_real_capacity_dict.iloc[i, 1]
+
+
+    return cost
                         
     def successor_move(self, old_schedule):
         original_schedule = copy.deepcopy(old_schedule)
