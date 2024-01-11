@@ -212,7 +212,34 @@ class ExamSchedulingTool:
                         if num_students_course1 > 0:
                             cost += 1
                             continue
-
+                            
+                        for other_time in schedule[day]:
+                            if other_time != time:
+                                if schedule[day][other_time]["course"] != "":
+                                    end_time_course2 = schedule[day][other_time]["end time"]
+    
+                                    if pd.to_datetime(time, format="%H.%M") < pd.to_datetime(other_time, format="%H.%M") < pd.to_datetime(end_time_course1, format="%H.%M"):
+                                        num_students_course2 = get_num_students_take_course(schedule[day][other_time]["course"], class_list)
+                                        
+                                        for i in range(len(classroom_real_capacity_dict)):
+                                            while num_students_course2 > 0:
+                                                if classroom_real_capacity_dict.iloc[i, 2] == False:
+                                                    classroom_real_capacity_dict.iloc[i, 2] = True
+                                                    classroom_real_capacity_dict.iloc[i, 3] = end_time_course2
+    
+                                                    if schedule[day][other_time]["room"] == "":
+                                                        schedule[day][other_time]["room"] = classroom_real_capacity_dict.iloc[i, 0]
+                                                    else:
+                                                        schedule[day][other_time]["room"] += "-" + classroom_real_capacity_dict.iloc[i, 0]
+                                                    num_students_course2 -= classroom_real_capacity_dict.iloc[i, 1]
+                                                
+                                                else: 
+                                                    break
+                                            
+                                        if num_students_course2 > 0:
+                                            cost += 1
+                                            break
+                        
     def successor_move(self, old_schedule):
         original_schedule = copy.deepcopy(old_schedule)
 
