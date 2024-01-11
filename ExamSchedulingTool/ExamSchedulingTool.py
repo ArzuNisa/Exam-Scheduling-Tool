@@ -179,7 +179,7 @@ class ExamSchedulingTool:
         
         return cost
 
-def successor_move(self, old_schedule):
+    def successor_move(self, old_schedule):
         original_schedule = copy.deepcopy(old_schedule)
 
         # Get random course to move
@@ -218,3 +218,35 @@ def successor_move(self, old_schedule):
 
         return original_schedule
 
+    def simulated_annealing_scheduler(self, temp_max, temp_min, cooling_rate, max_iter, K):
+        print("\n\nStarting simulated annealing scheduler...\n")
+
+        schedule = self.first_random_state(self.empty_schedule)
+        old_cost = self.cost(schedule)
+        iter_num = 0
+        
+        temperature = temp_max
+        while temperature >= temp_min:
+            for i in range(max_iter):
+                schedule_before_update = self.successor_move(schedule)
+                new_cost = self.cost(schedule)
+
+                if new_cost == 0:
+                    total = iter_num + i
+                    print(f"Found in {total}. iteration")
+                    return schedule
+                
+                delta = new_cost - old_cost
+                if delta >= 0:
+                    if random.random() > math.exp(-1.0 * delta / (K * temperature)):
+                        schedule = schedule_before_update
+                    else:
+                        old_cost = new_cost
+                else:
+                    old_cost = new_cost
+
+            iter_num += max_iter
+            temperature *= cooling_rate
+
+            if iter_num % 50 == 0:
+                print("Iteration: ", iter_num, "Fault Score: ", old_cost)
