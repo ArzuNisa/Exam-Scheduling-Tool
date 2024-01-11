@@ -178,3 +178,43 @@ class ExamSchedulingTool:
                                             cost += 1
         
         return cost
+
+def successor_move(self, old_schedule):
+        original_schedule = copy.deepcopy(old_schedule)
+
+        # Get random course to move
+        random_course = np.random.choice(self.class_list["CourseID"].unique().tolist())
+
+        # Get random day and time to move course to
+        random_day = np.random.choice(list(old_schedule.keys()))
+        random_time = np.random.choice(list(old_schedule[random_day].keys()))
+
+        # If same day and time is not empty then try again
+        while old_schedule[random_day][random_time]["course"] != "":
+            random_day = np.random.choice(list(old_schedule.keys()))
+            random_time = np.random.choice(list(old_schedule[random_day].keys()))
+
+        # Find the day and time of the course to move
+        for day in old_schedule:
+            for time in old_schedule[day]:
+                if old_schedule[day][time]["course"] == random_course:
+                    course_day = day
+                    course_time = time
+
+        # Get exam duration in minutes
+        exam_duration = self.class_list[self.class_list["CourseID"] == random_course]["ExamDuration(in mins)"].unique()[0]
+        # Add exam duration to time to get end time
+        end_time = pd.to_datetime(random_time, format="%H.%M") + pd.DateOffset(minutes=exam_duration)
+        # Assign end time to schedule
+        old_schedule[random_day][random_time]["end time"] = end_time.strftime("%H.%M")
+
+        # Move course to new day and time
+        old_schedule[random_day][random_time]["course"] = random_course
+        old_schedule[random_day][random_time]["room"] = ""
+        # Remove course from old day and time
+        old_schedule[course_day][course_time]["course"] = ""
+        old_schedule[course_day][course_time]["room"] = ""
+        old_schedule[course_day][course_time]["end time"] = ""
+
+        return original_schedule
+
