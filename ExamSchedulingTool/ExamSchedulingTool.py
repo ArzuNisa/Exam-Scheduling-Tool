@@ -177,7 +177,41 @@ class ExamSchedulingTool:
                                         if professor_has_two_exams_at_same_time(professor, schedule[day][time]["course"], schedule[day][other_time]["course"], class_list):
                                             cost += 1
         
-        return cost
+        # If cost is 0 (exams placed properly), try to fit course exams that has collision with other exams to empty classrooms
+        # After trying to place them, if there is not enough empty classrooms, add 1 to cost
+        # Exams can be placed more than one empty classroom according to their student numbers
+        if cost == 0:
+            for day in schedule:
+                for time in schedule[day]:
+                    if schedule[day][time]["course"] != "":
+                        end_time_course1 = schedule[day][time]["end time"]
+                        
+                        # If classroom free time has passed, make it free
+                        for i in range(len(classroom_real_capacity_dict)):
+                            if pd.to_datetime(time, format="%H.%M") >= pd.to_datetime(classroom_real_capacity_dict.iloc[i, 3], format="%H.%M"):
+                                classroom_real_capacity_dict.iloc[i, 2] = False
+                        
+                        num_students_course1 = get_num_students_take_course(schedule[day][time]["course"], class_list)
+                        # Place course to classrooms
+                        for i in range(len(classroom_real_capacity_dict)):
+                            while num_students_course1 > 0:
+                                if classroom_real_capacity_dict.iloc[i, 2] == False:
+                                    classroom_real_capacity_dict.iloc[i, 2] = True
+                                    classroom_real_capacity_dict.iloc[i, 3] = end_time_course1
+    
+                                    if schedule[day][time]["room"] == "":
+                                        schedule[day][time]["room"] = classroom_real_capacity_dict.iloc[i, 0]
+                                    else:
+                                        schedule[day][time]["room"] += "-" + classroom_real_capacity_dict.iloc[i, 0]
+    
+                                    num_students_course1 -= classroom_real_capacity_dict.iloc[i, 1]
+                                
+                                else: 
+                                    break
+    
+                        if num_students_course1 > 0:
+                            cost += 1
+                            continue
 
     def successor_move(self, old_schedule):
         original_schedule = copy.deepcopy(old_schedule)
