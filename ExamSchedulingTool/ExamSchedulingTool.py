@@ -105,3 +105,27 @@ class ExamSchedulingTool:
             for time in schedule[day]:
                 if schedule[day][time]["course"] != "":
                     print(schedule[day][time]["course"], day, time, schedule[day][time]["end time"])
+
+    def cost(schedule, class_list):
+        cost = 0
+    
+        # Check all the students and if a student has more than one exam at the same time on the same day add 1 to cost
+        # Also check all the professors and if a professor has more than one exam at the same time on the same day add 1 to cost
+        for day in schedule:
+            for time in schedule[day]:
+                if schedule[day][time]["course"] != "":
+                    end_time = schedule[day][time]["end time"]
+                    for other_time in schedule[day]:
+                        if other_time != time:
+                            if schedule[day][other_time]["course"] != "":
+                                if pd.to_datetime(time, format="%H.%M") < pd.to_datetime(other_time, format="%H.%M") < pd.to_datetime(end_time, format="%H.%M"):
+                                    # Check if a student has more than one exam at the same time on the same day
+                                    for student in all_student_numbers:
+                                        if student_has_two_exams_at_same_time(student, schedule[day][time]["course"], schedule[day][other_time]["course"], class_list):
+                                            cost += 1
+                                    # Check if a professor has more than one exam at the same time on the same day
+                                    for professor in all_professors:
+                                        if professor_has_two_exams_at_same_time(professor, schedule[day][time]["course"], schedule[day][other_time]["course"], class_list):
+                                            cost += 1
+        
+        return cost
