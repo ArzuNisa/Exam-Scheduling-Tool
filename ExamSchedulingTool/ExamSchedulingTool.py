@@ -7,9 +7,8 @@ import math
 
 class ExamSchedulingTool:
     def __init__(self, class_list_file_path='class_list.csv', classroom_capacities_file_path='classroom_capacities.csv'):
-        self.class_list = pd.read_csv(class_list_file_path)
-        self.classroom_capacity_list = pd.read_csv(classroom_capacities_file_path)
-
+        self.class_list, self.classroom_capacity_list = self.read_input_files(class_list_file_path, classroom_capacities_file_path)
+    
         self.classroom_real_capacities = None
         self.empty_schedule = None
 
@@ -18,7 +17,57 @@ class ExamSchedulingTool:
 
         self.init_classroom_capacities()
         self.init_empty_schedule()
+        self.init_blocked_hours()
 
+    def read_input_files(self, class_list_file_path, classroom_capacities_file_path):
+        try:
+            class_list = pd.read_csv(class_list_file_path)
+            classroom_capacity_list = pd.read_csv(classroom_capacities_file_path)
+        except:
+            print("Required CSV files for Exam scheduler could not be found. Exiting the program...")
+            exit(1)
+        
+        return class_list, classroom_capacity_list
+
+    def init_blocked_hours(self):
+        blocked_hours_str = input("Enter blocked hours in the format of\n'course_id Day start_time duration(minutes), course_id Day start_time duration(minutes)...' \n\nExample Usage: TIT101 Monday 09.00 60, TDL101 Wednesday 12.00 90\n\nType 's' to skip this step: ")
+        
+        if blocked_hours_str == "s":
+            print("Skipped")
+            return
+
+        blocked_hours = blocked_hours_str.split(",")
+
+        for day_hour in blocked_hours:
+            try:
+                course_id, day, start_time, duration = day_hour.strip().split(" ")
+            except:
+                print("Invalid input. Exiting the program...")
+                exit(1)
+
+            self.handle_blocked_hours(day, start_time, duration)
+
+            self.empty_schedule[day][start_time]["course"] = f"BLOCKED BY {course_id}"
+
+            end_time = pd.to_datetime(start_time, format="%H.%M") + pd.DateOffset(minutes=int(duration))
+            self.empty_schedule[day][start_time]["end time"] =  end_time.strftime("%H.%M")
+        
+    def handle_blocked_hours(self, day, start_time, duration):
+        # Check if the day is valid
+            if day not in self.empty_schedule:
+                print("Invalid day: ", day, "\nExiting the program...")
+                exit(1)
+
+            # Check if the hours is valid
+            if start_time not in self.empty_schedule[day]:
+                print("Invalid start time: ", start_time, "\nExiting the program...")
+                exit(1)
+
+            # Check if the duration is valid
+            if not duration.isnumeric():
+                print("Invalid duration: ", duration, "\nExiting the program...")
+                exit(1)
+    
     def init_classroom_capacities(self):
         # Get a copy of the classroom data
         self.classroom_real_capacities = self.classroom_capacity_list.copy()
