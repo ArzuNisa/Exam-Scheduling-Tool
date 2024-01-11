@@ -1,0 +1,2027 @@
+StudentID,Professor Name,CourseID,ExamDuration(in mins)
+1001,Yusuf Evren Aykaç,CENG113,90
+1001,Metin Aktaş,PHYS101,120
+1001,Furkan Soysal,CHEM101,90
+1001,Müberra Allahverdi,MATH101,120
+1001,Muhammed Fatih Demirci,CENG101,60
+1002,Yusuf Evren Aykaç,CENG113,90
+1002,Metin Aktaş,PHYS101,120
+1002,Furkan Soysal,CHEM101,90
+1002,Müberra Allahverdi,MATH101,120
+1002,Muhammed Fatih Demirci,CENG101,60
+1003,Yusuf Evren Aykaç,CENG113,90
+1003,Metin Aktaş,PHYS101,120
+1003,Furkan Soysal,CHEM101,90
+1003,Müberra Allahverdi,MATH101,120
+1003,Muhammed Fatih Demirci,CENG101,60
+1004,Yusuf Evren Aykaç,CENG113,90
+1004,Metin Aktaş,PHYS101,120
+1004,Furkan Soysal,CHEM101,90
+1004,Müberra Allahverdi,MATH101,120
+1004,Muhammed Fatih Demirci,CENG101,60
+1005,Yusuf Evren Aykaç,CENG113,90
+1005,Metin Aktaş,PHYS101,120
+1005,Furkan Soysal,CHEM101,90
+1005,Müberra Allahverdi,MATH101,120
+1005,Muhammed Fatih Demirci,CENG101,60
+1006,Yusuf Evren Aykaç,CENG113,90
+1006,Metin Aktaş,PHYS101,120
+1006,Furkan Soysal,CHEM101,90
+1006,Müberra Allahverdi,MATH101,120
+1006,Muhammed Fatih Demirci,CENG101,60
+1007,Yusuf Evren Aykaç,CENG113,90
+1007,Metin Aktaş,PHYS101,120
+1007,Furkan Soysal,CHEM101,90
+1007,Müberra Allahverdi,MATH101,120
+1007,Muhammed Fatih Demirci,CENG101,60
+1008,Yusuf Evren Aykaç,CENG113,90
+1008,Metin Aktaş,PHYS101,120
+1008,Furkan Soysal,CHEM101,90
+1008,Müberra Allahverdi,MATH101,120
+1008,Muhammed Fatih Demirci,CENG101,60
+1009,Yusuf Evren Aykaç,CENG113,90
+1009,Metin Aktaş,PHYS101,120
+1009,Furkan Soysal,CHEM101,90
+1009,Müberra Allahverdi,MATH101,120
+1009,Muhammed Fatih Demirci,CENG101,60
+1010,Yusuf Evren Aykaç,CENG113,90
+1010,Metin Aktaş,PHYS101,120
+1010,Furkan Soysal,CHEM101,90
+1010,Müberra Allahverdi,MATH101,120
+1010,Muhammed Fatih Demirci,CENG101,60
+1011,Yusuf Evren Aykaç,CENG113,90
+1011,Metin Aktaş,PHYS101,120
+1011,Furkan Soysal,CHEM101,90
+1011,Müberra Allahverdi,MATH101,120
+1011,Muhammed Fatih Demirci,CENG101,60
+1012,Yusuf Evren Aykaç,CENG113,90
+1012,Metin Aktaş,PHYS101,120
+1012,Furkan Soysal,CHEM101,90
+1012,Müberra Allahverdi,MATH101,120
+1012,Muhammed Fatih Demirci,CENG101,60
+1013,Yusuf Evren Aykaç,CENG113,90
+1013,Metin Aktaş,PHYS101,120
+1013,Furkan Soysal,CHEM101,90
+1013,Müberra Allahverdi,MATH101,120
+1013,Muhammed Fatih Demirci,CENG101,60
+1014,Yusuf Evren Aykaç,CENG113,90
+1014,Metin Aktaş,PHYS101,120
+1014,Furkan Soysal,CHEM101,90
+1014,Müberra Allahverdi,MATH101,120
+1014,Muhammed Fatih Demirci,CENG101,60
+1015,Yusuf Evren Aykaç,CENG113,90
+1015,Metin Aktaş,PHYS101,120
+1015,Furkan Soysal,CHEM101,90
+1015,Müberra Allahverdi,MATH101,120
+1015,Muhammed Fatih Demirci,CENG101,60
+1016,Yusuf Evren Aykaç,CENG113,90
+1016,Metin Aktaş,PHYS101,120
+1016,Furkan Soysal,CHEM101,90
+1016,Müberra Allahverdi,MATH101,120
+1016,Muhammed Fatih Demirci,CENG101,60
+1017,Yusuf Evren Aykaç,CENG113,90
+1017,Metin Aktaş,PHYS101,120
+1017,Furkan Soysal,CHEM101,90
+1017,Müberra Allahverdi,MATH101,120
+1017,Muhammed Fatih Demirci,CENG101,60
+1018,Yusuf Evren Aykaç,CENG113,90
+1018,Metin Aktaş,PHYS101,120
+1018,Furkan Soysal,CHEM101,90
+1018,Müberra Allahverdi,MATH101,120
+1018,Muhammed Fatih Demirci,CENG101,60
+1019,Yusuf Evren Aykaç,CENG113,90
+1019,Metin Aktaş,PHYS101,120
+1019,Furkan Soysal,CHEM101,90
+1019,Müberra Allahverdi,MATH101,120
+1019,Muhammed Fatih Demirci,CENG101,60
+1020,Yusuf Evren Aykaç,CENG113,90
+1020,Metin Aktaş,PHYS101,120
+1020,Furkan Soysal,CHEM101,90
+1020,Müberra Allahverdi,MATH101,120
+1020,Muhammed Fatih Demirci,CENG101,60
+1021,Yusuf Evren Aykaç,CENG113,90
+1021,Metin Aktaş,PHYS101,120
+1021,Furkan Soysal,CHEM101,90
+1021,Müberra Allahverdi,MATH101,120
+1021,Muhammed Fatih Demirci,CENG101,60
+1022,Yusuf Evren Aykaç,CENG113,90
+1022,Metin Aktaş,PHYS101,120
+1022,Furkan Soysal,CHEM101,90
+1022,Müberra Allahverdi,MATH101,120
+1022,Muhammed Fatih Demirci,CENG101,60
+1023,Yusuf Evren Aykaç,CENG113,90
+1023,Metin Aktaş,PHYS101,120
+1023,Furkan Soysal,CHEM101,90
+1023,Müberra Allahverdi,MATH101,120
+1023,Muhammed Fatih Demirci,CENG101,60
+1024,Yusuf Evren Aykaç,CENG113,90
+1024,Metin Aktaş,PHYS101,120
+1024,Furkan Soysal,CHEM101,90
+1024,Müberra Allahverdi,MATH101,120
+1024,Muhammed Fatih Demirci,CENG101,60
+1025,Yusuf Evren Aykaç,CENG113,90
+1025,Metin Aktaş,PHYS101,120
+1025,Furkan Soysal,CHEM101,90
+1025,Müberra Allahverdi,MATH101,120
+1025,Muhammed Fatih Demirci,CENG101,60
+1026,Yusuf Evren Aykaç,CENG113,90
+1026,Metin Aktaş,PHYS101,120
+1026,Furkan Soysal,CHEM101,90
+1026,Müberra Allahverdi,MATH101,120
+1026,Muhammed Fatih Demirci,CENG101,60
+1027,Yusuf Evren Aykaç,CENG113,90
+1027,Metin Aktaş,PHYS101,120
+1027,Furkan Soysal,CHEM101,90
+1027,Müberra Allahverdi,MATH101,120
+1027,Muhammed Fatih Demirci,CENG101,60
+1028,Yusuf Evren Aykaç,CENG113,90
+1028,Metin Aktaş,PHYS101,120
+1028,Furkan Soysal,CHEM101,90
+1028,Müberra Allahverdi,MATH101,120
+1028,Muhammed Fatih Demirci,CENG101,60
+1029,Yusuf Evren Aykaç,CENG113,90
+1029,Metin Aktaş,PHYS101,120
+1029,Furkan Soysal,CHEM101,90
+1029,Müberra Allahverdi,MATH101,120
+1029,Muhammed Fatih Demirci,CENG101,60
+1030,Yusuf Evren Aykaç,CENG113,90
+1030,Metin Aktaş,PHYS101,120
+1030,Furkan Soysal,CHEM101,90
+1030,Müberra Allahverdi,MATH101,120
+1030,Muhammed Fatih Demirci,CENG101,60
+1031,Yusuf Evren Aykaç,CENG113,90
+1031,Metin Aktaş,PHYS101,120
+1031,Furkan Soysal,CHEM101,90
+1031,Müberra Allahverdi,MATH101,120
+1031,Muhammed Fatih Demirci,CENG101,60
+1032,Yusuf Evren Aykaç,CENG113,90
+1032,Metin Aktaş,PHYS101,120
+1032,Furkan Soysal,CHEM101,90
+1032,Müberra Allahverdi,MATH101,120
+1032,Muhammed Fatih Demirci,CENG101,60
+1033,Yusuf Evren Aykaç,CENG113,90
+1033,Metin Aktaş,PHYS101,120
+1033,Furkan Soysal,CHEM101,90
+1033,Müberra Allahverdi,MATH101,120
+1033,Muhammed Fatih Demirci,CENG101,60
+1034,Yusuf Evren Aykaç,CENG113,90
+1034,Metin Aktaş,PHYS101,120
+1034,Furkan Soysal,CHEM101,90
+1034,Müberra Allahverdi,MATH101,120
+1034,Muhammed Fatih Demirci,CENG101,60
+1035,Yusuf Evren Aykaç,CENG113,90
+1035,Metin Aktaş,PHYS101,120
+1035,Furkan Soysal,CHEM101,90
+1035,Müberra Allahverdi,MATH101,120
+1035,Muhammed Fatih Demirci,CENG101,60
+1036,Yusuf Evren Aykaç,CENG113,90
+1036,Metin Aktaş,PHYS101,120
+1036,Furkan Soysal,CHEM101,90
+1036,Müberra Allahverdi,MATH101,120
+1036,Muhammed Fatih Demirci,CENG101,60
+1037,Yusuf Evren Aykaç,CENG113,90
+1037,Metin Aktaş,PHYS101,120
+1037,Furkan Soysal,CHEM101,90
+1037,Müberra Allahverdi,MATH101,120
+1037,Muhammed Fatih Demirci,CENG101,60
+1038,Yusuf Evren Aykaç,CENG113,90
+1038,Metin Aktaş,PHYS101,120
+1038,Furkan Soysal,CHEM101,90
+1038,Müberra Allahverdi,MATH101,120
+1038,Muhammed Fatih Demirci,CENG101,60
+1039,Yusuf Evren Aykaç,CENG113,90
+1039,Metin Aktaş,PHYS101,120
+1039,Furkan Soysal,CHEM101,90
+1039,Müberra Allahverdi,MATH101,120
+1039,Muhammed Fatih Demirci,CENG101,60
+1040,Yusuf Evren Aykaç,CENG113,90
+1040,Metin Aktaş,PHYS101,120
+1040,Furkan Soysal,CHEM101,90
+1040,Müberra Allahverdi,MATH101,120
+1040,Muhammed Fatih Demirci,CENG101,60
+1041,Yusuf Evren Aykaç,CENG113,90
+1041,Metin Aktaş,PHYS101,120
+1041,Furkan Soysal,CHEM101,90
+1041,Müberra Allahverdi,MATH101,120
+1041,Muhammed Fatih Demirci,CENG101,60
+1042,Yusuf Evren Aykaç,CENG113,90
+1042,Metin Aktaş,PHYS101,120
+1042,Furkan Soysal,CHEM101,90
+1042,Müberra Allahverdi,MATH101,120
+1042,Muhammed Fatih Demirci,CENG101,60
+1043,Yusuf Evren Aykaç,CENG113,90
+1043,Metin Aktaş,PHYS101,120
+1043,Furkan Soysal,CHEM101,90
+1043,Müberra Allahverdi,MATH101,120
+1043,Muhammed Fatih Demirci,CENG101,60
+1044,Yusuf Evren Aykaç,CENG113,90
+1044,Metin Aktaş,PHYS101,120
+1044,Furkan Soysal,CHEM101,90
+1044,Müberra Allahverdi,MATH101,120
+1044,Muhammed Fatih Demirci,CENG101,60
+1045,Yusuf Evren Aykaç,CENG113,90
+1045,Metin Aktaş,PHYS101,120
+1045,Furkan Soysal,CHEM101,90
+1045,Müberra Allahverdi,MATH101,120
+1045,Muhammed Fatih Demirci,CENG101,60
+1046,Yusuf Evren Aykaç,CENG113,90
+1046,Metin Aktaş,PHYS101,120
+1046,Furkan Soysal,CHEM101,90
+1046,Müberra Allahverdi,MATH101,120
+1046,Muhammed Fatih Demirci,CENG101,60
+1047,Yusuf Evren Aykaç,CENG113,90
+1047,Metin Aktaş,PHYS101,120
+1047,Furkan Soysal,CHEM101,90
+1047,Müberra Allahverdi,MATH101,120
+1047,Muhammed Fatih Demirci,CENG101,60
+1048,Yusuf Evren Aykaç,CENG113,90
+1048,Metin Aktaş,PHYS101,120
+1048,Furkan Soysal,CHEM101,90
+1048,Müberra Allahverdi,MATH101,120
+1048,Muhammed Fatih Demirci,CENG101,60
+1049,Yusuf Evren Aykaç,CENG113,90
+1049,Metin Aktaş,PHYS101,120
+1049,Furkan Soysal,CHEM101,90
+1049,Müberra Allahverdi,MATH101,120
+1049,Muhammed Fatih Demirci,CENG101,60
+1050,Yusuf Evren Aykaç,CENG113,90
+1050,Metin Aktaş,PHYS101,120
+1050,Furkan Soysal,CHEM101,90
+1050,Müberra Allahverdi,MATH101,120
+1050,Muhammed Fatih Demirci,CENG101,60
+1051,Yusuf Evren Aykaç,CENG113,90
+1051,Metin Aktaş,PHYS101,120
+1051,Furkan Soysal,CHEM101,90
+1051,Müberra Allahverdi,MATH101,120
+1051,Muhammed Fatih Demirci,CENG101,60
+1052,Yusuf Evren Aykaç,CENG113,90
+1052,Metin Aktaş,PHYS101,120
+1052,Furkan Soysal,CHEM101,90
+1052,Müberra Allahverdi,MATH101,120
+1052,Muhammed Fatih Demirci,CENG101,60
+1053,Yusuf Evren Aykaç,CENG113,90
+1053,Metin Aktaş,PHYS101,120
+1053,Furkan Soysal,CHEM101,90
+1053,Müberra Allahverdi,MATH101,120
+1053,Muhammed Fatih Demirci,CENG101,60
+1054,Yusuf Evren Aykaç,CENG113,90
+1054,Metin Aktaş,PHYS101,120
+1054,Furkan Soysal,CHEM101,90
+1054,Müberra Allahverdi,MATH101,120
+1054,Muhammed Fatih Demirci,CENG101,60
+1055,Yusuf Evren Aykaç,CENG113,90
+1055,Metin Aktaş,PHYS101,120
+1055,Furkan Soysal,CHEM101,90
+1055,Müberra Allahverdi,MATH101,120
+1055,Muhammed Fatih Demirci,CENG101,60
+1056,Yusuf Evren Aykaç,CENG113,90
+1056,Metin Aktaş,PHYS101,120
+1056,Furkan Soysal,CHEM101,90
+1056,Müberra Allahverdi,MATH101,120
+1056,Muhammed Fatih Demirci,CENG101,60
+1057,Yusuf Evren Aykaç,CENG113,90
+1057,Metin Aktaş,PHYS101,120
+1057,Furkan Soysal,CHEM101,90
+1057,Müberra Allahverdi,MATH101,120
+1057,Muhammed Fatih Demirci,CENG101,60
+1058,Yusuf Evren Aykaç,CENG113,90
+1058,Metin Aktaş,PHYS101,120
+1058,Furkan Soysal,CHEM101,90
+1058,Müberra Allahverdi,MATH101,120
+1058,Muhammed Fatih Demirci,CENG101,60
+1059,Yusuf Evren Aykaç,CENG113,90
+1059,Metin Aktaş,PHYS101,120
+1059,Furkan Soysal,CHEM101,90
+1059,Müberra Allahverdi,MATH101,120
+1059,Muhammed Fatih Demirci,CENG101,60
+1060,Yusuf Evren Aykaç,CENG113,90
+1060,Metin Aktaş,PHYS101,120
+1060,Furkan Soysal,CHEM101,90
+1060,Müberra Allahverdi,MATH101,120
+1060,Muhammed Fatih Demirci,CENG101,60
+1061,Yusuf Evren Aykaç,CENG113,90
+1061,Metin Aktaş,PHYS101,120
+1061,Furkan Soysal,CHEM101,90
+1061,Müberra Allahverdi,MATH101,120
+1061,Muhammed Fatih Demirci,CENG101,60
+1062,Yusuf Evren Aykaç,CENG113,90
+1062,Metin Aktaş,PHYS101,120
+1062,Furkan Soysal,CHEM101,90
+1062,Müberra Allahverdi,MATH101,120
+1062,Muhammed Fatih Demirci,CENG101,60
+1063,Yusuf Evren Aykaç,CENG113,90
+1063,Metin Aktaş,PHYS101,120
+1063,Furkan Soysal,CHEM101,90
+1063,Müberra Allahverdi,MATH101,120
+1063,Muhammed Fatih Demirci,CENG101,60
+1064,Yusuf Evren Aykaç,CENG113,90
+1064,Metin Aktaş,PHYS101,120
+1064,Furkan Soysal,CHEM101,90
+1064,Müberra Allahverdi,MATH101,120
+1064,Muhammed Fatih Demirci,CENG101,60
+1065,Yusuf Evren Aykaç,CENG113,90
+1065,Metin Aktaş,PHYS101,120
+1065,Furkan Soysal,CHEM101,90
+1065,Müberra Allahverdi,MATH101,120
+1065,Muhammed Fatih Demirci,CENG101,60
+1066,Yusuf Evren Aykaç,CENG113,90
+1066,Metin Aktaş,PHYS101,120
+1066,Furkan Soysal,CHEM101,90
+1066,Müberra Allahverdi,MATH101,120
+1066,Muhammed Fatih Demirci,CENG101,60
+1067,Yusuf Evren Aykaç,CENG113,90
+1067,Metin Aktaş,PHYS101,120
+1067,Furkan Soysal,CHEM101,90
+1067,Müberra Allahverdi,MATH101,120
+1067,Muhammed Fatih Demirci,CENG101,60
+1068,Yusuf Evren Aykaç,CENG113,90
+1068,Metin Aktaş,PHYS101,120
+1068,Furkan Soysal,CHEM101,90
+1068,Müberra Allahverdi,MATH101,120
+1068,Muhammed Fatih Demirci,CENG101,60
+1069,Yusuf Evren Aykaç,CENG113,90
+1069,Metin Aktaş,PHYS101,120
+1069,Furkan Soysal,CHEM101,90
+1069,Müberra Allahverdi,MATH101,120
+1069,Muhammed Fatih Demirci,CENG101,60
+1070,Yusuf Evren Aykaç,CENG113,90
+1070,Metin Aktaş,PHYS101,120
+1070,Furkan Soysal,CHEM101,90
+1070,Müberra Allahverdi,MATH101,120
+1070,Muhammed Fatih Demirci,CENG101,60
+1071,Yusuf Evren Aykaç,CENG113,90
+1071,Metin Aktaş,PHYS101,120
+1071,Furkan Soysal,CHEM101,90
+1071,Müberra Allahverdi,MATH101,120
+1071,Muhammed Fatih Demirci,CENG101,60
+1072,Yusuf Evren Aykaç,CENG113,90
+1072,Metin Aktaş,PHYS101,120
+1072,Furkan Soysal,CHEM101,90
+1072,Müberra Allahverdi,MATH101,120
+1072,Muhammed Fatih Demirci,CENG101,60
+1073,Yusuf Evren Aykaç,CENG113,90
+1073,Metin Aktaş,PHYS101,120
+1073,Furkan Soysal,CHEM101,90
+1073,Müberra Allahverdi,MATH101,120
+1073,Muhammed Fatih Demirci,CENG101,60
+1074,Yusuf Evren Aykaç,CENG113,90
+1074,Metin Aktaş,PHYS101,120
+1074,Furkan Soysal,CHEM101,90
+1074,Müberra Allahverdi,MATH101,120
+1074,Muhammed Fatih Demirci,CENG101,60
+1075,Yusuf Evren Aykaç,CENG113,90
+1075,Metin Aktaş,PHYS101,120
+1075,Furkan Soysal,CHEM101,90
+1075,Müberra Allahverdi,MATH101,120
+1075,Muhammed Fatih Demirci,CENG101,60
+1076,Yusuf Evren Aykaç,CENG113,90
+1076,Metin Aktaş,PHYS101,120
+1076,Furkan Soysal,CHEM101,90
+1076,Müberra Allahverdi,MATH101,120
+1076,Muhammed Fatih Demirci,CENG101,60
+1077,Yusuf Evren Aykaç,CENG113,90
+1077,Metin Aktaş,PHYS101,120
+1077,Furkan Soysal,CHEM101,90
+1077,Müberra Allahverdi,MATH101,120
+1077,Muhammed Fatih Demirci,CENG101,60
+1078,Yusuf Evren Aykaç,CENG113,90
+1078,Metin Aktaş,PHYS101,120
+1078,Furkan Soysal,CHEM101,90
+1078,Müberra Allahverdi,MATH101,120
+1078,Muhammed Fatih Demirci,CENG101,60
+1079,Yusuf Evren Aykaç,CENG113,90
+1079,Metin Aktaş,PHYS101,120
+1079,Furkan Soysal,CHEM101,90
+1079,Müberra Allahverdi,MATH101,120
+1079,Muhammed Fatih Demirci,CENG101,60
+1080,Yusuf Evren Aykaç,CENG113,90
+1080,Metin Aktaş,PHYS101,120
+1080,Furkan Soysal,CHEM101,90
+1080,Müberra Allahverdi,MATH101,120
+1080,Muhammed Fatih Demirci,CENG101,60
+1081,Yusuf Evren Aykaç,CENG113,90
+1081,Metin Aktaş,PHYS101,120
+1081,Furkan Soysal,CHEM101,90
+1081,Müberra Allahverdi,MATH101,120
+1081,Muhammed Fatih Demirci,CENG101,60
+1082,Yusuf Evren Aykaç,CENG113,90
+1082,Metin Aktaş,PHYS101,120
+1082,Furkan Soysal,CHEM101,90
+1082,Müberra Allahverdi,MATH101,120
+1082,Muhammed Fatih Demirci,CENG101,60
+1083,Yusuf Evren Aykaç,CENG113,90
+1083,Metin Aktaş,PHYS101,120
+1083,Furkan Soysal,CHEM101,90
+1083,Müberra Allahverdi,MATH101,120
+1083,Muhammed Fatih Demirci,CENG101,60
+1084,Yusuf Evren Aykaç,CENG113,90
+1084,Metin Aktaş,PHYS101,120
+1084,Furkan Soysal,CHEM101,90
+1084,Müberra Allahverdi,MATH101,120
+1084,Muhammed Fatih Demirci,CENG101,60
+1085,Yusuf Evren Aykaç,CENG113,90
+1085,Metin Aktaş,PHYS101,120
+1085,Furkan Soysal,CHEM101,90
+1085,Müberra Allahverdi,MATH101,120
+1085,Muhammed Fatih Demirci,CENG101,60
+1086,Yusuf Evren Aykaç,CENG113,90
+1086,Metin Aktaş,PHYS101,120
+1086,Furkan Soysal,CHEM101,90
+1086,Müberra Allahverdi,MATH101,120
+1086,Muhammed Fatih Demirci,CENG101,60
+1087,Yusuf Evren Aykaç,CENG113,90
+1087,Metin Aktaş,PHYS101,120
+1087,Furkan Soysal,CHEM101,90
+1087,Müberra Allahverdi,MATH101,120
+1087,Muhammed Fatih Demirci,CENG101,60
+1088,Yusuf Evren Aykaç,CENG113,90
+1088,Metin Aktaş,PHYS101,120
+1088,Furkan Soysal,CHEM101,90
+1088,Müberra Allahverdi,MATH101,120
+1088,Muhammed Fatih Demirci,CENG101,60
+1089,Yusuf Evren Aykaç,CENG113,90
+1089,Metin Aktaş,PHYS101,120
+1089,Furkan Soysal,CHEM101,90
+1089,Müberra Allahverdi,MATH101,120
+1089,Muhammed Fatih Demirci,CENG101,60
+1090,Yusuf Evren Aykaç,CENG113,90
+1090,Metin Aktaş,PHYS101,120
+1090,Furkan Soysal,CHEM101,90
+1090,Müberra Allahverdi,MATH101,120
+1090,Muhammed Fatih Demirci,CENG101,60
+1091,Yusuf Evren Aykaç,CENG113,90
+1091,Metin Aktaş,PHYS101,120
+1091,Furkan Soysal,CHEM101,90
+1091,Müberra Allahverdi,MATH101,120
+1091,Muhammed Fatih Demirci,CENG101,60
+1092,Yusuf Evren Aykaç,CENG113,90
+1092,Metin Aktaş,PHYS101,120
+1092,Furkan Soysal,CHEM101,90
+1092,Müberra Allahverdi,MATH101,120
+1092,Muhammed Fatih Demirci,CENG101,60
+1093,Yusuf Evren Aykaç,CENG113,90
+1093,Metin Aktaş,PHYS101,120
+1093,Furkan Soysal,CHEM101,90
+1093,Müberra Allahverdi,MATH101,120
+1093,Muhammed Fatih Demirci,CENG101,60
+1094,Yusuf Evren Aykaç,CENG113,90
+1094,Metin Aktaş,PHYS101,120
+1094,Furkan Soysal,CHEM101,90
+1094,Müberra Allahverdi,MATH101,120
+1094,Muhammed Fatih Demirci,CENG101,60
+1095,Yusuf Evren Aykaç,CENG113,90
+1095,Metin Aktaş,PHYS101,120
+1095,Furkan Soysal,CHEM101,90
+1095,Müberra Allahverdi,MATH101,120
+1095,Muhammed Fatih Demirci,CENG101,60
+2001,Muhammed Abdullah Bülbül,CENG201,90
+2001,Yusuf Evren Aykaç,CENG113,90
+2001,Müberra Allahverdi,MATH101,120
+2001,Osman Serdar Gedik,CENG203,120
+2001,Shafqat Ur Rehman,CENG209,90
+2001,Nezakat Sevda Javanshir,ENGR201,120
+2001,Fatma Küçük,CENG207,120
+2002,Muhammed Abdullah Bülbül,CENG201,90
+2002,Yusuf Evren Aykaç,CENG113,90
+2002,Osman Serdar Gedik,CENG203,120
+2002,Shafqat Ur Rehman,CENG209,90
+2002,Nezakat Sevda Javanshir,ENGR201,120
+2002,Fatma Küçük,CENG207,120
+2003,Muhammed Abdullah Bülbül,CENG201,90
+2003,Osman Serdar Gedik,CENG203,120
+2003,Shafqat Ur Rehman,CENG209,90
+2003,Nezakat Sevda Javanshir,ENGR201,120
+2003,Fatma Küçük,CENG207,120
+2004,Muhammed Abdullah Bülbül,CENG201,90
+2004,Müberra Allahverdi,MATH101,120
+2004,Osman Serdar Gedik,CENG203,120
+2004,Shafqat Ur Rehman,CENG209,90
+2004,Nezakat Sevda Javanshir,ENGR201,120
+2004,Fatma Küçük,CENG207,120
+2005,Muhammed Abdullah Bülbül,CENG201,90
+2005,Osman Serdar Gedik,CENG203,120
+2005,Shafqat Ur Rehman,CENG209,90
+2005,Nezakat Sevda Javanshir,ENGR201,120
+2005,Fatma Küçük,CENG207,120
+2005,Furkan Soysal,CHEM101,90
+2006,Muhammed Abdullah Bülbül,CENG201,90
+2006,Furkan Soysal,CHEM101,90
+2006,Osman Serdar Gedik,CENG203,120
+2006,Shafqat Ur Rehman,CENG209,90
+2006,Nezakat Sevda Javanshir,ENGR201,120
+2006,Fatma Küçük,CENG207,120
+2007,Muhammed Abdullah Bülbül,CENG201,90
+2007,Yusuf Evren Aykaç,CENG113,90
+2007,Müberra Allahverdi,MATH101,120
+2007,Osman Serdar Gedik,CENG203,120
+2007,Shafqat Ur Rehman,CENG209,90
+2007,Nezakat Sevda Javanshir,ENGR201,120
+2007,Fatma Küçük,CENG207,120
+2008,Muhammed Abdullah Bülbül,CENG201,90
+2008,Yusuf Evren Aykaç,CENG113,90
+2008,Osman Serdar Gedik,CENG203,120
+2008,Muhammed Fatih Demirci,CENG101,60
+2008,Shafqat Ur Rehman,CENG209,90
+2008,Nezakat Sevda Javanshir,ENGR201,120
+2008,Fatma Küçük,CENG207,120
+2009,Muhammed Abdullah Bülbül,CENG201,90
+2009,Osman Serdar Gedik,CENG203,120
+2009,Shafqat Ur Rehman,CENG209,90
+2009,Nezakat Sevda Javanshir,ENGR201,120
+2009,Fatma Küçük,CENG207,120
+2010,Muhammed Abdullah Bülbül,CENG201,90
+2010,Furkan Soysal,CHEM101,90
+2010,Osman Serdar Gedik,CENG203,120
+2010,Shafqat Ur Rehman,CENG209,90
+2010,Nezakat Sevda Javanshir,ENGR201,120
+2010,Fatma Küçük,CENG207,120
+2011,Muhammed Abdullah Bülbül,CENG201,90
+2011,Yusuf Evren Aykaç,CENG113,90
+2011,Osman Serdar Gedik,CENG203,120
+2011,Shafqat Ur Rehman,CENG209,90
+2011,Nezakat Sevda Javanshir,ENGR201,120
+2011,Fatma Küçük,CENG207,120
+2012,Muhammed Abdullah Bülbül,CENG201,90
+2012,Osman Serdar Gedik,CENG203,120
+2012,Shafqat Ur Rehman,CENG209,90
+2012,Nezakat Sevda Javanshir,ENGR201,120
+2012,Fatma Küçük,CENG207,120
+2013,Muhammed Abdullah Bülbül,CENG201,90
+2013,Metin Aktaş,PHYS101,120
+2013,Osman Serdar Gedik,CENG203,120
+2013,Shafqat Ur Rehman,CENG209,90
+2013,Nezakat Sevda Javanshir,ENGR201,120
+2013,Fatma Küçük,CENG207,120
+2014,Muhammed Abdullah Bülbül,CENG201,90
+2014,Yusuf Evren Aykaç,CENG113,90
+2014,Osman Serdar Gedik,CENG203,120
+2014,Shafqat Ur Rehman,CENG209,90
+2014,Nezakat Sevda Javanshir,ENGR201,120
+2014,Fatma Küçük,CENG207,120
+2015,Muhammed Abdullah Bülbül,CENG201,90
+2015,Metin Aktaş,PHYS101,120
+2015,Müberra Allahverdi,MATH101,120
+2015,Osman Serdar Gedik,CENG203,120
+2015,Shafqat Ur Rehman,CENG209,90
+2015,Nezakat Sevda Javanshir,ENGR201,120
+2015,Fatma Küçük,CENG207,120
+2016,Muhammed Abdullah Bülbül,CENG201,90
+2016,Muhammed Fatih Demirci,CENG101,60
+2016,Osman Serdar Gedik,CENG203,120
+2016,Shafqat Ur Rehman,CENG209,90
+2016,Nezakat Sevda Javanshir,ENGR201,120
+2016,Fatma Küçük,CENG207,120
+2017,Muhammed Abdullah Bülbül,CENG201,90
+2017,Metin Aktaş,PHYS101,120
+2017,Osman Serdar Gedik,CENG203,120
+2017,Shafqat Ur Rehman,CENG209,90
+2017,Nezakat Sevda Javanshir,ENGR201,120
+2017,Fatma Küçük,CENG207,120
+2018,Muhammed Abdullah Bülbül,CENG201,90
+2018,Yusuf Evren Aykaç,CENG113,90
+2018,Osman Serdar Gedik,CENG203,120
+2018,Shafqat Ur Rehman,CENG209,90
+2018,Nezakat Sevda Javanshir,ENGR201,120
+2018,Fatma Küçük,CENG207,120
+2019,Muhammed Abdullah Bülbül,CENG201,90
+2019,Yusuf Evren Aykaç,CENG113,90
+2019,Müberra Allahverdi,MATH101,120
+2019,Muhammed Fatih Demirci,CENG101,60
+2019,Osman Serdar Gedik,CENG203,120
+2019,Shafqat Ur Rehman,CENG209,90
+2019,Nezakat Sevda Javanshir,ENGR201,120
+2019,Fatma Küçük,CENG207,120
+2020,Muhammed Abdullah Bülbül,CENG201,90
+2020,Yusuf Evren Aykaç,CENG113,90
+2020,Müberra Allahverdi,MATH101,120
+2020,Osman Serdar Gedik,CENG203,120
+2020,Shafqat Ur Rehman,CENG209,90
+2020,Metin Aktaş,PHYS101,120
+2020,Nezakat Sevda Javanshir,ENGR201,120
+2020,Fatma Küçük,CENG207,120
+2021,Muhammed Abdullah Bülbül,CENG201,90
+2021,Osman Serdar Gedik,CENG203,120
+2021,Shafqat Ur Rehman,CENG209,90
+2021,Nezakat Sevda Javanshir,ENGR201,120
+2021,Fatma Küçük,CENG207,120
+2022,Muhammed Abdullah Bülbül,CENG201,90
+2022,Osman Serdar Gedik,CENG203,120
+2022,Shafqat Ur Rehman,CENG209,90
+2022,Nezakat Sevda Javanshir,ENGR201,120
+2022,Fatma Küçük,CENG207,120
+2023,Muhammed Abdullah Bülbül,CENG201,90
+2023,Osman Serdar Gedik,CENG203,120
+2023,Shafqat Ur Rehman,CENG209,90
+2023,Nezakat Sevda Javanshir,ENGR201,120
+2023,Fatma Küçük,CENG207,120
+2024,Muhammed Abdullah Bülbül,CENG201,90
+2024,Osman Serdar Gedik,CENG203,120
+2024,Shafqat Ur Rehman,CENG209,90
+2024,Nezakat Sevda Javanshir,ENGR201,120
+2024,Fatma Küçük,CENG207,120
+2025,Muhammed Abdullah Bülbül,CENG201,90
+2025,Osman Serdar Gedik,CENG203,120
+2025,Shafqat Ur Rehman,CENG209,90
+2025,Nezakat Sevda Javanshir,ENGR201,120
+2025,Fatma Küçük,CENG207,120
+2026,Muhammed Abdullah Bülbül,CENG201,90
+2026,Osman Serdar Gedik,CENG203,120
+2026,Shafqat Ur Rehman,CENG209,90
+2026,Nezakat Sevda Javanshir,ENGR201,120
+2026,Fatma Küçük,CENG207,120
+2027,Muhammed Abdullah Bülbül,CENG201,90
+2027,Muhammed Fatih Demirci,CENG101,60
+2027,Osman Serdar Gedik,CENG203,120
+2027,Shafqat Ur Rehman,CENG209,90
+2027,Nezakat Sevda Javanshir,ENGR201,120
+2027,Fatma Küçük,CENG207,120
+2028,Muhammed Abdullah Bülbül,CENG201,90
+2028,Osman Serdar Gedik,CENG203,120
+2028,Shafqat Ur Rehman,CENG209,90
+2028,Nezakat Sevda Javanshir,ENGR201,120
+2028,Fatma Küçük,CENG207,120
+2029,Muhammed Abdullah Bülbül,CENG201,90
+2029,Osman Serdar Gedik,CENG203,120
+2029,Shafqat Ur Rehman,CENG209,90
+2029,Nezakat Sevda Javanshir,ENGR201,120
+2029,Fatma Küçük,CENG207,120
+2030,Muhammed Abdullah Bülbül,CENG201,90
+2030,Müberra Allahverdi,MATH101,120
+2030,Osman Serdar Gedik,CENG203,120
+2030,Shafqat Ur Rehman,CENG209,90
+2030,Nezakat Sevda Javanshir,ENGR201,120
+2030,Fatma Küçük,CENG207,120
+2031,Muhammed Abdullah Bülbül,CENG201,90
+2031,Furkan Soysal,CHEM101,90
+2031,Osman Serdar Gedik,CENG203,120
+2031,Shafqat Ur Rehman,CENG209,90
+2031,Nezakat Sevda Javanshir,ENGR201,120
+2031,Fatma Küçük,CENG207,120
+2032,Muhammed Abdullah Bülbül,CENG201,90
+2032,Metin Aktaş,PHYS101,120
+2032,Osman Serdar Gedik,CENG203,120
+2032,Shafqat Ur Rehman,CENG209,90
+2032,Nezakat Sevda Javanshir,ENGR201,120
+2032,Fatma Küçük,CENG207,120
+2033,Muhammed Abdullah Bülbül,CENG201,90
+2033,Müberra Allahverdi,MATH101,120
+2033,Yusuf Evren Aykaç,CENG113,90
+2033,Osman Serdar Gedik,CENG203,120
+2033,Shafqat Ur Rehman,CENG209,90
+2033,Nezakat Sevda Javanshir,ENGR201,120
+2033,Fatma Küçük,CENG207,120
+2034,Muhammed Abdullah Bülbül,CENG201,90
+2034,Metin Aktaş,PHYS101,120
+2034,Osman Serdar Gedik,CENG203,120
+2034,Shafqat Ur Rehman,CENG209,90
+2034,Nezakat Sevda Javanshir,ENGR201,120
+2034,Fatma Küçük,CENG207,120
+2035,Muhammed Abdullah Bülbül,CENG201,90
+2035,Osman Serdar Gedik,CENG203,120
+2035,Shafqat Ur Rehman,CENG209,90
+2035,Nezakat Sevda Javanshir,ENGR201,120
+2035,Fatma Küçük,CENG207,120
+2036,Muhammed Abdullah Bülbül,CENG201,90
+2036,Muhammed Fatih Demirci,CENG101,60
+2036,Osman Serdar Gedik,CENG203,120
+2036,Shafqat Ur Rehman,CENG209,90
+2036,Nezakat Sevda Javanshir,ENGR201,120
+2036,Fatma Küçük,CENG207,120
+2037,Muhammed Abdullah Bülbül,CENG201,90
+2037,Osman Serdar Gedik,CENG203,120
+2037,Shafqat Ur Rehman,CENG209,90
+2037,Nezakat Sevda Javanshir,ENGR201,120
+2037,Fatma Küçük,CENG207,120
+2038,Muhammed Abdullah Bülbül,CENG201,90
+2038,Müberra Allahverdi,MATH101,120
+2038,Osman Serdar Gedik,CENG203,120
+2038,Shafqat Ur Rehman,CENG209,90
+2038,Nezakat Sevda Javanshir,ENGR201,120
+2038,Fatma Küçük,CENG207,120
+2039,Muhammed Abdullah Bülbül,CENG201,90
+2039,Yusuf Evren Aykaç,CENG113,90
+2039,Osman Serdar Gedik,CENG203,120
+2039,Shafqat Ur Rehman,CENG209,90
+2039,Nezakat Sevda Javanshir,ENGR201,120
+2039,Fatma Küçük,CENG207,120
+2040,Muhammed Abdullah Bülbül,CENG201,90
+2040,Furkan Soysal,CHEM101,90
+2040,Osman Serdar Gedik,CENG203,120
+2040,Shafqat Ur Rehman,CENG209,90
+2040,Nezakat Sevda Javanshir,ENGR201,120
+2040,Fatma Küçük,CENG207,120
+2041,Muhammed Abdullah Bülbül,CENG201,90
+2041,Yusuf Evren Aykaç,CENG113,90
+2041,Osman Serdar Gedik,CENG203,120
+2041,Shafqat Ur Rehman,CENG209,90
+2041,Nezakat Sevda Javanshir,ENGR201,120
+2041,Fatma Küçük,CENG207,120
+2042,Muhammed Abdullah Bülbül,CENG201,90
+2042,Müberra Allahverdi,MATH101,120
+2042,Osman Serdar Gedik,CENG203,120
+2042,Shafqat Ur Rehman,CENG209,90
+2042,Nezakat Sevda Javanshir,ENGR201,120
+2042,Fatma Küçük,CENG207,120
+2043,Muhammed Abdullah Bülbül,CENG201,90
+2043,Metin Aktaş,PHYS101,120
+2043,Osman Serdar Gedik,CENG203,120
+2043,Shafqat Ur Rehman,CENG209,90
+2043,Nezakat Sevda Javanshir,ENGR201,120
+2043,Fatma Küçük,CENG207,120
+2044,Muhammed Abdullah Bülbül,CENG201,90
+2044,Yusuf Evren Aykaç,CENG113,90
+2044,Osman Serdar Gedik,CENG203,120
+2044,Shafqat Ur Rehman,CENG209,90
+2044,Nezakat Sevda Javanshir,ENGR201,120
+2044,Fatma Küçük,CENG207,120
+2045,Muhammed Abdullah Bülbül,CENG201,90
+2045,Osman Serdar Gedik,CENG203,120
+2045,Shafqat Ur Rehman,CENG209,90
+2045,Nezakat Sevda Javanshir,ENGR201,120
+2045,Fatma Küçük,CENG207,120
+2046,Muhammed Abdullah Bülbül,CENG201,90
+2046,Yusuf Evren Aykaç,CENG113,90
+2046,Osman Serdar Gedik,CENG203,120
+2046,Shafqat Ur Rehman,CENG209,90
+2046,Nezakat Sevda Javanshir,ENGR201,120
+2046,Fatma Küçük,CENG207,120
+2047,Muhammed Abdullah Bülbül,CENG201,90
+2047,Osman Serdar Gedik,CENG203,120
+2047,Shafqat Ur Rehman,CENG209,90
+2047,Nezakat Sevda Javanshir,ENGR201,120
+2047,Fatma Küçük,CENG207,120
+2048,Muhammed Abdullah Bülbül,CENG201,90
+2048,Yusuf Evren Aykaç,CENG113,90
+2048,Osman Serdar Gedik,CENG203,120
+2048,Shafqat Ur Rehman,CENG209,90
+2048,Nezakat Sevda Javanshir,ENGR201,120
+2048,Fatma Küçük,CENG207,120
+2049,Muhammed Abdullah Bülbül,CENG201,90
+2049,Osman Serdar Gedik,CENG203,120
+2049,Shafqat Ur Rehman,CENG209,90
+2049,Nezakat Sevda Javanshir,ENGR201,120
+2049,Fatma Küçük,CENG207,120
+2050,Muhammed Abdullah Bülbül,CENG201,90
+2050,Osman Serdar Gedik,CENG203,120
+2050,Shafqat Ur Rehman,CENG209,90
+2050,Nezakat Sevda Javanshir,ENGR201,120
+2050,Fatma Küçük,CENG207,120
+2051,Muhammed Abdullah Bülbül,CENG201,90
+2051,Osman Serdar Gedik,CENG203,120
+2051,Shafqat Ur Rehman,CENG209,90
+2051,Nezakat Sevda Javanshir,ENGR201,120
+2051,Fatma Küçük,CENG207,120
+2052,Muhammed Abdullah Bülbül,CENG201,90
+2052,Osman Serdar Gedik,CENG203,120
+2052,Shafqat Ur Rehman,CENG209,90
+2052,Nezakat Sevda Javanshir,ENGR201,120
+2052,Fatma Küçük,CENG207,120
+2053,Muhammed Abdullah Bülbül,CENG201,90
+2053,Yusuf Evren Aykaç,CENG113,90
+2053,Osman Serdar Gedik,CENG203,120
+2053,Shafqat Ur Rehman,CENG209,90
+2053,Nezakat Sevda Javanshir,ENGR201,120
+2053,Fatma Küçük,CENG207,120
+2054,Muhammed Abdullah Bülbül,CENG201,90
+2054,Osman Serdar Gedik,CENG203,120
+2054,Shafqat Ur Rehman,CENG209,90
+2054,Nezakat Sevda Javanshir,ENGR201,120
+2054,Fatma Küçük,CENG207,120
+2055,Muhammed Abdullah Bülbül,CENG201,90
+2055,Osman Serdar Gedik,CENG203,120
+2055,Shafqat Ur Rehman,CENG209,90
+2055,Nezakat Sevda Javanshir,ENGR201,120
+2055,Fatma Küçük,CENG207,120
+2056,Muhammed Abdullah Bülbül,CENG201,90
+2056,Osman Serdar Gedik,CENG203,120
+2056,Shafqat Ur Rehman,CENG209,90
+2056,Nezakat Sevda Javanshir,ENGR201,120
+2056,Fatma Küçük,CENG207,120
+2057,Muhammed Abdullah Bülbül,CENG201,90
+2057,Osman Serdar Gedik,CENG203,120
+2057,Shafqat Ur Rehman,CENG209,90
+2057,Nezakat Sevda Javanshir,ENGR201,120
+2057,Fatma Küçük,CENG207,120
+2058,Muhammed Abdullah Bülbül,CENG201,90
+2058,Osman Serdar Gedik,CENG203,120
+2058,Shafqat Ur Rehman,CENG209,90
+2058,Nezakat Sevda Javanshir,ENGR201,120
+2058,Fatma Küçük,CENG207,120
+2059,Muhammed Abdullah Bülbül,CENG201,90
+2059,Osman Serdar Gedik,CENG203,120
+2059,Shafqat Ur Rehman,CENG209,90
+2059,Nezakat Sevda Javanshir,ENGR201,120
+2059,Fatma Küçük,CENG207,120
+2060,Muhammed Abdullah Bülbül,CENG201,90
+2060,Osman Serdar Gedik,CENG203,120
+2060,Shafqat Ur Rehman,CENG209,90
+2060,Nezakat Sevda Javanshir,ENGR201,120
+2060,Fatma Küçük,CENG207,120
+2061,Muhammed Abdullah Bülbül,CENG201,90
+2061,Osman Serdar Gedik,CENG203,120
+2061,Shafqat Ur Rehman,CENG209,90
+2061,Nezakat Sevda Javanshir,ENGR201,120
+2061,Fatma Küçük,CENG207,120
+2062,Muhammed Abdullah Bülbül,CENG201,90
+2062,Osman Serdar Gedik,CENG203,120
+2062,Shafqat Ur Rehman,CENG209,90
+2062,Nezakat Sevda Javanshir,ENGR201,120
+2062,Fatma Küçük,CENG207,120
+2063,Muhammed Abdullah Bülbül,CENG201,90
+2063,Osman Serdar Gedik,CENG203,120
+2063,Shafqat Ur Rehman,CENG209,90
+2063,Nezakat Sevda Javanshir,ENGR201,120
+2063,Fatma Küçük,CENG207,120
+2064,Muhammed Abdullah Bülbül,CENG201,90
+2064,Osman Serdar Gedik,CENG203,120
+2064,Shafqat Ur Rehman,CENG209,90
+2064,Nezakat Sevda Javanshir,ENGR201,120
+2064,Fatma Küçük,CENG207,120
+2065,Muhammed Abdullah Bülbül,CENG201,90
+2065,Metin Aktaş,PHYS101,120
+2065,Osman Serdar Gedik,CENG203,120
+2065,Shafqat Ur Rehman,CENG209,90
+2065,Nezakat Sevda Javanshir,ENGR201,120
+2065,Fatma Küçük,CENG207,120
+2066,Muhammed Abdullah Bülbül,CENG201,90
+2066,Osman Serdar Gedik,CENG203,120
+2066,Shafqat Ur Rehman,CENG209,90
+2066,Nezakat Sevda Javanshir,ENGR201,120
+2066,Fatma Küçük,CENG207,120
+2067,Muhammed Abdullah Bülbül,CENG201,90
+2067,Osman Serdar Gedik,CENG203,120
+2067,Shafqat Ur Rehman,CENG209,90
+2067,Nezakat Sevda Javanshir,ENGR201,120
+2067,Fatma Küçük,CENG207,120
+2068,Muhammed Abdullah Bülbül,CENG201,90
+2068,Osman Serdar Gedik,CENG203,120
+2068,Shafqat Ur Rehman,CENG209,90
+2068,Nezakat Sevda Javanshir,ENGR201,120
+2068,Fatma Küçük,CENG207,120
+2069,Muhammed Abdullah Bülbül,CENG201,90
+2069,Osman Serdar Gedik,CENG203,120
+2069,Shafqat Ur Rehman,CENG209,90
+2069,Nezakat Sevda Javanshir,ENGR201,120
+2069,Fatma Küçük,CENG207,120
+2070,Muhammed Abdullah Bülbül,CENG201,90
+2071,Metin Aktaş,PHYS101,120
+2070,Osman Serdar Gedik,CENG203,120
+2070,Shafqat Ur Rehman,CENG209,90
+2070,Nezakat Sevda Javanshir,ENGR201,120
+2070,Fatma Küçük,CENG207,120
+2071,Muhammed Abdullah Bülbül,CENG201,90
+2071,Osman Serdar Gedik,CENG203,120
+2071,Shafqat Ur Rehman,CENG209,90
+2071,Nezakat Sevda Javanshir,ENGR201,120
+2071,Fatma Küçük,CENG207,120
+2072,Muhammed Abdullah Bülbül,CENG201,90
+2072,Osman Serdar Gedik,CENG203,120
+2072,Shafqat Ur Rehman,CENG209,90
+2072,Nezakat Sevda Javanshir,ENGR201,120
+2072,Fatma Küçük,CENG207,120
+2073,Muhammed Abdullah Bülbül,CENG201,90
+2073,Osman Serdar Gedik,CENG203,120
+2073,Shafqat Ur Rehman,CENG209,90
+2073,Nezakat Sevda Javanshir,ENGR201,120
+2073,Fatma Küçük,CENG207,120
+2074,Muhammed Abdullah Bülbül,CENG201,90
+2074,Osman Serdar Gedik,CENG203,120
+2074,Shafqat Ur Rehman,CENG209,90
+2074,Nezakat Sevda Javanshir,ENGR201,120
+2074,Fatma Küçük,CENG207,120
+2075,Muhammed Abdullah Bülbül,CENG201,90
+2075,Metin Aktaş,PHYS101,120
+2075,Osman Serdar Gedik,CENG203,120
+2075,Shafqat Ur Rehman,CENG209,90
+2075,Nezakat Sevda Javanshir,ENGR201,120
+2075,Fatma Küçük,CENG207,120
+2076,Muhammed Abdullah Bülbül,CENG201,90
+2076,Yusuf Evren Aykaç,CENG113,90
+2076,Osman Serdar Gedik,CENG203,120
+2076,Shafqat Ur Rehman,CENG209,90
+2076,Nezakat Sevda Javanshir,ENGR201,120
+2076,Fatma Küçük,CENG207,120
+2077,Muhammed Abdullah Bülbül,CENG201,90
+2077,Osman Serdar Gedik,CENG203,120
+2077,Shafqat Ur Rehman,CENG209,90
+2077,Nezakat Sevda Javanshir,ENGR201,120
+2077,Fatma Küçük,CENG207,120
+2078,Muhammed Abdullah Bülbül,CENG201,90
+2078,Osman Serdar Gedik,CENG203,120
+2078,Shafqat Ur Rehman,CENG209,90
+2078,Nezakat Sevda Javanshir,ENGR201,120
+2078,Fatma Küçük,CENG207,120
+2079,Muhammed Abdullah Bülbül,CENG201,90
+2079,Osman Serdar Gedik,CENG203,120
+2079,Shafqat Ur Rehman,CENG209,90
+2079,Nezakat Sevda Javanshir,ENGR201,120
+2079,Fatma Küçük,CENG207,120
+2080,Muhammed Abdullah Bülbül,CENG201,90
+2080,Metin Aktaş,PHYS101,120
+2080,Yusuf Evren Aykaç,CENG113,90
+2080,Osman Serdar Gedik,CENG203,120
+2080,Shafqat Ur Rehman,CENG209,90
+2080,Nezakat Sevda Javanshir,ENGR201,120
+2080,Fatma Küçük,CENG207,120
+2081,Muhammed Abdullah Bülbül,CENG201,90
+2081,Osman Serdar Gedik,CENG203,120
+2081,Shafqat Ur Rehman,CENG209,90
+2081,Nezakat Sevda Javanshir,ENGR201,120
+2081,Fatma Küçük,CENG207,120
+2082,Muhammed Abdullah Bülbül,CENG201,90
+2082,Osman Serdar Gedik,CENG203,120
+2082,Shafqat Ur Rehman,CENG209,90
+2082,Nezakat Sevda Javanshir,ENGR201,120
+2082,Fatma Küçük,CENG207,120
+2083,Muhammed Abdullah Bülbül,CENG201,90
+2083,Osman Serdar Gedik,CENG203,120
+2083,Shafqat Ur Rehman,CENG209,90
+2083,Nezakat Sevda Javanshir,ENGR201,120
+2083,Fatma Küçük,CENG207,120
+2084,Muhammed Abdullah Bülbül,CENG201,90
+2084,Osman Serdar Gedik,CENG203,120
+2084,Shafqat Ur Rehman,CENG209,90
+2084,Nezakat Sevda Javanshir,ENGR201,120
+2084,Fatma Küçük,CENG207,120
+2085,Muhammed Abdullah Bülbül,CENG201,90
+2085,Yusuf Evren Aykaç,CENG113,90
+2085,Osman Serdar Gedik,CENG203,120
+2085,Shafqat Ur Rehman,CENG209,90
+2085,Nezakat Sevda Javanshir,ENGR201,120
+2085,Fatma Küçük,CENG207,120
+2086,Muhammed Abdullah Bülbül,CENG201,90
+2086,Osman Serdar Gedik,CENG203,120
+2086,Shafqat Ur Rehman,CENG209,90
+2086,Nezakat Sevda Javanshir,ENGR201,120
+2086,Fatma Küçük,CENG207,120
+2087,Muhammed Abdullah Bülbül,CENG201,90
+2087,Metin Aktaş,PHYS101,120
+2087,Osman Serdar Gedik,CENG203,120
+2087,Shafqat Ur Rehman,CENG209,90
+2087,Nezakat Sevda Javanshir,ENGR201,120
+2087,Fatma Küçük,CENG207,120
+2088,Muhammed Abdullah Bülbül,CENG201,90
+2088,Osman Serdar Gedik,CENG203,120
+2088,Shafqat Ur Rehman,CENG209,90
+2088,Nezakat Sevda Javanshir,ENGR201,120
+2088,Fatma Küçük,CENG207,120
+2089,Muhammed Abdullah Bülbül,CENG201,90
+2089,Yusuf Evren Aykaç,CENG113,90
+2089,Osman Serdar Gedik,CENG203,120
+2089,Shafqat Ur Rehman,CENG209,90
+2089,Nezakat Sevda Javanshir,ENGR201,120
+2089,Fatma Küçük,CENG207,120
+2090,Muhammed Abdullah Bülbül,CENG201,90
+2090,Metin Aktaş,PHYS101,120
+2090,Osman Serdar Gedik,CENG203,120
+2090,Shafqat Ur Rehman,CENG209,90
+2090,Nezakat Sevda Javanshir,ENGR201,120
+2090,Fatma Küçük,CENG207,120
+2091,Muhammed Abdullah Bülbül,CENG201,90
+2091,Osman Serdar Gedik,CENG203,120
+2091,Shafqat Ur Rehman,CENG209,90
+2091,Nezakat Sevda Javanshir,ENGR201,120
+2091,Fatma Küçük,CENG207,120
+2092,Muhammed Abdullah Bülbül,CENG201,90
+2092,Osman Serdar Gedik,CENG203,120
+2092,Shafqat Ur Rehman,CENG209,90
+2092,Nezakat Sevda Javanshir,ENGR201,120
+2092,Fatma Küçük,CENG207,120
+2093,Muhammed Abdullah Bülbül,CENG201,90
+2093,Metin Aktaş,PHYS101,120
+2093,Müberra Allahverdi,MATH101,120
+2093,Osman Serdar Gedik,CENG203,120
+2093,Shafqat Ur Rehman,CENG209,90
+2093,Nezakat Sevda Javanshir,ENGR201,120
+2093,Fatma Küçük,CENG207,120
+2094,Muhammed Abdullah Bülbül,CENG201,90
+2094,Osman Serdar Gedik,CENG203,120
+2094,Shafqat Ur Rehman,CENG209,90
+2094,Nezakat Sevda Javanshir,ENGR201,120
+2094,Fatma Küçük,CENG207,120
+2095,Muhammed Abdullah Bülbül,CENG201,90
+2095,Osman Serdar Gedik,CENG203,120
+2095,Shafqat Ur Rehman,CENG209,90
+2095,Nezakat Sevda Javanshir,ENGR201,120
+2095,Fatma Küçük,CENG207,120
+2096,Muhammed Abdullah Bülbül,CENG201,90
+2096,Osman Serdar Gedik,CENG203,120
+2096,Shafqat Ur Rehman,CENG209,90
+2096,Nezakat Sevda Javanshir,ENGR201,120
+2096,Fatma Küçük,CENG207,120
+2097,Muhammed Abdullah Bülbül,CENG201,90
+2097,Osman Serdar Gedik,CENG203,120
+2097,Shafqat Ur Rehman,CENG209,90
+2097,Nezakat Sevda Javanshir,ENGR201,120
+2097,Fatma Küçük,CENG207,120
+2098,Muhammed Abdullah Bülbül,CENG201,90
+2098,Osman Serdar Gedik,CENG203,120
+2098,Shafqat Ur Rehman,CENG209,90
+2098,Nezakat Sevda Javanshir,ENGR201,120
+2098,Fatma Küçük,CENG207,120
+2099,Muhammed Abdullah Bülbül,CENG201,90
+2099,Osman Serdar Gedik,CENG203,120
+2099,Shafqat Ur Rehman,CENG209,90
+2099,Nezakat Sevda Javanshir,ENGR201,120
+2099,Fatma Küçük,CENG207,120
+2100,Muhammed Abdullah Bülbül,CENG201,90
+2100,Müberra Allahverdi,MATH101,120
+2100,Osman Serdar Gedik,CENG203,120
+2100,Shafqat Ur Rehman,CENG209,90
+2100,Nezakat Sevda Javanshir,ENGR201,120
+2100,Fatma Küçük,CENG207,120
+3001,Mustafa Yeniad,CENG301,60
+3001,Muhammed Abdullah Bülbül,CENG201,90
+3001,Fadi Yılmaz,CENG303,90
+3001,Fahreddin Şükrü Torun,CENG305,90
+3001,Osman Serdar Gedik,CENG307,120
+3001,Ahmet Esad Top,CENG317,60
+3002,Mustafa Yeniad,CENG301,60
+3002,Fadi Yılmaz,CENG303,90
+3002,Fahreddin Şükrü Torun,CENG305,90
+3002,Osman Serdar Gedik,CENG307,120
+3002,Fatih Nar,CENG463,120
+3002,Osman Serdar Gedik,CENG203,120
+3003,Mustafa Yeniad,CENG301,60
+3003,Fadi Yılmaz,CENG303,90
+3003,Fahreddin Şükrü Torun,CENG305,90
+3003,Osman Serdar Gedik,CENG307,120
+3003,Ahmet Esad Top,CENG317,60
+3003,Fahreddin Şükrü Torun,CENG327,90
+3003,Fatih Vehbi Çelebi,CENG460,60
+3004,Mustafa Yeniad,CENG301,60
+3004,Fadi Yılmaz,CENG303,90
+3004,Fahreddin Şükrü Torun,CENG305,90
+3004,Osman Serdar Gedik,CENG307,120
+3004,Ahmet Esad Top,CENG317,60
+3005,Mustafa Yeniad,CENG301,60
+3005,Fadi Yılmaz,CENG303,90
+3005,Fahreddin Şükrü Torun,CENG305,90
+3005,Osman Serdar Gedik,CENG307,120
+3005,Ahmet Esad Top,CENG317,60
+3005,Fatih Nar,CENG463,120
+3006,Mustafa Yeniad,CENG301,60
+3006,Osman Serdar Gedik,CENG203,120
+3006,Fadi Yılmaz,CENG303,90
+3006,Fahreddin Şükrü Torun,CENG305,90
+3006,Osman Serdar Gedik,CENG307,120
+3006,Metin Aktaş,PHYS101,120
+3007,Mustafa Yeniad,CENG301,60
+3007,Fadi Yılmaz,CENG303,90
+3007,Fahreddin Şükrü Torun,CENG305,90
+3007,Osman Serdar Gedik,CENG307,120
+3007,Ahmet Esad Top,CENG317,60
+3007,Yusuf Evren Aykaç,CENG113,90
+3008,Mustafa Yeniad,CENG301,60
+3008,Fadi Yılmaz,CENG303,90
+3008,Fahreddin Şükrü Torun,CENG305,90
+3008,Osman Serdar Gedik,CENG307,120
+3008,Ahmet Esad Top,CENG317,60
+3008,Muhammed Abdullah Bülbül,CENG315,90
+3008,Fahreddin Şükrü Torun,CENG327,90
+3009,Mustafa Yeniad,CENG301,60
+3009,Fadi Yılmaz,CENG303,90
+3009,Fahreddin Şükrü Torun,CENG305,90
+3009,Osman Serdar Gedik,CENG307,120
+3009,Ahmet Esad Top,CENG317,60
+3009,Muhammed Abdullah Bülbül,CENG315,90
+3010,Mustafa Yeniad,CENG301,60
+3010,Muhammed Abdullah Bülbül,CENG201,90
+3010,Fadi Yılmaz,CENG303,90
+3010,Fahreddin Şükrü Torun,CENG305,90
+3010,Osman Serdar Gedik,CENG307,120
+3010,Fadi Yılmaz,CENG325,60
+3010,Muhammed Abdullah Bülbül,CENG315,90
+3010,Fahreddin Şükrü Torun,CENG327,90
+3011,Mustafa Yeniad,CENG301,60
+3011,Fadi Yılmaz,CENG303,90
+3011,Fahreddin Şükrü Torun,CENG305,90
+3011,Osman Serdar Gedik,CENG307,120
+3011,Ahmet Esad Top,CENG317,60
+3011,Muhammed Abdullah Bülbül,CENG315,90
+3011,Fatih Vehbi Çelebi,CENG460,60
+3012,Mustafa Yeniad,CENG301,60
+3012,Fadi Yılmaz,CENG303,90
+3012,Fahreddin Şükrü Torun,CENG305,90
+3012,Osman Serdar Gedik,CENG307,120
+3012,Fadi Yılmaz,CENG325,60
+3012,Muhammed Abdullah Bülbül,CENG315,90
+3012,Fahreddin Şükrü Torun,CENG327,90
+3012,Günsel Bingöl,CENG309,60
+3013,Mustafa Yeniad,CENG301,60
+3013,Fadi Yılmaz,CENG303,90
+3013,Fahreddin Şükrü Torun,CENG305,90
+3013,Osman Serdar Gedik,CENG307,120
+3013,Fatih Nar,CENG463,120
+3013,Ahmet Esad Top,CENG317,60
+3013,Muhammed Abdullah Bülbül,CENG315,90
+3013,Yusuf Evren Aykaç,CENG431,90
+3014,Mustafa Yeniad,CENG301,60
+3014,Fadi Yılmaz,CENG303,90
+3014,Fahreddin Şükrü Torun,CENG305,90
+3014,Osman Serdar Gedik,CENG307,120
+3014,Fadi Yılmaz,CENG325,60
+3014,Muhammed Abdullah Bülbül,CENG315,90
+3014,Fahreddin Şükrü Torun,CENG327,90
+3014,Günsel Bingöl,CENG309,60
+3015,Mustafa Yeniad,CENG301,60
+3015,Fadi Yılmaz,CENG303,90
+3015,Fahreddin Şükrü Torun,CENG305,90
+3015,Osman Serdar Gedik,CENG307,120
+3015,Fadi Yılmaz,CENG325,60
+3015,Muhammed Fatih Demirci,CENG101,60
+3015,Günsel Bingöl,CENG309,60
+3016,Mustafa Yeniad,CENG301,60
+3016,Fadi Yılmaz,CENG303,90
+3016,Fahreddin Şükrü Torun,CENG305,90
+3016,Osman Serdar Gedik,CENG307,120
+3016,Fadi Yılmaz,CENG325,60
+3016,Muhammed Abdullah Bülbül,CENG315,90
+3016,Fatih Nar,CENG463,120
+3017,Mustafa Yeniad,CENG301,60
+3017,Fadi Yılmaz,CENG303,90
+3017,Fahreddin Şükrü Torun,CENG305,90
+3017,Osman Serdar Gedik,CENG307,120
+3017,Fadi Yılmaz,CENG325,60
+3017,Mustafa Yeniad,CENG465,120
+3017,Muhammed Abdullah Bülbül,CENG315,90
+3017,Yusuf Evren Aykaç,CENG431,90
+3017,Fahreddin Şükrü Torun,CENG327,90
+3018,Mustafa Yeniad,CENG301,60
+3018,Fadi Yılmaz,CENG303,90
+3018,Fahreddin Şükrü Torun,CENG305,90
+3018,Osman Serdar Gedik,CENG307,120
+3018,Ahmet Esad Top,CENG317,60
+3018,Muhammed Abdullah Bülbül,CENG315,90
+3018,Fahreddin Şükrü Torun,CENG327,90
+3019,Mustafa Yeniad,CENG301,60
+3019,Shafqat Ur Rehman,CENG209,90
+3019,Fadi Yılmaz,CENG303,90
+3019,Fahreddin Şükrü Torun,CENG305,90
+3019,Osman Serdar Gedik,CENG307,120
+3019,Fadi Yılmaz,CENG325,60
+3019,Muhammed Abdullah Bülbül,CENG315,90
+3019,Günsel Bingöl,CENG309,60
+3020,Mustafa Yeniad,CENG301,60
+3020,Fadi Yılmaz,CENG303,90
+3020,Fahreddin Şükrü Torun,CENG305,90
+3020,Osman Serdar Gedik,CENG307,120
+3020,Fadi Yılmaz,CENG325,60
+3020,Ahmet Esad Top,CENG317,60
+3020,Fahreddin Şükrü Torun,CENG327,90
+3021,Mustafa Yeniad,CENG301,60
+3021,Fadi Yılmaz,CENG303,90
+3021,Fahreddin Şükrü Torun,CENG305,90
+3021,Osman Serdar Gedik,CENG307,120
+3021,Ahmet Esad Top,CENG317,60
+3021,Muhammed Abdullah Bülbül,CENG315,90
+3021,Günsel Bingöl,CENG309,60
+3022,Mustafa Yeniad,CENG301,60
+3022,Muhammed Abdullah Bülbül,CENG201,90
+3022,Fadi Yılmaz,CENG303,90
+3022,Fahreddin Şükrü Torun,CENG305,90
+3022,Osman Serdar Gedik,CENG307,120
+3022,Fadi Yılmaz,CENG325,60
+3022,Yusuf Evren Aykaç,CENG427,120
+3023,Mustafa Yeniad,CENG301,60
+3023,Fatma Küçük,CENG207,120
+3023,Fadi Yılmaz,CENG303,90
+3023,Fahreddin Şükrü Torun,CENG305,90
+3023,Osman Serdar Gedik,CENG307,120
+3023,Muhammed Abdullah Bülbül,CENG315,90
+3024,Mustafa Yeniad,CENG301,60
+3024,Fadi Yılmaz,CENG303,90
+3024,Fahreddin Şükrü Torun,CENG305,90
+3024,Osman Serdar Gedik,CENG307,120
+3024,Ahmet Esad Top,CENG317,6012
+3024,Fadi Yılmaz,CENG325,60
+3024,Günsel Bingöl,CENG309,60
+3025,Mustafa Yeniad,CENG301,60
+3025,Fatma Küçük,CENG207,120
+3025,Osman Serdar Gedik,CENG203,120
+3025,Fadi Yılmaz,CENG303,90
+3025,Fahreddin Şükrü Torun,CENG305,90
+3025,Osman Serdar Gedik,CENG307,120
+3025,Muhammed Abdullah Bülbül,CENG315,90
+3025,Mustafa Yeniad,CENG465,120
+3025,Fahreddin Şükrü Torun,CENG327,90
+3026,Mustafa Yeniad,CENG301,60
+3026,Shafqat Ur Rehman,CENG209,90
+3026,Fadi Yılmaz,CENG303,90
+3026,Fahreddin Şükrü Torun,CENG305,90
+3026,Osman Serdar Gedik,CENG307,120
+3026,Ahmet Esad Top,CENG317,60
+3026,Fatih Nar,CENG463,120
+3026,Fahreddin Şükrü Torun,CENG327,90
+3027,Mustafa Yeniad,CENG301,60
+3027,Fatma Küçük,CENG207,120
+3027,Fadi Yılmaz,CENG303,90
+3027,Fahreddin Şükrü Torun,CENG305,90
+3027,Osman Serdar Gedik,CENG307,120
+3027,Muhammed Abdullah Bülbül,CENG315,90
+3027,Mustafa Yeniad,CENG465,120
+3027,Günsel Bingöl,CENG309,60
+3028,Mustafa Yeniad,CENG301,60
+3028,Fadi Yılmaz,CENG303,90
+3028,Fahreddin Şükrü Torun,CENG305,90
+3028,Osman Serdar Gedik,CENG307,120
+3028,Ahmet Esad Top,CENG317,60
+3028,Fadi Yılmaz,CENG325,60
+3028,Yusuf Evren Aykaç,CENG427,120
+3028,Günsel Bingöl,CENG309,60
+3029,Mustafa Yeniad,CENG301,60
+3029,Muhammed Abdullah Bülbül,CENG201,90
+3029,Shafqat Ur Rehman,CENG209,90
+3029,Fadi Yılmaz,CENG303,90
+3029,Fahreddin Şükrü Torun,CENG305,90
+3029,Osman Serdar Gedik,CENG307,120
+3029,Muhammed Abdullah Bülbül,CENG315,90
+3029,Günsel Bingöl,CENG309,60
+3030,Mustafa Yeniad,CENG301,60
+3030,Fadi Yılmaz,CENG303,90
+3030,Fahreddin Şükrü Torun,CENG305,90
+3030,Osman Serdar Gedik,CENG307,120
+3030,Ahmet Esad Top,CENG317,60
+3030,Fatih Nar,CENG463,120
+3030,Fahreddin Şükrü Torun,CENG327,90
+3031,Mustafa Yeniad,CENG301,60
+3031,Fatma Küçük,CENG207,120
+3031,Fadi Yılmaz,CENG303,90
+3031,Fahreddin Şükrü Torun,CENG305,90
+3031,Osman Serdar Gedik,CENG307,120
+3031,Fadi Yılmaz,CENG325,60
+3032,Mustafa Yeniad,CENG301,60
+3032,Fadi Yılmaz,CENG303,90
+3032,Fahreddin Şükrü Torun,CENG305,90
+3032,Osman Serdar Gedik,CENG307,120
+3032,Fadi Yılmaz,CENG325,60
+3032,Fahreddin Şükrü Torun,CENG327,90
+3032,Günsel Bingöl,CENG309,60
+3033,Mustafa Yeniad,CENG301,60
+3033,Müberra Allahverdi,MATH101,120
+3033,Fadi Yılmaz,CENG303,90
+3033,Fahreddin Şükrü Torun,CENG305,90
+3033,Osman Serdar Gedik,CENG307,120
+3033,Ahmet Esad Top,CENG317,60
+3033,Günsel Bingöl,CENG309,60
+3034,Mustafa Yeniad,CENG301,60
+3034,Fadi Yılmaz,CENG303,90
+3034,Fahreddin Şükrü Torun,CENG305,90
+3034,Osman Serdar Gedik,CENG307,120
+3034,Fadi Yılmaz,CENG325,60
+3034,Muhammed Abdullah Bülbül,CENG315,90
+3034,Fahreddin Şükrü Torun,CENG327,90
+3034,Günsel Bingöl,CENG309,60
+3035,Mustafa Yeniad,CENG301,60
+3035,Fadi Yılmaz,CENG303,90
+3035,Fahreddin Şükrü Torun,CENG305,90
+3035,Osman Serdar Gedik,CENG307,120
+3035,Ahmet Esad Top,CENG317,60
+3035,Mustafa Yeniad,CENG465,120
+3035,Fahreddin Şükrü Torun,CENG327,90
+3035,Günsel Bingöl,CENG309,60
+3036,Mustafa Yeniad,CENG301,60
+3036,Shafqat Ur Rehman,CENG209,90
+3036,Fadi Yılmaz,CENG303,90
+3036,Fahreddin Şükrü Torun,CENG305,90
+3036,Osman Serdar Gedik,CENG307,120
+3036,Fahreddin Şükrü Torun,CENG327,90
+3037,Mustafa Yeniad,CENG301,60
+3037,Fadi Yılmaz,CENG303,90
+3037,Fahreddin Şükrü Torun,CENG305,90
+3037,Osman Serdar Gedik,CENG307,120
+3037,Muhammed Abdullah Bülbül,CENG315,90
+3037,Yusuf Evren Aykaç,CENG431,90
+3038,Mustafa Yeniad,CENG301,60
+3038,Fadi Yılmaz,CENG303,90
+3038,Fahreddin Şükrü Torun,CENG305,90
+3038,Osman Serdar Gedik,CENG307,120
+3038,Ahmet Esad Top,CENG317,60
+3038,Fadi Yılmaz,CENG325,60
+3038,Fahreddin Şükrü Torun,CENG327,90
+3038,Fatih Vehbi Çelebi,CENG460,60
+3039,Mustafa Yeniad,CENG301,60
+3039,Müberra Allahverdi,MATH101,120
+3039,Fadi Yılmaz,CENG303,90
+3039,Fahreddin Şükrü Torun,CENG305,90
+3039,Osman Serdar Gedik,CENG307,120
+3039,Yusuf Evren Aykaç,CENG431,90
+3039,Fahreddin Şükrü Torun,CENG327,90
+3039,Günsel Bingöl,CENG309,60
+3040,Mustafa Yeniad,CENG301,60
+3040,Fadi Yılmaz,CENG303,90
+3040,Fahreddin Şükrü Torun,CENG305,90
+3040,Osman Serdar Gedik,CENG307,120
+3040,Ahmet Esad Top,CENG317,60
+3040,Fatih Nar,CENG463,120
+3040,Günsel Bingöl,CENG309,60
+3041,Mustafa Yeniad,CENG301,60
+3041,Fadi Yılmaz,CENG303,90
+3041,Fahreddin Şükrü Torun,CENG305,90
+3041,Osman Serdar Gedik,CENG307,120
+3041,Fadi Yılmaz,CENG325,60
+3041,Shafqat Ur Rehman,CENG433,90
+3042,Mustafa Yeniad,CENG301,60
+3042,Fadi Yılmaz,CENG303,90
+3042,Fahreddin Şükrü Torun,CENG305,90
+3042,Osman Serdar Gedik,CENG307,120
+3042,Ahmet Esad Top,CENG317,60
+3042,Mustafa Yeniad,CENG465,120
+3042,Fahreddin Şükrü Torun,CENG327,90
+3043,Mustafa Yeniad,CENG301,60
+3043,Fatma Küçük,CENG207,120
+3043,Fadi Yılmaz,CENG303,90
+3043,Fahreddin Şükrü Torun,CENG305,90
+3043,Osman Serdar Gedik,CENG307,120
+3043,Muhammed Abdullah Bülbül,CENG315,90
+3044,Mustafa Yeniad,CENG301,60
+3044,Fadi Yılmaz,CENG303,90
+3044,Fahreddin Şükrü Torun,CENG305,90
+3044,Osman Serdar Gedik,CENG307,120
+3044,Fadi Yılmaz,CENG325,60
+3044,Shafqat Ur Rehman,CENG433,90
+3045,Mustafa Yeniad,CENG301,60
+3045,Fadi Yılmaz,CENG303,90
+3045,Fahreddin Şükrü Torun,CENG305,90
+3045,Osman Serdar Gedik,CENG307,120
+3045,Ahmet Esad Top,CENG317,60
+3045,Fadi Yılmaz,CENG325,60
+3045,Mustafa Yeniad,CENG465,120
+3046,Mustafa Yeniad,CENG301,60
+3046,Fadi Yılmaz,CENG303,90
+3046,Fahreddin Şükrü Torun,CENG305,90
+3046,Osman Serdar Gedik,CENG307,120
+3046,Fadi Yılmaz,CENG325,60
+3046,Muhammed Abdullah Bülbül,CENG315,90
+3046,Fahreddin Şükrü Torun,CENG327,90
+3046,Fatih Vehbi Çelebi,CENG460,60
+3047,Mustafa Yeniad,CENG301,60
+3047,Shafqat Ur Rehman,CENG209,90
+3047,Fadi Yılmaz,CENG303,90
+3047,Fahreddin Şükrü Torun,CENG305,90
+3047,Osman Serdar Gedik,CENG307,120
+3047,Ahmet Esad Top,CENG317,60
+3047,Fadi Yılmaz,CENG325,60
+3048,Mustafa Yeniad,CENG301,60
+3048,Osman Serdar Gedik,CENG203,120
+3048,Fadi Yılmaz,CENG303,90
+3048,Fahreddin Şükrü Torun,CENG305,90
+3048,Osman Serdar Gedik,CENG307,120
+3048,Fadi Yılmaz,CENG325,60
+3048,Fahreddin Şükrü Torun,CENG327,90
+3049,Mustafa Yeniad,CENG301,60
+3049,Osman Serdar Gedik,CENG203,120
+3049,Fadi Yılmaz,CENG303,90
+3049,Fahreddin Şükrü Torun,CENG305,90
+3049,Osman Serdar Gedik,CENG307,120
+3049,Muhammed Abdullah Bülbül,CENG315,90
+3049,Fahreddin Şükrü Torun,CENG327,90
+3049,Günsel Bingöl,CENG309,60
+3050,Mustafa Yeniad,CENG301,60
+3050,Fadi Yılmaz,CENG303,90
+3050,Fahreddin Şükrü Torun,CENG305,90
+3050,Osman Serdar Gedik,CENG307,120
+3050,Ahmet Esad Top,CENG317,60
+3050,Fadi Yılmaz,CENG325,60
+3050,Fahreddin Şükrü Torun,CENG327,90
+3051,Mustafa Yeniad,CENG301,60
+3051,Shafqat Ur Rehman,CENG209,90
+3051,Fadi Yılmaz,CENG303,90
+3051,Fahreddin Şükrü Torun,CENG305,90
+3051,Osman Serdar Gedik,CENG307,120
+3051,Ahmet Esad Top,CENG317,60
+3051,Fahreddin Şükrü Torun,CENG327,90
+3051,Günsel Bingöl,CENG309,60
+3052,Mustafa Yeniad,CENG301,60
+3052,Fatma Küçük,CENG207,120
+3052,Fadi Yılmaz,CENG303,90
+3052,Fahreddin Şükrü Torun,CENG305,90
+3052,Osman Serdar Gedik,CENG307,120
+3052,Fadi Yılmaz,CENG325,60
+3052,Fahreddin Şükrü Torun,CENG327,90
+3052,Günsel Bingöl,CENG309,60
+3053,Mustafa Yeniad,CENG301,60
+3053,Fadi Yılmaz,CENG303,90
+3053,Fahreddin Şükrü Torun,CENG305,90
+3053,Osman Serdar Gedik,CENG307,120
+3053,Ahmet Esad Top,CENG317,60
+3053,Muhammed Abdullah Bülbül,CENG315,90
+3053,Günsel Bingöl,CENG309,60
+3054,Mustafa Yeniad,CENG301,60
+3054,Fadi Yılmaz,CENG303,90
+3054,Fahreddin Şükrü Torun,CENG305,90
+3054,Osman Serdar Gedik,CENG307,120
+3054,Fadi Yılmaz,CENG325,60
+3054,Yusuf Evren Aykaç,CENG427,120
+3054,Fahreddin Şükrü Torun,CENG327,90
+3051,Günsel Bingöl,CENG309,60
+3055,Mustafa Yeniad,CENG301,60
+3055,Fadi Yılmaz,CENG303,90
+3055,Fahreddin Şükrü Torun,CENG305,90
+3055,Osman Serdar Gedik,CENG307,120
+3055,Ahmet Esad Top,CENG317,60
+3055,Fatih Nar,CENG463,120
+3055,Günsel Bingöl,CENG309,60
+3056,Mustafa Yeniad,CENG301,60
+3056,Fadi Yılmaz,CENG303,90
+3056,Fahreddin Şükrü Torun,CENG305,90
+3056,Osman Serdar Gedik,CENG307,120
+3056,Ahmet Esad Top,CENG317,60
+3056,Muhammed Abdullah Bülbül,CENG315,90
+3056,Günsel Bingöl,CENG309,60
+3057,Mustafa Yeniad,CENG301,60
+3057,Fadi Yılmaz,CENG303,90
+3057,Fahreddin Şükrü Torun,CENG305,90
+3057,Osman Serdar Gedik,CENG307,120
+3057,Fadi Yılmaz,CENG325,60
+3057,Muhammed Abdullah Bülbül,CENG315,90
+3057,Fatih Nar,CENG463,120
+3057,Fahreddin Şükrü Torun,CENG327,90
+3058,Mustafa Yeniad,CENG301,60
+3058,Fadi Yılmaz,CENG303,90
+3058,Fahreddin Şükrü Torun,CENG305,90
+3058,Osman Serdar Gedik,CENG307,120
+3058,Ahmet Esad Top,CENG317,60
+3058,Fadi Yılmaz,CENG325,60
+3058,Günsel Bingöl,CENG309,60
+3059,Mustafa Yeniad,CENG301,60
+3059,Osman Serdar Gedik,CENG203,120
+3059,Fadi Yılmaz,CENG303,90
+3059,Fahreddin Şükrü Torun,CENG305,90
+3059,Osman Serdar Gedik,CENG307,120
+3059,Muhammed Abdullah Bülbül,CENG315,90
+3059,Fahreddin Şükrü Torun,CENG327,90
+3060,Mustafa Yeniad,CENG301,60
+3060,Fadi Yılmaz,CENG303,90
+3060,Fahreddin Şükrü Torun,CENG305,90
+3060,Osman Serdar Gedik,CENG307,120
+3060,Ahmet Esad Top,CENG317,60
+3060,Muhammed Abdullah Bülbül,CENG315,90
+3060,Günsel Bingöl,CENG309,60
+3061,Mustafa Yeniad,CENG301,60
+3061,Fadi Yılmaz,CENG303,90
+3061,Fahreddin Şükrü Torun,CENG305,90
+3061,Osman Serdar Gedik,CENG307,120
+3061,Muhammed Abdullah Bülbül,CENG315,90
+3061,Fahreddin Şükrü Torun,CENG327,90
+3062,Mustafa Yeniad,CENG301,60
+3062,Fadi Yılmaz,CENG303,90
+3062,Fahreddin Şükrü Torun,CENG305,90
+3062,Osman Serdar Gedik,CENG307,120
+3062,Fadi Yılmaz,CENG325,60
+3062,Fahreddin Şükrü Torun,CENG327,90
+3062,Günsel Bingöl,CENG309,60
+3063,Mustafa Yeniad,CENG301,60
+3063,Fadi Yılmaz,CENG303,90
+3063,Fahreddin Şükrü Torun,CENG305,90
+3063,Osman Serdar Gedik,CENG307,120
+3063,Ahmet Esad Top,CENG317,60
+3063,Muhammed Abdullah Bülbül,CENG315,90
+3063,Günsel Bingöl,CENG309,60
+3064,Mustafa Yeniad,CENG301,60
+3064,Fadi Yılmaz,CENG303,90
+3064,Fahreddin Şükrü Torun,CENG305,90
+3064,Osman Serdar Gedik,CENG307,120
+3064,Fadi Yılmaz,CENG325,60
+3064,Muhammed Abdullah Bülbül,CENG315,90
+3064,Fahreddin Şükrü Torun,CENG327,90
+3064,Günsel Bingöl,CENG309,60
+3065,Mustafa Yeniad,CENG301,60
+3065,Fadi Yılmaz,CENG303,90
+3065,Fahreddin Şükrü Torun,CENG305,90
+3065,Osman Serdar Gedik,CENG307,120
+3065,Ahmet Esad Top,CENG317,60
+3065,Günsel Bingöl,CENG309,60
+3065,Fatih Vehbi Çelebi,CENG460,60
+3066,Mustafa Yeniad,CENG301,60
+3066,Fadi Yılmaz,CENG303,90
+3066,Fahreddin Şükrü Torun,CENG305,90
+3066,Osman Serdar Gedik,CENG307,120
+3066,Ahmet Esad Top,CENG317,60
+3066,Yusuf Evren Aykaç,CENG427,120
+3066,Fahreddin Şükrü Torun,CENG327,90
+3066,Günsel Bingöl,CENG309,60
+3067,Mustafa Yeniad,CENG301,60
+3067,Osman Serdar Gedik,CENG203,120
+3067,Fadi Yılmaz,CENG303,90
+3067,Fahreddin Şükrü Torun,CENG305,90
+3067,Osman Serdar Gedik,CENG307,120
+3067,Muhammed Abdullah Bülbül,CENG315,90
+3067,Fahreddin Şükrü Torun,CENG327,90
+3068,Mustafa Yeniad,CENG301,60
+3068,Fatma Küçük,CENG207,120
+3068,Fadi Yılmaz,CENG303,90
+3068,Fahreddin Şükrü Torun,CENG305,90
+3068,Osman Serdar Gedik,CENG307,120
+3068,Muhammed Abdullah Bülbül,CENG315,90
+3068,Günsel Bingöl,CENG309,60
+3069,Mustafa Yeniad,CENG301,60
+3069,Fadi Yılmaz,CENG303,90
+3069,Fahreddin Şükrü Torun,CENG305,90
+3069,Osman Serdar Gedik,CENG307,120
+3069,Fadi Yılmaz,CENG325,60
+3069,Fahreddin Şükrü Torun,CENG327,90
+3069,Günsel Bingöl,CENG309,60
+3070,Mustafa Yeniad,CENG301,60
+3070,Muhammed Abdullah Bülbül,CENG201,90
+3070,Fadi Yılmaz,CENG303,90
+3070,Fahreddin Şükrü Torun,CENG305,90
+3070,Osman Serdar Gedik,CENG307,120
+3070,Shafqat Ur Rehman,CENG433,90
+3070,Günsel Bingöl,CENG309,60
+3071,Mustafa Yeniad,CENG301,60
+3071,Nezakat Sevda Javanshir,ENGR201,120
+3071,Fadi Yılmaz,CENG303,90
+3071,Fahreddin Şükrü Torun,CENG305,90
+3071,Osman Serdar Gedik,CENG307,120
+3071,Fadi Yılmaz,CENG325,60
+3071,Fahreddin Şükrü Torun,CENG327,90
+3071,Fatih Vehbi Çelebi,CENG460,60
+3072,Mustafa Yeniad,CENG301,60
+3072,Fadi Yılmaz,CENG303,90
+3072,Fahreddin Şükrü Torun,CENG305,90
+3072,Osman Serdar Gedik,CENG307,120
+3072,Ahmet Esad Top,CENG317,60
+3072,Yusuf Evren Aykaç,CENG427,120
+3072,Günsel Bingöl,CENG309,60
+3073,Mustafa Yeniad,CENG301,60
+3073,Fadi Yılmaz,CENG303,90
+3073,Fahreddin Şükrü Torun,CENG305,90
+3073,Osman Serdar Gedik,CENG307,120
+3073,Fadi Yılmaz,CENG325,60
+3073,Muhammed Abdullah Bülbül,CENG315,90
+3073,Fahreddin Şükrü Torun,CENG327,90
+3074,Mustafa Yeniad,CENG301,60
+3074,Fatma Küçük,CENG207,120
+3074,Fadi Yılmaz,CENG303,90
+3074,Fahreddin Şükrü Torun,CENG305,90
+3074,Osman Serdar Gedik,CENG307,120
+3074,Muhammed Abdullah Bülbül,CENG315,90
+3074,Fahreddin Şükrü Torun,CENG327,90
+3074,Günsel Bingöl,CENG309,60
+3075,Mustafa Yeniad,CENG301,60
+3075,Fadi Yılmaz,CENG303,90
+3075,Fahreddin Şükrü Torun,CENG305,90
+3075,Osman Serdar Gedik,CENG307,120
+3075,Fahreddin Şükrü Torun,CENG327,90
+3073,Fadi Yılmaz,CENG325,60
+3073,Shafqat Ur Rehman,CENG433,90
+3076,Mustafa Yeniad,CENG301,60
+3076,Fadi Yılmaz,CENG303,90
+3076,Fahreddin Şükrü Torun,CENG305,90
+3076,Osman Serdar Gedik,CENG307,120
+3076,Fadi Yılmaz,CENG325,60
+3076,Fahreddin Şükrü Torun,CENG327,90
+3076,Fatih Vehbi Çelebi,CENG460,60
+3077,Mustafa Yeniad,CENG301,60
+3077,Fadi Yılmaz,CENG303,90
+3077,Fahreddin Şükrü Torun,CENG305,90
+3077,Osman Serdar Gedik,CENG307,120
+3077,Ahmet Esad Top,CENG317,60
+3077,Muhammed Abdullah Bülbül,CENG315,90
+3077,Günsel Bingöl,CENG309,60
+3078,Mustafa Yeniad,CENG301,60
+3078,Nezakat Sevda Javanshir,ENGR201,120
+3078,Fadi Yılmaz,CENG303,90
+3078,Fahreddin Şükrü Torun,CENG305,90
+3078,Osman Serdar Gedik,CENG307,120
+3078,Muhammed Abdullah Bülbül,CENG315,90
+3078,Yusuf Evren Aykaç,CENG427,120
+3078,Fahreddin Şükrü Torun,CENG327,90
+3079,Mustafa Yeniad,CENG301,60
+3079,Fadi Yılmaz,CENG303,90
+3079,Fahreddin Şükrü Torun,CENG305,90
+3079,Osman Serdar Gedik,CENG307,120
+3079,Ahmet Esad Top,CENG317,60
+3079,Muhammed Abdullah Bülbül,CENG315,90
+3079,Günsel Bingöl,CENG309,60
+3080,Mustafa Yeniad,CENG301,60
+3080,Muhammed Abdullah Bülbül,CENG201,90
+3080,Fadi Yılmaz,CENG303,90
+3080,Fahreddin Şükrü Torun,CENG305,90
+3080,Osman Serdar Gedik,CENG307,120
+3080,Fadi Yılmaz,CENG325,60
+3080,Fahreddin Şükrü Torun,CENG327,90
+3081,Mustafa Yeniad,CENG301,60
+3081,Fadi Yılmaz,CENG303,90
+3081,Fahreddin Şükrü Torun,CENG305,90
+3081,Osman Serdar Gedik,CENG307,120
+3081,Ahmet Esad Top,CENG317,60
+3081,Günsel Bingöl,CENG309,60
+3082,Mustafa Yeniad,CENG301,60
+3082,Fadi Yılmaz,CENG303,90
+3082,Fahreddin Şükrü Torun,CENG305,90
+3082,Osman Serdar Gedik,CENG307,120
+3082,Muhammed Abdullah Bülbül,CENG315,90
+3082,Fahreddin Şükrü Torun,CENG327,90
+3083,Mustafa Yeniad,CENG301,60
+3083,Fadi Yılmaz,CENG303,90
+3083,Fahreddin Şükrü Torun,CENG305,90
+3083,Osman Serdar Gedik,CENG307,120
+3083,Fadi Yılmaz,CENG325,60
+3083,Günsel Bingöl,CENG309,60
+3084,Mustafa Yeniad,CENG301,60
+3084,Fadi Yılmaz,CENG303,90
+3084,Fahreddin Şükrü Torun,CENG305,90
+3084,Osman Serdar Gedik,CENG307,120
+3084,Ahmet Esad Top,CENG317,60
+3084,Fahreddin Şükrü Torun,CENG327,90
+3084,Günsel Bingöl,CENG309,60
+3085,Mustafa Yeniad,CENG301,60
+3085,Nezakat Sevda Javanshir,ENGR201,120
+3085,Fadi Yılmaz,CENG303,90
+3085,Fahreddin Şükrü Torun,CENG305,90
+3085,Osman Serdar Gedik,CENG307,120
+3085,Muhammed Abdullah Bülbül,CENG315,90
+3085,Fatih Vehbi Çelebi,CENG460,60
+3086,Mustafa Yeniad,CENG301,60
+3086,Fadi Yılmaz,CENG303,90
+3086,Fahreddin Şükrü Torun,CENG305,90
+3086,Osman Serdar Gedik,CENG307,120
+3086,Fadi Yılmaz,CENG325,60
+3086,Günsel Bingöl,CENG309,60
+3087,Mustafa Yeniad,CENG301,60
+3087,Fadi Yılmaz,CENG303,90
+3087,Fahreddin Şükrü Torun,CENG305,90
+3087,Osman Serdar Gedik,CENG307,120
+3087,Fadi Yılmaz,CENG325,60
+3087,Fahreddin Şükrü Torun,CENG327,90
+3088,Mustafa Yeniad,CENG301,60
+3088,Muhammed Abdullah Bülbül,CENG201,90
+3088,Fadi Yılmaz,CENG303,90
+3088,Fahreddin Şükrü Torun,CENG305,90
+3088,Osman Serdar Gedik,CENG307,120
+3088,Fadi Yılmaz,CENG325,60
+3088,Fahreddin Şükrü Torun,CENG327,90
+3089,Mustafa Yeniad,CENG301,60
+3089,Muhammed Abdullah Bülbül,CENG201,90
+3089,Fadi Yılmaz,CENG303,90
+3089,Fahreddin Şükrü Torun,CENG305,90
+3089,Osman Serdar Gedik,CENG307,120
+3089,Muhammed Abdullah Bülbül,CENG315,90
+3089,Günsel Bingöl,CENG309,60
+3090,Mustafa Yeniad,CENG301,60
+3090,Fadi Yılmaz,CENG303,90
+3090,Fahreddin Şükrü Torun,CENG305,90
+3090,Osman Serdar Gedik,CENG307,120
+3090,Ahmet Esad Top,CENG317,60
+3090,Fadi Yılmaz,CENG325,60
+3090,Fahreddin Şükrü Torun,CENG327,90
+4001,Mustafa Yeniad,CENG465,60 
+4001,Yusuf Evren Aykaç,CENG431,90
+4001,Fadi Yılmaz,CENG325,60
+4001,Metin Aktaş,PHYS101,120
+4001,Fadi Yılmaz,CENG405,90
+4001,Ahmet Esad Top,CENG317,60
+4002,Yusuf Evren Aykaç,CENG427,120
+4002,Mustafa Yeniad,CENG465,60
+4002,Yusuf Evren Aykaç,CENG431,90
+4002,Fadi Yılmaz,CENG325,60
+4002,Fadi Yılmaz,CENG303,90
+4002,Fahreddin Şükrü Torun,CENG327,90
+4003,Yusuf Evren Aykaç,CENG427,120
+4003,Mustafa Yeniad,CENG465,60
+4003,Yusuf Evren Aykaç,CENG431,90
+4003,Fadi Yılmaz,CENG325,60
+4003,Fatih Nar,CENG463,120
+4004,Yusuf Evren Aykaç,CENG427,120
+4004,Mustafa Yeniad,CENG465,60
+4004,Yusuf Evren Aykaç,CENG431,90
+4004,Fadi Yılmaz,CENG325,60
+4004,Muhammed Abdullah Bülbül,CENG315,90
+4004,Osman Serdar Gedik,CENG307,120
+4004,Fatih Vehbi Çelebi,CENG460,60
+4005,Yusuf Evren Aykaç,CENG427,120
+4005,Mustafa Yeniad,CENG465,60
+4005,Yusuf Evren Aykaç,CENG431,90
+4005,Fatih Nar,CENG463,120
+4005,Ahmet Esad Top,CENG317,60
+4006,Mustafa Yeniad,CENG465,60
+4006,Yusuf Evren Aykaç,CENG431,90
+4006,Fadi Yılmaz,CENG405,90
+4006,Ahmet Esad Top,CENG317,60
+4006,Muhammed Abdullah Bülbül,CENG315,90
+4006,Fatih Vehbi Çelebi,CENG460,60
+4007,Yusuf Evren Aykaç,CENG427,120
+4007,Mustafa Yeniad,CENG465,60
+4007,Yusuf Evren Aykaç,CENG431,90
+4007,Fadi Yılmaz,CENG405,90
+4007,Ahmet Esad Top,CENG317,60
+4007,Osman Serdar Gedik,CENG307,120
+4007,Fatih Vehbi Çelebi,CENG460,60
+4008,Yusuf Evren Aykaç,CENG427,120
+4008,Mustafa Yeniad,CENG465,60
+4008,Yusuf Evren Aykaç,CENG431,90
+4008,Fadi Yılmaz,CENG405,90
+4008,Ahmet Esad Top,CENG317,60
+4008,Fatih Vehbi Çelebi,CENG460,60
+4009,Mustafa Yeniad,CENG465,60
+4009,Yusuf Evren Aykaç,CENG431,90
+4009,Fatih Nar,CENG463,120
+4009,Ahmet Esad Top,CENG317,60
+4009,Günsel Bingöl,CENG309,60
+4010,Yusuf Evren Aykaç,CENG427,120
+4010,Mustafa Yeniad,CENG465,60
+4010,Yusuf Evren Aykaç,CENG431,90
+4010,Fadi Yılmaz,CENG405,90
+4010,Ahmet Esad Top,CENG317,60
+4010,Osman Serdar Gedik,CENG307,120
+4010,Fatih Vehbi Çelebi,CENG460,60
+4011,Yusuf Evren Aykaç,CENG427,120
+4011,Mustafa Yeniad,CENG465,60
+4011,Yusuf Evren Aykaç,CENG431,90
+4011,Fadi Yılmaz,CENG405,90
+4011,Ahmet Esad Top,CENG317,60
+4011,Fahreddin Şükrü Torun,CENG305,90
+4012,Yusuf Evren Aykaç,CENG427,120
+4012,Mustafa Yeniad,CENG465,60
+4012,Shafqat Ur Rehman,CENG433,90
+4012,Fahreddin Şükrü Torun,CENG305,90
+4012,Fatih Nar,CENG463,120
+4012,Fadi Yılmaz,CENG405,90
+4012,Fatih Vehbi Çelebi,CENG460,60
+4013,Yusuf Evren Aykaç,CENG427,120
+4013,Mustafa Yeniad,CENG465,60
+4013,Shafqat Ur Rehman,CENG433,90
+4013,Fatih Nar,CENG463,120
+4013,Fadi Yılmaz,CENG405,90
+4013,Ahmet Esad Top,CENG317,60
+4013,Fadi Yılmaz,CENG303,90
+4014,Yusuf Evren Aykaç,CENG427,120
+4014,Mustafa Yeniad,CENG465,60
+4014,Shafqat Ur Rehman,CENG433,90
+4014,Fatih Nar,CENG463,120
+4014,Fadi Yılmaz,CENG405,90
+4015,Yusuf Evren Aykaç,CENG427,120
+4015,Mustafa Yeniad,CENG465,60
+4015,Shafqat Ur Rehman,CENG433,90
+4015,Fatih Nar,CENG463,120
+4015,Fadi Yılmaz,CENG405,90
+4015,Fahreddin Şükrü Torun,CENG305,90
+4015,Fatih Vehbi Çelebi,CENG460,60
+4016,Yusuf Evren Aykaç,CENG427,120
+4016,Mustafa Yeniad,CENG465,60
+4016,Shafqat Ur Rehman,CENG433,90
+4016,Fatih Nar,CENG463,120
+4016,Osman Serdar Gedik,CENG307,120
+4016,Fadi Yılmaz,CENG405,90
+4016,Günsel Bingöl,CENG309,60
+4017,Yusuf Evren Aykaç,CENG427,120
+4017,Mustafa Yeniad,CENG465,60
+4017,Shafqat Ur Rehman,CENG433,90
+4017,Fatih Nar,CENG463,120
+4017,Fahreddin Şükrü Torun,CENG305,90
+4018,Yusuf Evren Aykaç,CENG427,120
+4018,Mustafa Yeniad,CENG465,60
+4018,Shafqat Ur Rehman,CENG433,90
+4018,Fatih Nar,CENG463,120
+4018,Mustafa Yeniad,CENG301,60
+4019,Yusuf Evren Aykaç,CENG427,120
+4019,Mustafa Yeniad,CENG465,60
+4019,Shafqat Ur Rehman,CENG433,90
+4019,Fatih Nar,CENG463,120
+4019,Muhammed Abdullah Bülbül,CENG315,90
+4019,Fatih Vehbi Çelebi,CENG460,60
+4020,Yusuf Evren Aykaç,CENG427,120
+4020,Mustafa Yeniad,CENG465,60
+4020,Shafqat Ur Rehman,CENG433,90
+4020,Fatih Nar,CENG463,120
+4020,Muhammed Abdullah Bülbül,CENG315,90
+4020,Osman Serdar Gedik,CENG307,120
+4021,Mustafa Yeniad,CENG465,60 
+4021,Yusuf Evren Aykaç,CENG431,90
+4021,Fatih Nar,CENG463,120
+4021,Shafqat Ur Rehman,CENG433,90
+4021,Günsel Bingöl,CENG309,60
+4021,Fatih Vehbi Çelebi,CENG460,60
+4022,Mustafa Yeniad,CENG465,60 
+4022,Yusuf Evren Aykaç,CENG431,90
+4022,Fatih Nar,CENG463,120
+4022,Fatih Vehbi Çelebi,CENG460,60
+4023,Mustafa Yeniad,CENG465,60 
+4023,Yusuf Evren Aykaç,CENG431,90
+4023,Yusuf Evren Aykaç,CENG427,120
+4023,Fatih Nar,CENG463,120
+4023,Fatih Vehbi Çelebi,CENG460,60
+4024,Mustafa Yeniad,CENG465,60 
+4024,Yusuf Evren Aykaç,CENG431,90
+4024,Fatih Nar,CENG463,120
+4024,Shafqat Ur Rehman,CENG433,90
+4024,Fadi Yılmaz,CENG303,90
+4024,Günsel Bingöl,CENG309,60
+4025,Fadi Yılmaz,CENG405,90
+4025,Shafqat Ur Rehman,CENG433,90
+4025,Fatih Nar,CENG463,120
+4025,Fahreddin Şükrü Torun,CENG305,90
+4025,Fatih Vehbi Çelebi,CENG460,60
+4026,Fadi Yılmaz,CENG405,90
+4026,Shafqat Ur Rehman,CENG433,90
+4026,Yusuf Evren Aykaç,CENG427,120
+4026,Fatih Nar,CENG463,120
+4026,Osman Serdar Gedik,CENG307,120
+4027,Mustafa Yeniad,CENG465,60 
+4027,Yusuf Evren Aykaç,CENG431,90
+4027,Fatih Nar,CENG463,120
+4027,Ahmet Esad Top,CENG317,60
+4027,Fatih Vehbi Çelebi,CENG460,60
+4028,Shafqat Ur Rehman,CENG433,90
+4028,Yusuf Evren Aykaç,CENG427,120
+4028,Fadi Yılmaz,CENG405,90
+4028,Fahreddin Şükrü Torun,CENG305,90
+4028,Günsel Bingöl,CENG309,60
+4028,Fatih Vehbi Çelebi,CENG460,60
+4029,Yusuf Evren Aykaç,CENG431,90
+4029,Fatih Nar,CENG463,120
+4029,Fadi Yılmaz,CENG405,90
+4029,Shafqat Ur Rehman,CENG433,90
+4029,Mustafa Yeniad,CENG301,60
+4030,Fadi Yılmaz,CENG405,90
+4030,Shafqat Ur Rehman,CENG433,90
+4030,Yusuf Evren Aykaç,CENG427,120
+4030,Fatih Nar,CENG463,120
+4030,Muhammed Abdullah Bülbül,CENG201,90
+4030,Fatih Vehbi Çelebi,CENG460,60
+4031,Fadi Yılmaz,CENG405,90
+4031,Shafqat Ur Rehman,CENG433,90
+4031,Fatih Nar,CENG463,120
+4031,Yusuf Evren Aykaç,CENG427,120
+4031,Günsel Bingöl,CENG309,60
+4032,Fadi Yılmaz,CENG405,90
+4032,Shafqat Ur Rehman,CENG433,90
+4032,Yusuf Evren Aykaç,CENG427,120
+4032,Fahreddin Şükrü Torun,CENG305,90
+4032,Fatih Vehbi Çelebi,CENG460,60
+4033,Mustafa Yeniad,CENG465,60 
+4033,Yusuf Evren Aykaç,CENG431,90
+4033,Shafqat Ur Rehman,CENG433,90
+4033,Fatih Nar,CENG463,120
+4033,Fadi Yılmaz,CENG405,90
+4033,Fatih Vehbi Çelebi,CENG460,60
+4034,Mustafa Yeniad,CENG465,60 
+4034,Yusuf Evren Aykaç,CENG431,90
+4034,Fatih Nar,CENG463,120
+4034,Yusuf Evren Aykaç,CENG427,120
+4034,Fadi Yılmaz,CENG303,90
+4034,Fatih Vehbi Çelebi,CENG460,60
+4035,Mustafa Yeniad,CENG465,60 
+4035,Yusuf Evren Aykaç,CENG431,90
+4035,Shafqat Ur Rehman,CENG433,90
+4035,Fahreddin Şükrü Torun,CENG305,90
+4035,Fatih Vehbi Çelebi,CENG460,60
+4036,Mustafa Yeniad,CENG465,60 
+4036,Yusuf Evren Aykaç,CENG431,
+4036,Fatih Nar,CENG463,12090
+4036,Fadi Yılmaz,CENG405,90
+4037,Fadi Yılmaz,CENG405,90
+4037,Shafqat Ur Rehman,CENG433,90
+4037,Fatih Nar,CENG463,120
+4037,Yusuf Evren Aykaç,CENG427,120
+4037,Muhammed Abdullah Bülbül,CENG201,90
+4037,Fatih Vehbi Çelebi,CENG460,60
+4038,Fadi Yılmaz,CENG405,90
+4038,Shafqat Ur Rehman,CENG433,90
+4038,Yusuf Evren Aykaç,CENG427,120
+4038,Osman Serdar Gedik,CENG307,120
+4038,Fatih Vehbi Çelebi,CENG460,60
+4039,Fadi Yılmaz,CENG405,90
+4039,Shafqat Ur Rehman,CENG433,90
+4039,Yusuf Evren Aykaç,CENG427,120
+4039,Fatih Nar,CENG463,120
+4039,Fatih Vehbi Çelebi,CENG460,60
+4040,Fadi Yılmaz,CENG405,90
+4040,Shafqat Ur Rehman,CENG433,90
+4040,Fatih Nar,CENG463,120
+4040,Yusuf Evren Aykaç,CENG427,120
+4040,Mustafa Yeniad,CENG301,60
+4040,Fatih Vehbi Çelebi,CENG460,60
+4041,Mustafa Yeniad,CENG465,60 
+4041,Yusuf Evren Aykaç,CENG431,90
+4041,Shafqat Ur Rehman,CENG433,90
+4041,Fadi Yılmaz,CENG405,90
+4041,Fatih Vehbi Çelebi,CENG460,60
+4042,Mustafa Yeniad,CENG465,60 
+4042,Yusuf Evren Aykaç,CENG431,90
+4042,Fatih Nar,CENG463,120
+4042,Fadi Yılmaz,CENG405,90
+4042,Fatih Vehbi Çelebi,CENG460,60
+4043,Mustafa Yeniad,CENG465,60 
+4043,Yusuf Evren Aykaç,CENG431,90
+4043,Shafqat Ur Rehman,CENG433,90
+4043,Muhammed Abdullah Bülbül,CENG315,90
+4043,Fahreddin Şükrü Torun,CENG327,90
+4044,Mustafa Yeniad,CENG465,60 
+4044,Yusuf Evren Aykaç,CENG431,90
+4044,Fatih Nar,CENG463,120
+4044,Fahreddin Şükrü Torun,CENG305,90
+4044,Günsel Bingöl,CENG309,60
+4045,Mustafa Yeniad,CENG465,60 
+4045,Yusuf Evren Aykaç,CENG431,90
+4045,Fadi Yılmaz,CENG405,90
+4045,Fatih Vehbi Çelebi,CENG460,60
+4046,Mustafa Yeniad,CENG465,60 
+4046,Yusuf Evren Aykaç,CENG431,90
+4046,Shafqat Ur Rehman,CENG433,90
+4046,Muhammed Abdullah Bülbül,CENG315,90
+4046,Fadi Yılmaz,CENG303,90
+4047,Fadi Yılmaz,CENG405,90
+4047,Shafqat Ur Rehman,CENG433,90
+4047,Fadi Yılmaz,CENG405,90
+4047,Fatih Vehbi Çelebi,CENG460,60
+4057,Yusuf Evren Aykaç,CENG427,120
+4057,Osman Serdar Gedik,CENG307,120
+4048,Yusuf Evren Aykaç,CENG431,90
+4048,Shafqat Ur Rehman,CENG433,90
+4048,Yusuf Evren Aykaç,CENG427,120
+4048,Fahreddin Şükrü Torun,CENG305,90
+4048,Fatih Vehbi Çelebi,CENG460,60
+4049,Mustafa Yeniad,CENG465,60 
+4049,Yusuf Evren Aykaç,CENG431,90
+4049,Fatih Nar,CENG463,120
+4049,Muhammed Abdullah Bülbül,CENG315,90
+4050,Mustafa Yeniad,CENG465,60 
+4050,Yusuf Evren Aykaç,CENG431,90
+4050,Fadi Yılmaz,CENG405,90
+4050,Muhammed Abdullah Bülbül,CENG315,90
+4050,Fatih Vehbi Çelebi,CENG460,60
+4051,Mustafa Yeniad,CENG465,60 
+4051,Yusuf Evren Aykaç,CENG431,90
+4051,Shafqat Ur Rehman,CENG433,90
+4051,Fadi Yılmaz,CENG405,90
+4052,Mustafa Yeniad,CENG465,60 
+4052,Yusuf Evren Aykaç,CENG431,90
+4052,Fatih Nar,CENG463,120
+4052,Fadi Yılmaz,CENG405,90
+4052,Fatih Vehbi Çelebi,CENG460,60
+4053,Yusuf Evren Aykaç,CENG431,90
+4053,Shafqat Ur Rehman,CENG433,90
+4053,Yusuf Evren Aykaç,CENG427,120
+4053,Fadi Yılmaz,CENG405,90
+4053,Fadi Yılmaz,CENG303,90
+4054,Mustafa Yeniad,CENG465,60 
+4054,Yusuf Evren Aykaç,CENG431,90
+4054,Shafqat Ur Rehman,CENG433,90
+4054,Fadi Yılmaz,CENG405,90
+4055,Fadi Yılmaz,CENG405,90
+4055,Shafqat Ur Rehman,CENG433,90
+4055,Yusuf Evren Aykaç,CENG427,120
+4055,Muhammed Abdullah Bülbül,CENG315,90
+4055,Fatih Vehbi Çelebi,CENG460,60
+4056,Mustafa Yeniad,CENG465,60 
+4056,Yusuf Evren Aykaç,CENG431,90
+4056,Fadi Yılmaz,CENG405,90
+4056,Fahreddin Şükrü Torun,CENG305,90
+4057,Mustafa Yeniad,CENG465,60 
+4057,Yusuf Evren Aykaç,CENG431,90
+4057,Fatih Nar,CENG463,120
+4057,Fadi Yılmaz,CENG405,90
+4057,Fatih Vehbi Çelebi,CENG460,60
+4058,Yusuf Evren Aykaç,CENG431,90
+4058,Fatih Nar,CENG463,120
+4058,Yusuf Evren Aykaç,CENG427,120
+4058,Osman Serdar Gedik,CENG307,120
+4058,Fatih Vehbi Çelebi,CENG460,60
+4059,Mustafa Yeniad,CENG465,60 
+4059,Fadi Yılmaz,CENG405,90
+4059,Yusuf Evren Aykaç,CENG427,120
+4060,Yusuf Evren Aykaç,CENG431,90
+4060,Fatih Nar,CENG463,120
+4060,Fadi Yılmaz,CENG405,90
+4060,Shafqat Ur Rehman,CENG433,90
+4060,Ahmet Esad Top,CENG317,60
+4061,Fadi Yılmaz,CENG405,90
+4061,Shafqat Ur Rehman,CENG433,90
+4061,Fatih Nar,CENG463,120
+4061,Yusuf Evren Aykaç,CENG427,120
+4061,Fahreddin Şükrü Torun,CENG327,90
+4061,Fatih Vehbi Çelebi,CENG460,60
+4062,Shafqat Ur Rehman,CENG433,90
+4062,Fadi Yılmaz,CENG405,90
+4062,Yusuf Evren Aykaç,CENG427,120
+4062,Osman Serdar Gedik,CENG307,120
+4062,Fadi Yılmaz,CENG303,90
+4063,Shafqat Ur Rehman,CENG433,90
+4063,Fadi Yılmaz,CENG405,90
+4063,Yusuf Evren Aykaç,CENG431,90
+4063,Muhammed Abdullah Bülbül,CENG315,90
+4063,Fahreddin Şükrü Torun,CENG327,90
+4064,Shafqat Ur Rehman,CENG433,90
+4064,Fadi Yılmaz,CENG405,90
+4064,Yusuf Evren Aykaç,CENG431,90
+4064,Yusuf Evren Aykaç,CENG427,120
+4064,Fadi Yılmaz,CENG303,90
+4064,Fatih Vehbi Çelebi,CENG460,60
+4065,Shafqat Ur Rehman,CENG433,90
+4065,Yusuf Evren Aykaç,CENG427,120
+4065,Mustafa Yeniad,CENG465,60 
+4065,Osman Serdar Gedik,CENG307,120
+4065,Fatih Vehbi Çelebi,CENG460,60
+4066,Shafqat Ur Rehman,CENG433,90
+4066,Fadi Yılmaz,CENG405,90
+4066,Yusuf Evren Aykaç,CENG427,120
+4066,Fahreddin Şükrü Torun,CENG305,90
+4067,Shafqat Ur Rehman,CENG433,90
+4067,Yusuf Evren Aykaç,CENG431,90
+4067,Fadi Yılmaz,CENG405,90
+4067,Muhammed Abdullah Bülbül,CENG315,90
+4067,Fahreddin Şükrü Torun,CENG327,90
+4067,Fatih Vehbi Çelebi,CENG460,60
