@@ -291,7 +291,39 @@ class ExamSchedulingTool:
         old_schedule[course_day][course_time]["course"] = ""
         old_schedule[course_day][course_time]["room"] = ""
         old_schedule[course_day][course_time]["end time"] = ""
-
+        # Extra: check if there is a collision with other exams
+        # If there is a collision, move the other exam to a random empty time
+        for day in old_schedule:
+            for time in old_schedule[day]:
+                if old_schedule[day][time]["course"] != "":
+                    end_time = old_schedule[day][time]["end time"]
+                    for other_time in old_schedule[day]:
+                        if other_time != time:
+                            if old_schedule[day][other_time]["course"] != "":
+                                if pd.to_datetime(time, format="%H.%M") < pd.to_datetime(other_time, format="%H.%M") < pd.to_datetime(end_time, format="%H.%M"):
+                                    # Get random day and time to move other course to
+                                    random_day = np.random.choice(list(old_schedule.keys()))
+                                    random_time = np.random.choice(list(old_schedule[random_day].keys()))
+    
+                                    # If same day and time is not empty then try again
+                                    while old_schedule[random_day][random_time]["course"] != "":
+                                        random_day = np.random.choice(list(old_schedule.keys()))
+                                        random_time = np.random.choice(list(old_schedule[random_day].keys()))
+    
+                                    # Get exam duration in minutes
+                                    exam_duration = class_list[class_list["CourseID"] == old_schedule[day][other_time]["course"]]["ExamDuration(in mins)"].unique()[0]
+                                    # Add exam duration to time to get end time
+                                    end_time = pd.to_datetime(random_time, format="%H.%M") + pd.DateOffset(minutes=exam_duration)
+                                    # Assign end time to schedule
+                                    old_schedule[random_day][random_time]["end time"] = end_time.strftime("%H.%M")
+    
+                                    # Move course to new day and time
+                                    old_schedule[random_day][random_time]["course"] = old_schedule[day][other_time]["course"]
+                                    old_schedule[random_day][random_time]["room"] = ""
+                                    # Remove course from old day and time
+                                    old_schedule[day][other_time]["course"] = ""
+                                    old_schedule[day][other_time]["room"] = ""
+                                    old_schedule[day][other_time]["end time"] = ""
         return original_schedule
 
     def simulated_annealing_scheduler(self, temp_max, temp_min, cooling_rate, max_iter, K):
