@@ -332,6 +332,8 @@ class ExamSchedulingTool:
         schedule = self.first_random_state(self.empty_schedule)
         old_cost = self.cost(schedule)
         iter_num = 0
+        add_extra_day_iter_threshold = 1000
+        flag_day_added = False
         
         temperature = temp_max
         while temperature >= temp_min:
@@ -358,3 +360,20 @@ class ExamSchedulingTool:
 
             if iter_num % 50 == 0:
                 print("Iteration: ", iter_num, "Fault Score: ", old_cost)
+
+            # If could not find a solution with 6 days, add an extra day
+            if iter_num > add_extra_day_iter_threshold and not flag_day_added:
+                print(f"Could not find a solution with 6 days after {add_extra_day_iter_threshold} iterations. Adding an extra day...")
+                flag_day_added = True
+                self.add_extra_day(schedule)
+
+
+    def add_extra_day(self, schedule):
+        # Add an extra day named "Sunday"
+        schedule["Sunday"] = {"09.00":{"course":"", "room":"", "end time":""}}
+        # Add the rest of the times - every 30 minutes
+        time = "09.00"
+        while time != "18.30":
+            schedule["Sunday"][time] = {"course": "", "room": "", "end time":""}
+            time = pd.to_datetime(time, format="%H.%M") + pd.DateOffset(minutes=30)
+            time = time.strftime("%H.%M")         
