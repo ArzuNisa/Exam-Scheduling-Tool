@@ -17,6 +17,11 @@ class ExamSchedulingTool:
         self.all_professor_names = self.class_list["Professor Name"].unique().tolist()
 
         self.init_classroom_capacities()
+        # Constants for classroom capacities
+        # Get min of the real capacities
+        self.SMALL_CLASSROOM_THRESHOLD = self.classroom_real_capacities["Capacity"].min()
+        # Get max of the real capacities
+        self.BIG_CLASSROOM_THRESHOLD = self.classroom_real_capacities["Capacity"].max()
         self.init_empty_schedule()
         self.init_blocked_hours()
 
@@ -307,7 +312,6 @@ class ExamSchedulingTool:
                 flag_day_added = True
                 self.add_extra_day(schedule)
 
-
     def add_extra_day(self, schedule):
         # Add an extra day named "Sunday"
         schedule["Sunday"] = {"09.00":{"course":"", "room":"", "end time":""}}
@@ -316,7 +320,32 @@ class ExamSchedulingTool:
         while time != "18.30":
             schedule["Sunday"][time] = {"course": "", "room": "", "end time":""}
             time = pd.to_datetime(time, format="%H.%M") + pd.DateOffset(minutes=30)
-            time = time.strftime("%H.%M")         
+            time = time.strftime("%H.%M")  
+
+    def set_exam_classrooms(self, schedule):
+        # Assign classrooms to courses
+        for day in schedule:
+            for time in schedule[day]:
+                if schedule[day][time]["course"] != "":
+                    course_id = schedule[day][time]["course"]
+                    # Get num of students take the course
+                    course_capacity = self.get_num_students_take_course(course_id)
+                    
+                    # If course capacity is higher than the whole capacity of the classrooms, raise an error
+                    if course_capacity > self.classroom_real_capacities["Capacity"].sum():
+                        print("Course capacity is higher than the whole capacity of the classrooms. Exiting the program...")
+                        exit(1) 
+                    
+                    # Assign a random small classroom
+                    elif 0 < course_capacity <= self.SMALL_CLASSROOM_THRESHOLD:
+                        random_small_classroom = np.random.choice(self.classroom_real_capacities[self.classroom_real_capacities["Capacity"] <= self.SMALL_CLASSROOM_THRESHOLD]["RoomID"].tolist())
+                        schedule[day][time]["room"] = random_small_classroom
+
+                    # Assign a random big classroom
+                    elif self.SMALL_CLASSROOM_THRESHOLD < course_capacity <= self.BIG_CLASSROOM_THRESHOLD:
+                        random_big_classroom = np.random.choice(self.classroom_real_capacities[self.classroom_real_capacities["Capacity"] > self.SMALL_CLASSROOM_THRESHOLD]["RoomID"].tolist())
+                        schedule[day][time]["room"] = random_big_classroom
+       
 
     def show_schedule(self, schedule):
         """
