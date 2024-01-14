@@ -1,13 +1,21 @@
-import pandas as pd
-import numpy as np
 import copy
-import random
 import math
+import numpy as np
 import os
+import pandas as pd
+import random
 
 
 class ExamSchedulingTool:
+    """
+    Exam Scheduling Tool class that schedules the exams of the given courses and classrooms with simulated annealing algorithm
+    """
+
     def __init__(self, class_list_file_path='class_list.csv', classroom_capacities_file_path='classroom_capacities.csv'):
+        """
+        Initializes the ExamSchedulingTool object with the given input files and creates the empty schedule and classroom capacities dataframes
+        """
+
         self.class_list, self.classroom_capacity_list = self.read_input_files(class_list_file_path, classroom_capacities_file_path)
     
         self.classroom_real_capacities = None
@@ -26,6 +34,11 @@ class ExamSchedulingTool:
         self.init_blocked_hours()
 
     def read_input_files(self, class_list_file_path, classroom_capacities_file_path):
+        """
+        Reads the input files and returns the dataframes of the files
+        """
+
+        # Check if the input files exist
         try:
             class_list = pd.read_csv(class_list_file_path)
             classroom_capacity_list = pd.read_csv(classroom_capacities_file_path)
@@ -36,14 +49,21 @@ class ExamSchedulingTool:
         return class_list, classroom_capacity_list
 
     def init_blocked_hours(self):
+        """
+        Initializes the blocked hours
+        """
+
         blocked_hours_str = input("Enter blocked hours in the format of\n'course_id Day start_time duration(minutes), course_id Day start_time duration(minutes)...' \n\nExample Usage: TIT101 Monday 09.00 60, TDL101 Wednesday 12.00 90\n\nType 's' to skip this step: ")
         
+        # If user types 's' then skip this step
         if blocked_hours_str == "s":
             print("Skipped")
             return
 
+        # Split the input by comma
         blocked_hours = blocked_hours_str.split(",")
 
+        # Check if the input is valid
         for day_hour in blocked_hours:
             try:
                 course_id, day, start_time, duration = day_hour.strip().split(" ")
@@ -51,30 +71,39 @@ class ExamSchedulingTool:
                 print("Invalid input. Exiting the program...")
                 exit(1)
 
+            # Check the validity of the input
             self.handle_blocked_hours(day, start_time, duration)
-
+            
             self.empty_schedule[day][start_time]["course"] = f"BLOCKED BY {course_id}"
 
             end_time = pd.to_datetime(start_time, format="%H.%M") + pd.DateOffset(minutes=int(duration))
             self.empty_schedule[day][start_time]["end time"] =  end_time.strftime("%H.%M")
         
     def handle_blocked_hours(self, day, start_time, duration):
+        """
+        Handles the blocked hours input
+        """
+
         # Check if the day is valid
-            if day not in self.empty_schedule:
-                print("Invalid day: ", day, "\nExiting the program...")
-                exit(1)
+        if day not in self.empty_schedule:
+            print("Invalid day: ", day, "\nExiting the program...")
+            exit(1)
 
-            # Check if the hours is valid
-            if start_time not in self.empty_schedule[day]:
-                print("Invalid start time: ", start_time, "\nExiting the program...")
-                exit(1)
+        # Check if the hours is valid
+        if start_time not in self.empty_schedule[day]:
+            print("Invalid start time: ", start_time, "\nExiting the program...")
+            exit(1)
 
-            # Check if the duration is valid
-            if not duration.isnumeric():
-                print("Invalid duration: ", duration, "\nExiting the program...")
-                exit(1)
+        # Check if the duration is valid
+        if not duration.isnumeric():
+            print("Invalid duration: ", duration, "\nExiting the program...")
+            exit(1)
     
     def init_classroom_capacities(self):
+        """
+        Initializes the classroom capacities
+        """
+        
         # Get a copy of the classroom data
         self.classroom_real_capacities = self.classroom_capacity_list.copy()
 
@@ -88,6 +117,10 @@ class ExamSchedulingTool:
         self.classroom_real_capacities.sort_values(by=['Capacity'], inplace=True, ascending=False)
 
     def init_empty_schedule(self):
+        """
+        Initializes the empty schedule
+        """
+
         # Set the empty schedule to the default schedule
         self.empty_schedule = {"Monday":{"09.00":{"course":"", "room":"", "end time":""}},
             "Tuesday":{"09.00":{"course":"", "room":"", "end time":""}},
@@ -106,6 +139,10 @@ class ExamSchedulingTool:
                 time = time.strftime("%H.%M")
 
     def student_has_two_exams_at_same_time(self, student_id, course1, course2):
+        """
+        Returns True if the student has two exams at the same time on the same day
+        """
+
         student_courses = self.get_all_courses_of_student(student_id)
         if course1 in student_courses and course2 in student_courses:
             return True
@@ -113,9 +150,17 @@ class ExamSchedulingTool:
         return False
     
     def get_all_courses_of_student(self, student_id):
+        """
+        Returns all the courses of the given student
+        """
+
         return self.class_list[self.class_list["StudentID"] == student_id]["CourseID"].tolist()
     
     def professor_has_two_exams_at_same_time(self, professor_name, courseID1, courseID2):
+        """
+        Returns True if the professor has two exams at the same time on the same day
+        """
+
         professor_courses = self.get_all_courses_of_professor(professor_name)
         if courseID1 in professor_courses and courseID2 in professor_courses:
             return True
@@ -123,13 +168,25 @@ class ExamSchedulingTool:
         return False
     
     def get_all_courses_of_professor(self, professor_name):
+        """
+        Returns all the courses of the given professor
+        """
+
         return self.class_list[self.class_list["Professor Name"] == professor_name]["CourseID"].unique().tolist()
 
     def get_num_students_take_course(self, courseID):
+        """
+        Returns the number of students take the given course
+        """
+
         return self.class_list[self.class_list["CourseID"] == courseID]["CourseID"].count()
 
 
     def first_random_state(self, schedule):
+        """
+        Creates the first random state of the schedule
+        """
+
         temp_schedule = copy.deepcopy(schedule)
 
         for course in self.class_list["CourseID"].unique().tolist():
@@ -155,6 +212,10 @@ class ExamSchedulingTool:
         return temp_schedule
 
     def print_schedule(self, schedule):
+        """
+        Prints the schedule to the console
+        """
+
         #print(course, random_day, random_time, end_time.strftime("%H.%M"), "exam duration: ", exam_duration)
         for day in schedule:
             for time in schedule[day]:
@@ -162,8 +223,11 @@ class ExamSchedulingTool:
                     print(schedule[day][time]["course"], day, time, schedule[day][time]["end time"])
 
     def cost(self, schedule):
-        cost = 0
+        """
+        Returns the cost of the given schedule based on the constraints
+        """
 
+        cost = 0
 
         # Check if a course time is overlapping with another course
         for day in schedule:
@@ -195,12 +259,13 @@ class ExamSchedulingTool:
                                         if self.professor_has_two_exams_at_same_time(professor, schedule[day][time]["course"], schedule[day][other_time]["course"]):
                                             cost += 1
         
-       
-
-
         return cost
-                        
+
     def successor_move(self, old_schedule):
+        """
+        Returns a successor move of the given schedule
+        """
+
         original_schedule = copy.deepcopy(old_schedule)
 
         # Get random course to move
@@ -240,6 +305,10 @@ class ExamSchedulingTool:
         return original_schedule
 
     def simulated_annealing_scheduler(self, temp_max, temp_min, cooling_rate, max_iter, K):
+        """
+        Simulated annealing scheduler
+        """
+
         print("\n\nStarting simulated annealing scheduler...\n")
 
         schedule = self.first_random_state(self.empty_schedule)
@@ -249,28 +318,39 @@ class ExamSchedulingTool:
         flag_day_added = False
         
         temperature = temp_max
+        # While temperature is higher than minimum temperature
         while temperature >= temp_min:
+            # While iteration number is lower than max iteration
             for i in range(max_iter):
+                # Get the successor move
                 schedule_before_update = self.successor_move(schedule)
+                # Calculate the cost of the new schedule
                 new_cost = self.cost(schedule)
 
+                # If cost is 0 then return the schedule
                 if new_cost == 0:
                     total = iter_num + i
                     print(f"Found in {total}. iteration")
                     return schedule
                 
+                # Calculate delta
                 delta = new_cost - old_cost
                 if delta >= 0:
+                    # If delta is positive then reject the move
                     if random.random() > math.exp(-1.0 * delta / (K * temperature)):
                         schedule = schedule_before_update
+                    # Accept the bad move
                     else:
                         old_cost = new_cost
+                # If delta is negative then accept the move
                 else:
                     old_cost = new_cost
 
+            # Update the iteration number and temperature
             iter_num += max_iter
             temperature *= cooling_rate
 
+            # Print the iteration number and cost
             if iter_num % 50 == 0:
                 print("Iteration: ", iter_num, "Fault Score: ", old_cost)
 
@@ -281,6 +361,9 @@ class ExamSchedulingTool:
                 self.add_extra_day(schedule)
 
     def add_extra_day(self, schedule):
+        """
+        Adds an extra day to the schedule named "Sunday"
+        """
         # Add an extra day named "Sunday"
         schedule["Sunday"] = {"09.00":{"course":"", "room":"", "end time":""}}
         # Add the rest of the times - every 30 minutes
@@ -291,9 +374,15 @@ class ExamSchedulingTool:
             time = time.strftime("%H.%M")  
             
     def set_free_all_classrooms(self):
+        """
+        Sets all classrooms to free
+        """
         self.classroom_real_capacities["Occupied"] = False
-        
+
     def set_exam_classrooms(self, schedule):
+        """
+        Assigns classrooms to courses
+        """
         # Assign classrooms to courses
         for day in schedule:
             for time in schedule[day]:
@@ -372,14 +461,17 @@ class ExamSchedulingTool:
 
                         # Free all classrooms that is occupied for the next iteration
                         self.set_free_all_classrooms()
-       
+    
     def get_first_occured_digit(self, course_name):
-            for c in course_name:
-                if c.isdigit():
-                    return c
-                
-                if c == " ":
-                    return "0"
+        """
+        Returns the first occured digit in the course name if there is any 
+        """
+        for c in course_name:
+            if c.isdigit():
+                return c
+            
+            if c == " ":
+                return "0"
                 
     def show_schedule(self, schedule):
         """
@@ -433,9 +525,6 @@ class ExamSchedulingTool:
         print("\n------------------------------------------- BLOCKED HOURS --------------------------------------------")
         print(blocked_hourse_courses, end="")
         print("------------------------------------------------------------------------------------------------------"),
-
-
-
 
 def print_welcome_message():
     os.system('cls||clear')
