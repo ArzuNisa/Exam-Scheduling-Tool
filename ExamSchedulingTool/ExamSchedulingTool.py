@@ -157,7 +157,19 @@ class ExamSchedulingTool:
 
     def cost(schedule, class_list):
         cost = 0
-    
+
+
+        # Check if a course time is overlapping with another course
+        for day in schedule:
+            for time in schedule[day]:
+                if schedule[day][time]["course"] != "":
+                    end_time = schedule[day][time]["end time"]
+                    for other_time in schedule[day]:
+                        if other_time != time:
+                            if schedule[day][other_time]["course"] != "":
+                                if pd.to_datetime(time, format="%H.%M") < pd.to_datetime(other_time, format="%H.%M") < pd.to_datetime(end_time, format="%H.%M"):
+                                    cost += 1
+                                    
         # Check all the students and if a student has more than one exam at the same time on the same day add 1 to cost
         # Also check all the professors and if a professor has more than one exam at the same time on the same day add 1 to cost
         for day in schedule:
@@ -177,83 +189,10 @@ class ExamSchedulingTool:
                                         if professor_has_two_exams_at_same_time(professor, schedule[day][time]["course"], schedule[day][other_time]["course"]):
                                             cost += 1
         
-        # If cost is 0 (exams placed properly), try to fit course exams that has collision with other exams to empty classrooms
-        # After trying to place them, if there is not enough empty classrooms, add 1 to cost
-        # Exams can be placed more than one empty classroom according to their student numbers
-        if cost == 0:
-            for day in schedule:
-                for time in schedule[day]:
-                    if schedule[day][time]["course"] != "":
-                        end_time_course1 = schedule[day][time]["end time"]
-                        
-                        # If classroom free time has passed, make it free
-                        for i in range(len(classroom_real_capacity_dict)):
-                            if pd.to_datetime(time, format="%H.%M") >= pd.to_datetime(classroom_real_capacity_dict.iloc[i, 3], format="%H.%M"):
-                                classroom_real_capacity_dict.iloc[i, 2] = False
-                        
-                        num_students_course1 = get_num_students_take_course(schedule[day][time]["course"], class_list)
-                        # Place course to classrooms
-                        for i in range(len(classroom_real_capacity_dict)):
-                            while num_students_course1 > 0:
-                                if classroom_real_capacity_dict.iloc[i, 2] == False:
-                                    classroom_real_capacity_dict.iloc[i, 2] = True
-                                    classroom_real_capacity_dict.iloc[i, 3] = end_time_course1
-    
-                                    if schedule[day][time]["room"] == "":
-                                        schedule[day][time]["room"] = classroom_real_capacity_dict.iloc[i, 0]
-                                    else:
-                                        schedule[day][time]["room"] += "-" + classroom_real_capacity_dict.iloc[i, 0]
-    
-                                    num_students_course1 -= classroom_real_capacity_dict.iloc[i, 1]
-                                
-                                else: 
-                                    break
-    
-                        if num_students_course1 > 0:
-                            cost += 1
-                            continue
-                            
-                        for other_time in schedule[day]:
-                            if other_time != time:
-                                if schedule[day][other_time]["course"] != "":
-                                    end_time_course2 = schedule[day][other_time]["end time"]
-    
-                                    if pd.to_datetime(time, format="%H.%M") < pd.to_datetime(other_time, format="%H.%M") < pd.to_datetime(end_time_course1, format="%H.%M"):
-                                        num_students_course2 = get_num_students_take_course(schedule[day][other_time]["course"], class_list)
-                                        
-                                        for i in range(len(classroom_real_capacity_dict)):
-                                            while num_students_course2 > 0:
-                                                if classroom_real_capacity_dict.iloc[i, 2] == False:
-                                                    classroom_real_capacity_dict.iloc[i, 2] = True
-                                                    classroom_real_capacity_dict.iloc[i, 3] = end_time_course2
-    
-                                                    if schedule[day][other_time]["room"] == "":
-                                                        schedule[day][other_time]["room"] = classroom_real_capacity_dict.iloc[i, 0]
-                                                    else:
-                                                        schedule[day][other_time]["room"] += "-" + classroom_real_capacity_dict.iloc[i, 0]
-                                                    num_students_course2 -= classroom_real_capacity_dict.iloc[i, 1]
-                                                
-                                                else: 
-                                                    break
-                                            
-                                        if num_students_course2 > 0:
-                                            cost += 1
-                                            break
-
-                                        for i in range(len(classroom_real_capacity_dict)):
-                                            if num_students <= classroom_real_capacity_dict.iloc[i, 1]:
-                                                if classroom_real_capacity_dict.iloc[i, 2] == False:
-                                                    classroom_real_capacity_dict.iloc[i, 2] = True
-                                                    schedule[day][other_time]["room"] = classroom_real_capacity_dict.iloc[i, 0]
-                                                    break
-
-                                            if i == len(classroom_real_capacity_dict) - 1:
-                                                if classroom_real_capacity_dict.iloc[i, 2] == False:
-                                                    classroom_real_capacity_dict.iloc[i, 2] = True
-                                                    num_students -= classroom_real_capacity_dict.iloc[i, 1]
+       
 
 
-    return cost
+        return cost
                         
     def successor_move(self, old_schedule):
         original_schedule = copy.deepcopy(old_schedule)
@@ -311,7 +250,7 @@ class ExamSchedulingTool:
                                         random_time = np.random.choice(list(old_schedule[random_day].keys()))
     
                                     # Get exam duration in minutes
-                                    exam_duration = class_list[class_list["CourseID"] == old_schedule[day][other_time]["course"]]["ExamDuration(in mins)"].unique()[0]
+                                    exam_duration = self.class_list[self.class_list["CourseID"] == old_schedule[day][other_time]["course"]]["ExamDuration(in mins)"].unique()[0]
                                     # Add exam duration to time to get end time
                                     end_time = pd.to_datetime(random_time, format="%H.%M") + pd.DateOffset(minutes=exam_duration)
                                     # Assign end time to schedule
