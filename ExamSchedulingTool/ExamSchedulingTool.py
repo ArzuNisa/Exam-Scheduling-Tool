@@ -3,7 +3,7 @@ import numpy as np
 import copy
 import random
 import math
-
+import os
 
 class ExamSchedulingTool:
     def __init__(self, class_list_file_path='class_list.csv', classroom_capacities_file_path='classroom_capacities.csv'):
