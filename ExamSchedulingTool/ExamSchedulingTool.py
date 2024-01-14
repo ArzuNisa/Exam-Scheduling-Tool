@@ -377,3 +377,56 @@ class ExamSchedulingTool:
             schedule["Sunday"][time] = {"course": "", "room": "", "end time":""}
             time = pd.to_datetime(time, format="%H.%M") + pd.DateOffset(minutes=30)
             time = time.strftime("%H.%M")         
+
+    def show_schedule(self, schedule):
+        """
+        Prints the schedule to the console in a readable format
+        """
+
+        # Get the courses of each year
+        first_year_course_schedule = ""
+        second_year_course_schedule = ""
+        third_year_course_schedule = ""
+        fourth_year_course_schedule = ""
+        # Get the blocked hours
+        blocked_hourse_courses = ""
+
+    
+        for day in schedule:
+            for time in schedule[day]:
+                if schedule[day][time]["course"] != "":
+                    # Check the course code and add to the corresponding year
+                    # e.g. 1. year courses start with 1
+                    # Find the first occured digit in the course code
+                    if self.get_first_occured_digit(schedule[day][time]["course"]) == "1":
+                        first_year_course_schedule += f" \t {schedule[day][time]['course']} \t | \t {day} \t | \t {time}-{schedule[day][time]['end time']}  \t  | \t {schedule[day][time]['room']}\n"
+
+                    elif self.get_first_occured_digit(schedule[day][time]["course"]) == "2":
+                        second_year_course_schedule += f" \t {schedule[day][time]['course']} \t | \t {day} \t | \t {time}-{schedule[day][time]['end time']}  \t  | \t {schedule[day][time]['room']}\n"
+                    
+                    elif self.get_first_occured_digit(schedule[day][time]["course"]) == "3":
+                        third_year_course_schedule += f" \t {schedule[day][time]['course']} \t | \t {day} \t | \t {time}-{schedule[day][time]['end time']}  \t  | \t {schedule[day][time]['room']}\n"
+                    
+                    elif self.get_first_occured_digit(schedule[day][time]["course"]) == "4":
+                        fourth_year_course_schedule += f" \t {schedule[day][time]['course']} \t | \t {day} \t | \t {time}-{schedule[day][time]['end time']}  \t  | \t {schedule[day][time]['room']}\n"
+
+                    # Blocked Hours
+                    else:
+                        blocked_hourse_courses += f"     {schedule[day][time]['course']} \t | \t {day} \t | \t {time}-{schedule[day][time]['end time']}  \t  | \t\n"
+
+        # Print the schedule to the console in a readable format
+        input("\nPress Enter to show the schedule...")
+        print("\n\n--------------------------------------------- THE SCHEDULE -------------------------------------------")
+        print("\n       Course Code \t | \t   Day \t\t | \t    Time  \t  | \t     Classes")
+        print("------------------------------------------------------------------------------------------------------")
+        print(first_year_course_schedule, end="")
+        print("------------------------------------------------------------------------------------------------------")
+        print(second_year_course_schedule, end="")
+        print("------------------------------------------------------------------------------------------------------")
+        print(third_year_course_schedule, end="")
+        print("------------------------------------------------------------------------------------------------------")
+        print(fourth_year_course_schedule, end="")
+        print("------------------------------------------------------------------------------------------------------")
+        print("\n------------------------------------------- BLOCKED HOURS --------------------------------------------")
+        print(blocked_hourse_courses, end="")
+        print("------------------------------------------------------------------------------------------------------")
