@@ -5,6 +5,7 @@ import random
 import math
 import os
 
+
 class ExamSchedulingTool:
     def __init__(self, class_list_file_path='class_list.csv', classroom_capacities_file_path='classroom_capacities.csv'):
         self.class_list, self.classroom_capacity_list = self.read_input_files(class_list_file_path, classroom_capacities_file_path)
@@ -155,7 +156,7 @@ class ExamSchedulingTool:
                 if schedule[day][time]["course"] != "":
                     print(schedule[day][time]["course"], day, time, schedule[day][time]["end time"])
 
-    def cost(schedule, class_list):
+    def cost(self, schedule, class_list):
         cost = 0
 
 
@@ -182,11 +183,11 @@ class ExamSchedulingTool:
                                 if pd.to_datetime(time, format="%H.%M") < pd.to_datetime(other_time, format="%H.%M") < pd.to_datetime(end_time, format="%H.%M"):
                                     # Check if a student has more than one exam at the same time on the same day
                                     for student in self.all_student_numbers:
-                                        if student_has_two_exams_at_same_time(student, schedule[day][time]["course"], schedule[day][other_time]["course"]):
+                                        if self.student_has_two_exams_at_same_time(student, schedule[day][time]["course"], schedule[day][other_time]["course"]):
                                             cost += 1
                                     # Check if a professor has more than one exam at the same time on the same day
                                     for professor in self.all_professors_names:
-                                        if professor_has_two_exams_at_same_time(professor, schedule[day][time]["course"], schedule[day][other_time]["course"]):
+                                        if self.professor_has_two_exams_at_same_time(professor, schedule[day][time]["course"], schedule[day][other_time]["course"]):
                                             cost += 1
         
        
