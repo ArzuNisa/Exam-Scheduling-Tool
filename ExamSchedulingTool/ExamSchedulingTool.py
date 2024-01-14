@@ -346,7 +346,14 @@ class ExamSchedulingTool:
                         random_big_classroom = np.random.choice(self.classroom_real_capacities[self.classroom_real_capacities["Capacity"] > self.SMALL_CLASSROOM_THRESHOLD]["RoomID"].tolist())
                         schedule[day][time]["room"] = random_big_classroom
        
-
+    def get_first_occured_digit(self, course_name):
+            for c in course_name:
+                if c.isdigit():
+                    return c
+                
+                if c == " ":
+                    return "0"
+                
     def show_schedule(self, schedule):
         """
         Prints the schedule to the console in a readable format
