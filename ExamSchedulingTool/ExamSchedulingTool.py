@@ -161,7 +161,7 @@ class ExamSchedulingTool:
                 if schedule[day][time]["course"] != "":
                     print(schedule[day][time]["course"], day, time, schedule[day][time]["end time"])
 
-    def cost(self, schedule, class_list):
+    def cost(self, schedule):
         cost = 0
 
 
@@ -191,7 +191,7 @@ class ExamSchedulingTool:
                                         if self.student_has_two_exams_at_same_time(student, schedule[day][time]["course"], schedule[day][other_time]["course"]):
                                             cost += 1
                                     # Check if a professor has more than one exam at the same time on the same day
-                                    for professor in self.all_professors_names:
+                                    for professor in self.all_professor_names:
                                         if self.professor_has_two_exams_at_same_time(professor, schedule[day][time]["course"], schedule[day][other_time]["course"]):
                                             cost += 1
         
@@ -236,39 +236,7 @@ class ExamSchedulingTool:
         old_schedule[course_day][course_time]["course"] = ""
         old_schedule[course_day][course_time]["room"] = ""
         old_schedule[course_day][course_time]["end time"] = ""
-        # Extra: check if there is a collision with other exams
-        # If there is a collision, move the other exam to a random empty time
-        for day in old_schedule:
-            for time in old_schedule[day]:
-                if old_schedule[day][time]["course"] != "":
-                    end_time = old_schedule[day][time]["end time"]
-                    for other_time in old_schedule[day]:
-                        if other_time != time:
-                            if old_schedule[day][other_time]["course"] != "":
-                                if pd.to_datetime(time, format="%H.%M") < pd.to_datetime(other_time, format="%H.%M") < pd.to_datetime(end_time, format="%H.%M"):
-                                    # Get random day and time to move other course to
-                                    random_day = np.random.choice(list(old_schedule.keys()))
-                                    random_time = np.random.choice(list(old_schedule[random_day].keys()))
-    
-                                    # If same day and time is not empty then try again
-                                    while old_schedule[random_day][random_time]["course"] != "":
-                                        random_day = np.random.choice(list(old_schedule.keys()))
-                                        random_time = np.random.choice(list(old_schedule[random_day].keys()))
-    
-                                    # Get exam duration in minutes
-                                    exam_duration = self.class_list[self.class_list["CourseID"] == old_schedule[day][other_time]["course"]]["ExamDuration(in mins)"].unique()[0]
-                                    # Add exam duration to time to get end time
-                                    end_time = pd.to_datetime(random_time, format="%H.%M") + pd.DateOffset(minutes=exam_duration)
-                                    # Assign end time to schedule
-                                    old_schedule[random_day][random_time]["end time"] = end_time.strftime("%H.%M")
-    
-                                    # Move course to new day and time
-                                    old_schedule[random_day][random_time]["course"] = old_schedule[day][other_time]["course"]
-                                    old_schedule[random_day][random_time]["room"] = ""
-                                    # Remove course from old day and time
-                                    old_schedule[day][other_time]["course"] = ""
-                                    old_schedule[day][other_time]["room"] = ""
-                                    old_schedule[day][other_time]["end time"] = ""
+
         return original_schedule
 
     def simulated_annealing_scheduler(self, temp_max, temp_min, cooling_rate, max_iter, K):
@@ -321,7 +289,10 @@ class ExamSchedulingTool:
             schedule["Sunday"][time] = {"course": "", "room": "", "end time":""}
             time = pd.to_datetime(time, format="%H.%M") + pd.DateOffset(minutes=30)
             time = time.strftime("%H.%M")  
-
+            
+    def set_free_all_classrooms(self):
+        self.classroom_real_capacities["Occupied"] = False
+        
     def set_exam_classrooms(self, schedule):
         # Assign classrooms to courses
         for day in schedule:
@@ -345,6 +316,62 @@ class ExamSchedulingTool:
                     elif self.SMALL_CLASSROOM_THRESHOLD < course_capacity <= self.BIG_CLASSROOM_THRESHOLD:
                         random_big_classroom = np.random.choice(self.classroom_real_capacities[self.classroom_real_capacities["Capacity"] > self.SMALL_CLASSROOM_THRESHOLD]["RoomID"].tolist())
                         schedule[day][time]["room"] = random_big_classroom
+                    
+                    # Assign two random classrooms 
+                    elif course_capacity < 2 * self.SMALL_CLASSROOM_THRESHOLD:
+                        random_classroom = np.random.choice(self.classroom_real_capacities["RoomID"].tolist())
+                        schedule[day][time]["room"] = random_classroom
+                        # Set occupied that classroom
+                        self.classroom_real_capacities.loc[self.classroom_real_capacities["RoomID"] == random_classroom, "Occupied"] = True
+
+                        # Choose random second classroom from the unoccupied classrooms
+                        random_classroom2 = np.random.choice(self.classroom_real_capacities[self.classroom_real_capacities["Occupied"] == False]["RoomID"].tolist())
+                        schedule[day][time]["room"] += "-" + random_classroom2
+
+                        # Free all classrooms that is occupied for the next iteration
+                        self.set_free_all_classrooms()
+
+                    # Assign three random classrooms
+                    elif course_capacity < 3 * self.SMALL_CLASSROOM_THRESHOLD:
+                        random_classroom = np.random.choice(self.classroom_real_capacities["RoomID"].tolist())
+                        schedule[day][time]["room"] = random_classroom
+                        # Set occupied that classroom
+                        self.classroom_real_capacities.loc[self.classroom_real_capacities["RoomID"] == random_classroom, "Occupied"] = True
+
+                        # Choose random second classroom from the unoccupied classrooms
+                        random_classroom2 = np.random.choice(self.classroom_real_capacities[self.classroom_real_capacities["Occupied"] == False]["RoomID"].tolist())
+                        schedule[day][time]["room"] += "-" + random_classroom2
+                        # Set occupied that classroom
+                        self.classroom_real_capacities.loc[self.classroom_real_capacities["RoomID"] == random_classroom2, "Occupied"] = True
+
+                        # Choose random third classroom from the unoccupied classrooms
+                        random_classroom3 = np.random.choice(self.classroom_real_capacities[self.classroom_real_capacities["Occupied"] == False]["RoomID"].tolist())
+                        schedule[day][time]["room"] += "-" + random_classroom3
+
+                        # Free all classrooms that is occupied for the next iteration
+                        self.set_free_all_classrooms()
+
+                    # Assign more classrooms until the classrooms can handle the course capacity
+                    else:
+                        # Get the number of classrooms needed
+                        num_classrooms = math.ceil(course_capacity / self.SMALL_CLASSROOM_THRESHOLD)
+
+                        # Assign the first classroom
+                        random_classroom = np.random.choice(self.classroom_real_capacities["RoomID"].tolist())
+                        schedule[day][time]["room"] = random_classroom
+                        # Set occupied that classroom
+                        self.classroom_real_capacities.loc[self.classroom_real_capacities["RoomID"] == random_classroom, "Occupied"] = True
+
+                        # Assign the rest of the classrooms
+                        for _ in range(num_classrooms - 1):
+                            # Choose random second classroom from the unoccupied classrooms
+                            random_classroom2 = np.random.choice(self.classroom_real_capacities[self.classroom_real_capacities["Occupied"] == False]["RoomID"].tolist())
+                            schedule[day][time]["room"] += "-" + random_classroom2
+                            # Set occupied that classroom
+                            self.classroom_real_capacities.loc[self.classroom_real_capacities["RoomID"] == random_classroom2, "Occupied"] = True
+
+                        # Free all classrooms that is occupied for the next iteration
+                        self.set_free_all_classrooms()
        
     def get_first_occured_digit(self, course_name):
             for c in course_name:
@@ -352,7 +379,7 @@ class ExamSchedulingTool:
                     return c
                 
                 if c == " ":
-                    return "0"
+                    return "0"
                 
     def show_schedule(self, schedule):
         """
@@ -414,7 +441,6 @@ def print_welcome_message():
     os.system('cls||clear')
     print("---------------------------------- WELCOME TO THE EXAM SCHEDULER TOOL --------------------------------\n")
 
-
 if __name__ == "__main__":
     # Print welcome message
     print_welcome_message()
@@ -431,5 +457,7 @@ if __name__ == "__main__":
 
     # Start the simulated annealing scheduler
     schedule = scheduler_tool.simulated_annealing_scheduler(temp_max, temp_min, cooling_rate, max_iter, K)
+    # Set the classrooms to the courses
+    scheduler_tool.set_exam_classrooms(schedule)
     # Print the schedule to the console in a readable format
     scheduler_tool.show_schedule(schedule)
