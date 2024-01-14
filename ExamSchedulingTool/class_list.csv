@@ -1310,6 +1310,7 @@ StudentID,Professor Name,CourseID,ExamDuration(in mins)
 3039,Günsel Bingöl,CENG309,60
 3040,Mustafa Yeniad,CENG301,60
 3040,Fadi Yılmaz,CENG303,90
+3040,Shafqat Ur Rehman,CENG433,90
 3040,Fahreddin Şükrü Torun,CENG305,90
 3040,Osman Serdar Gedik,CENG307,120
 3040,Ahmet Esad Top,CENG317,60
@@ -1400,6 +1401,7 @@ StudentID,Professor Name,CourseID,ExamDuration(in mins)
 3052,Fadi Yılmaz,CENG325,60
 3052,Fahreddin Şükrü Torun,CENG327,90
 3052,Günsel Bingöl,CENG309,60
+3052,Shafqat Ur Rehman,CENG433,90
 3053,Mustafa Yeniad,CENG301,60
 3053,Fadi Yılmaz,CENG303,90
 3053,Fahreddin Şükrü Torun,CENG305,90
@@ -1414,7 +1416,6 @@ StudentID,Professor Name,CourseID,ExamDuration(in mins)
 3054,Fadi Yılmaz,CENG325,60
 3054,Yusuf Evren Aykaç,CENG427,120
 3054,Fahreddin Şükrü Torun,CENG327,90
-3051,Günsel Bingöl,CENG309,60
 3055,Mustafa Yeniad,CENG301,60
 3055,Fadi Yılmaz,CENG303,90
 3055,Fahreddin Şükrü Torun,CENG305,90
@@ -1455,6 +1456,7 @@ StudentID,Professor Name,CourseID,ExamDuration(in mins)
 3060,Fadi Yılmaz,CENG303,90
 3060,Fahreddin Şükrü Torun,CENG305,90
 3060,Osman Serdar Gedik,CENG307,120
+3060,Shafqat Ur Rehman,CENG433,90
 3060,Ahmet Esad Top,CENG317,60
 3060,Muhammed Abdullah Bülbül,CENG315,90
 3060,Günsel Bingöl,CENG309,60
@@ -1464,6 +1466,7 @@ StudentID,Professor Name,CourseID,ExamDuration(in mins)
 3061,Osman Serdar Gedik,CENG307,120
 3061,Muhammed Abdullah Bülbül,CENG315,90
 3061,Fahreddin Şükrü Torun,CENG327,90
+3061,Shafqat Ur Rehman,CENG433,90
 3062,Mustafa Yeniad,CENG301,60
 3062,Fadi Yılmaz,CENG303,90
 3062,Fahreddin Şükrü Torun,CENG305,90
@@ -1545,6 +1548,7 @@ StudentID,Professor Name,CourseID,ExamDuration(in mins)
 3072,Yusuf Evren Aykaç,CENG427,120
 3072,Günsel Bingöl,CENG309,60
 3073,Mustafa Yeniad,CENG301,60
+3073,Shafqat Ur Rehman,CENG433,90
 3073,Fadi Yılmaz,CENG303,90
 3073,Fahreddin Şükrü Torun,CENG305,90
 3073,Osman Serdar Gedik,CENG307,120
@@ -1627,6 +1631,7 @@ StudentID,Professor Name,CourseID,ExamDuration(in mins)
 3084,Ahmet Esad Top,CENG317,60
 3084,Fahreddin Şükrü Torun,CENG327,90
 3084,Günsel Bingöl,CENG309,60
+3084,Shafqat Ur Rehman,CENG433,90
 3085,Mustafa Yeniad,CENG301,60
 3085,Nezakat Sevda Javanshir,ENGR201,120
 3085,Fadi Yılmaz,CENG303,90
@@ -1722,6 +1727,7 @@ StudentID,Professor Name,CourseID,ExamDuration(in mins)
 4009,Günsel Bingöl,CENG309,60
 4010,Yusuf Evren Aykaç,CENG427,120
 4010,Mustafa Yeniad,CENG465,60
+4010,Shafqat Ur Rehman,CENG433,90
 4010,Yusuf Evren Aykaç,CENG431,90
 4010,Fadi Yılmaz,CENG405,90
 4010,Ahmet Esad Top,CENG317,60
