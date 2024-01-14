@@ -110,7 +110,7 @@ class ExamSchedulingTool:
         return self.class_list[self.class_list["StudentID"] == student_id]["CourseID"].tolist()
     
     def professor_has_two_exams_at_same_time(self, professor_name, courseID1, courseID2):
-        professor_courses = self.get_all_courses_of_professor(professor_name, self.class_list)
+        professor_courses = self.get_all_courses_of_professor(professor_name)
         if courseID1 in professor_courses and courseID2 in professor_courses:
             return True
         
@@ -169,12 +169,12 @@ class ExamSchedulingTool:
                             if schedule[day][other_time]["course"] != "":
                                 if pd.to_datetime(time, format="%H.%M") < pd.to_datetime(other_time, format="%H.%M") < pd.to_datetime(end_time, format="%H.%M"):
                                     # Check if a student has more than one exam at the same time on the same day
-                                    for student in all_student_numbers:
-                                        if student_has_two_exams_at_same_time(student, schedule[day][time]["course"], schedule[day][other_time]["course"], class_list):
+                                    for student in self.all_student_numbers:
+                                        if student_has_two_exams_at_same_time(student, schedule[day][time]["course"], schedule[day][other_time]["course"]):
                                             cost += 1
                                     # Check if a professor has more than one exam at the same time on the same day
-                                    for professor in all_professors:
-                                        if professor_has_two_exams_at_same_time(professor, schedule[day][time]["course"], schedule[day][other_time]["course"], class_list):
+                                    for professor in self.all_professors_names:
+                                        if professor_has_two_exams_at_same_time(professor, schedule[day][time]["course"], schedule[day][other_time]["course"]):
                                             cost += 1
         
         # If cost is 0 (exams placed properly), try to fit course exams that has collision with other exams to empty classrooms
@@ -429,4 +429,31 @@ class ExamSchedulingTool:
         print("------------------------------------------------------------------------------------------------------")
         print("\n------------------------------------------- BLOCKED HOURS --------------------------------------------")
         print(blocked_hourse_courses, end="")
-        print("------------------------------------------------------------------------------------------------------")
+        print("------------------------------------------------------------------------------------------------------"),
+
+
+
+
+def print_welcome_message():
+    os.system('cls||clear')
+    print("---------------------------------- WELCOME TO THE EXAM SCHEDULER TOOL --------------------------------\n")
+
+
+if __name__ == "__main__":
+    # Print welcome message
+    print_welcome_message()
+
+    # Create the scheduler tool object
+    scheduler_tool = ExamSchedulingTool()
+    
+    # Set the parameters for simulated annealing
+    temp_max = 1.0 / 3
+    temp_min = 0.0
+    cooling_rate = 0.95
+    max_iter = 10
+    K = 1
+
+    # Start the simulated annealing scheduler
+    schedule = scheduler_tool.simulated_annealing_scheduler(temp_max, temp_min, cooling_rate, max_iter, K)
+    # Print the schedule to the console in a readable format
+    scheduler_tool.show_schedule(schedule)
