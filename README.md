@@ -50,7 +50,7 @@ For classroom_and_capacities.csv:
 ---
 ## Behaviors in some abnormal situations:
 
-### Case 1 - Could not find a proper place after 1000 iterations (This ):
+### Case 1 - Could not find a proper place after 1000 iterations (This parameter can be changed at main function ):
 ![extraDayAddedInfo](https://github.com/ArzuNisa/Exam-Scheduling-Tool/assets/111875259/87042e7c-145d-46ab-9e8f-08eed08a055f)
 
 Here it added sunday and rescheduled:
