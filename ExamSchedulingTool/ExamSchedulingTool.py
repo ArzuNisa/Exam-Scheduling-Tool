@@ -11,13 +11,14 @@ class ExamSchedulingTool:
     Exam Scheduling Tool class that schedules the exams of the given courses and classrooms with simulated annealing algorithm
     """
 
-    def __init__(self, class_list_file_path='class_list.csv', classroom_capacities_file_path='classroom_capacities.csv'):
+    def __init__(self, class_list_file_path='class_list.csv', classroom_capacities_file_path='classroom_capacities.csv', conflict = False):
         """
         Initializes the ExamSchedulingTool object with the given input files and creates the empty schedule and classroom capacities dataframes
         """
 
         self.class_list, self.classroom_capacity_list = self.read_input_files(class_list_file_path, classroom_capacities_file_path)
-    
+        self.conflict = conflict
+
         self.classroom_real_capacities = None
         self.empty_schedule = None
 
@@ -239,25 +240,27 @@ class ExamSchedulingTool:
                             if schedule[day][other_time]["course"] != "":
                                 if pd.to_datetime(time, format="%H.%M") < pd.to_datetime(other_time, format="%H.%M") < pd.to_datetime(end_time, format="%H.%M"):
                                     cost += 1
-                                    
-        # Check all the students and if a student has more than one exam at the same time on the same day add 1 to cost
-        # Also check all the professors and if a professor has more than one exam at the same time on the same day add 1 to cost
-        for day in schedule:
-            for time in schedule[day]:
-                if schedule[day][time]["course"] != "":
-                    end_time = schedule[day][time]["end time"]
-                    for other_time in schedule[day]:
-                        if other_time != time:
-                            if schedule[day][other_time]["course"] != "":
-                                if pd.to_datetime(time, format="%H.%M") < pd.to_datetime(other_time, format="%H.%M") < pd.to_datetime(end_time, format="%H.%M"):
-                                    # Check if a student has more than one exam at the same time on the same day
-                                    for student in self.all_student_numbers:
-                                        if self.student_has_two_exams_at_same_time(student, schedule[day][time]["course"], schedule[day][other_time]["course"]):
-                                            cost += 1
-                                    # Check if a professor has more than one exam at the same time on the same day
-                                    for professor in self.all_professor_names:
-                                        if self.professor_has_two_exams_at_same_time(professor, schedule[day][time]["course"], schedule[day][other_time]["course"]):
-                                            cost += 1
+    
+        # If user let the program for exam conflicts. However, we need to check student and professor conflicts
+        if self.conflict:
+            # Check all the students and if a student has more than one exam at the same time on the same day add 1 to cost
+            # Also check all the professors and if a professor has more than one exam at the same time on the same day add 1 to cost
+            for day in schedule:
+                for time in schedule[day]:
+                    if schedule[day][time]["course"] != "":
+                        end_time = schedule[day][time]["end time"]
+                        for other_time in schedule[day]:
+                            if other_time != time:
+                                if schedule[day][other_time]["course"] != "":
+                                    if pd.to_datetime(time, format="%H.%M") < pd.to_datetime(other_time, format="%H.%M") < pd.to_datetime(end_time, format="%H.%M"):
+                                        # Check if a student has more than one exam at the same time on the same day
+                                        for student in self.all_student_numbers:
+                                            if self.student_has_two_exams_at_same_time(student, schedule[day][time]["course"], schedule[day][other_time]["course"]):
+                                                cost += 1
+                                        # Check if a professor has more than one exam at the same time on the same day
+                                        for professor in self.all_professor_names:
+                                            if self.professor_has_two_exams_at_same_time(professor, schedule[day][time]["course"], schedule[day][other_time]["course"]):
+                                                cost += 1
         
         return cost
 
@@ -405,40 +408,6 @@ class ExamSchedulingTool:
                     elif self.SMALL_CLASSROOM_THRESHOLD < course_capacity <= self.BIG_CLASSROOM_THRESHOLD:
                         random_big_classroom = np.random.choice(self.classroom_real_capacities[self.classroom_real_capacities["Capacity"] > self.SMALL_CLASSROOM_THRESHOLD]["RoomID"].tolist())
                         schedule[day][time]["room"] = random_big_classroom
-                    
-                    # Assign two random classrooms 
-                    elif course_capacity < 2 * self.SMALL_CLASSROOM_THRESHOLD:
-                        random_classroom = np.random.choice(self.classroom_real_capacities["RoomID"].tolist())
-                        schedule[day][time]["room"] = random_classroom
-                        # Set occupied that classroom
-                        self.classroom_real_capacities.loc[self.classroom_real_capacities["RoomID"] == random_classroom, "Occupied"] = True
-
-                        # Choose random second classroom from the unoccupied classrooms
-                        random_classroom2 = np.random.choice(self.classroom_real_capacities[self.classroom_real_capacities["Occupied"] == False]["RoomID"].tolist())
-                        schedule[day][time]["room"] += "-" + random_classroom2
-
-                        # Free all classrooms that is occupied for the next iteration
-                        self.set_free_all_classrooms()
-
-                    # Assign three random classrooms
-                    elif course_capacity < 3 * self.SMALL_CLASSROOM_THRESHOLD:
-                        random_classroom = np.random.choice(self.classroom_real_capacities["RoomID"].tolist())
-                        schedule[day][time]["room"] = random_classroom
-                        # Set occupied that classroom
-                        self.classroom_real_capacities.loc[self.classroom_real_capacities["RoomID"] == random_classroom, "Occupied"] = True
-
-                        # Choose random second classroom from the unoccupied classrooms
-                        random_classroom2 = np.random.choice(self.classroom_real_capacities[self.classroom_real_capacities["Occupied"] == False]["RoomID"].tolist())
-                        schedule[day][time]["room"] += "-" + random_classroom2
-                        # Set occupied that classroom
-                        self.classroom_real_capacities.loc[self.classroom_real_capacities["RoomID"] == random_classroom2, "Occupied"] = True
-
-                        # Choose random third classroom from the unoccupied classrooms
-                        random_classroom3 = np.random.choice(self.classroom_real_capacities[self.classroom_real_capacities["Occupied"] == False]["RoomID"].tolist())
-                        schedule[day][time]["room"] += "-" + random_classroom3
-
-                        # Free all classrooms that is occupied for the next iteration
-                        self.set_free_all_classrooms()
 
                     # Assign more classrooms until the classrooms can handle the course capacity
                     else:
