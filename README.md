@@ -1,8 +1,22 @@
 # Exam Scheduling Tool
 
 This exam scheduler was made for our department. It works for all kinds of scenarios, as long as the CSV files indicating the list of exams that students will take and the capacities of the classes are provided in a proper format. You can change the parameters of the algorithm within the main function.
-
 ---
+## Installation
+```
+pip install "numpy>=1.26.3" "pandas>=2.1.4"
+```
+OR
+```
+pip install -r requirements.txt
+```
+---
+## Usage
+```
+python ExamSchedulingTool.py
+```
+---
+
 ## EXAMPLE OUTPUT:
 
 ![startingScheduler](https://github.com/ArzuNisa/Exam-Scheduling-Tool/assets/111875259/91c09e8c-047c-492b-a77b-d194e66c61cd)
