@@ -11,7 +11,7 @@ class ExamSchedulingTool:
     Exam Scheduling Tool class that schedules the exams of the given courses and classrooms with simulated annealing algorithm
     """
 
-    def __init__(self, class_list_file_path='class_list.csv', classroom_capacities_file_path='classroom_capacities.csv', conflict = False):
+    def __init__(self, class_list_file_path='student_exam_list.csv', classroom_capacities_file_path='classroom_and_capacities.csv', conflict = False):
         """
         Initializes the ExamSchedulingTool object with the given input files and creates the empty schedule and classroom capacities dataframes
         """
@@ -191,13 +191,16 @@ class ExamSchedulingTool:
         temp_schedule = copy.deepcopy(schedule)
 
         for course in self.class_list["CourseID"].unique().tolist():
-            random_day = np.random.choice(list(temp_schedule.keys()))
-            random_time = np.random.choice(list(temp_schedule[random_day].keys()))
-            
-            # If same day and time is not empty then try again
-            while temp_schedule[random_day][random_time]["course"] != "":
-                random_day = np.random.choice(list(temp_schedule.keys()))
-                random_time = np.random.choice(list(temp_schedule[random_day].keys()))
+            # Get all empty times
+            empty_times = []
+            for day in temp_schedule:
+                for time in temp_schedule[day]:
+                    if temp_schedule[day][time]["course"] == "":
+                        empty_times.append((day, time))
+
+            # Get random empty day and time to move course to
+            idx = np.random.choice(len(empty_times))
+            random_day, random_time = empty_times[idx]
             
             # If empty then assign course
             temp_schedule[random_day][random_time]["course"] = course
@@ -275,13 +278,16 @@ class ExamSchedulingTool:
         random_course = np.random.choice(self.class_list["CourseID"].unique().tolist())
 
         # Get random day and time to move course to
-        random_day = np.random.choice(list(old_schedule.keys()))
-        random_time = np.random.choice(list(old_schedule[random_day].keys()))
+        # Get all empty times
+        empty_times = []
+        for day in old_schedule:
+            for time in old_schedule[day]:
+                if old_schedule[day][time]["course"] == "":
+                    empty_times.append((day, time))
 
-        # If same day and time is not empty then try again
-        while old_schedule[random_day][random_time]["course"] != "":
-            random_day = np.random.choice(list(old_schedule.keys()))
-            random_time = np.random.choice(list(old_schedule[random_day].keys()))
+        # Get random empty day and time to move course to
+        idx = np.random.choice(len(empty_times))
+        random_day, random_time = empty_times[idx]
 
         # Find the day and time of the course to move
         for day in old_schedule:
@@ -307,7 +313,7 @@ class ExamSchedulingTool:
 
         return original_schedule
 
-    def simulated_annealing_scheduler(self, temp_max, temp_min, cooling_rate, max_iter, K):
+    def simulated_annealing_scheduler(self, temp_max, temp_min, cooling_rate, max_iter, K, add_extra_day_after_iter=1000):
         """
         Simulated annealing scheduler
         """
@@ -317,7 +323,6 @@ class ExamSchedulingTool:
         schedule = self.first_random_state(self.empty_schedule)
         old_cost = self.cost(schedule)
         iter_num = 0
-        add_extra_day_iter_threshold = 1000
         flag_day_added = False
         
         temperature = temp_max
@@ -358,8 +363,8 @@ class ExamSchedulingTool:
                 print("Iteration: ", iter_num, "Fault Score: ", old_cost)
 
             # If could not find a solution with 6 days, add an extra day
-            if iter_num > add_extra_day_iter_threshold and not flag_day_added:
-                print(f"Could not find a solution with 6 days after {add_extra_day_iter_threshold} iterations. Adding an extra day...")
+            if iter_num > add_extra_day_after_iter and not flag_day_added:
+                print(f"Could not find a solution with 6 days after {add_extra_day_after_iter} iterations. Adding an extra day...")
                 flag_day_added = True
                 self.add_extra_day(schedule)
 
@@ -389,11 +394,11 @@ class ExamSchedulingTool:
         # Assign classrooms to courses
         for day in schedule:
             for time in schedule[day]:
-                if schedule[day][time]["course"] != "":
+                if schedule[day][time]["course"].find("BLOCKED BY") == -1 and schedule[day][time]["course"] != "":
                     course_id = schedule[day][time]["course"]
                     # Get num of students take the course
                     course_capacity = self.get_num_students_take_course(course_id)
-                    
+
                     # If course capacity is higher than the whole capacity of the classrooms, raise an error
                     if course_capacity > self.classroom_real_capacities["Capacity"].sum():
                         print("Course capacity is higher than the whole capacity of the classrooms. Exiting the program...")
@@ -413,6 +418,11 @@ class ExamSchedulingTool:
                     else:
                         # Get the number of classrooms needed
                         num_classrooms = math.ceil(course_capacity / self.SMALL_CLASSROOM_THRESHOLD)
+
+                        if num_classrooms > len(self.classroom_real_capacities):
+                            print("Not enough classrooms to handle the course capacity. Exiting the program...")
+                            exit(1)
+
 
                         # Assign the first classroom
                         random_classroom = np.random.choice(self.classroom_real_capacities["RoomID"].tolist())
@@ -499,7 +509,7 @@ def print_welcome_message():
     os.system('cls||clear')
     print("---------------------------------- WELCOME TO THE EXAM SCHEDULER TOOL --------------------------------\n")
 
-if __name__ == "__main__":
+def main():
     # Print welcome message
     print_welcome_message()
 
@@ -512,10 +522,14 @@ if __name__ == "__main__":
     cooling_rate = 0.95
     max_iter = 10
     K = 1
+    add_extra_day_after_iter = 1000
 
     # Start the simulated annealing scheduler
-    schedule = scheduler_tool.simulated_annealing_scheduler(temp_max, temp_min, cooling_rate, max_iter, K)
+    schedule = scheduler_tool.simulated_annealing_scheduler(temp_max, temp_min, cooling_rate, max_iter, K, add_extra_day_after_iter)
     # Set the classrooms to the courses
     scheduler_tool.set_exam_classrooms(schedule)
     # Print the schedule to the console in a readable format
     scheduler_tool.show_schedule(schedule)
+
+if __name__ == "__main__":
+    main()    
