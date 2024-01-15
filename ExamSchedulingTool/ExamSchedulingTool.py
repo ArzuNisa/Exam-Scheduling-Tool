@@ -1,3 +1,16 @@
+"""
+Exam Scheduling Tool With Simulated Annealing Algorithm
+
+Authors: 
+Arzu Nisa YALCINKAYA - 20050111028
+Hatice AKKUŞ - 20050111006
+Nazife BÜTÜN - 20050111012
+Sertac İNCE - 20050111003
+
+Date: 15.01.2024
+"""
+
+
 import copy
 import math
 import numpy as np
@@ -14,6 +27,18 @@ class ExamSchedulingTool:
     def __init__(self, class_list_file_path='student_exam_list.csv', classroom_capacities_file_path='classroom_and_capacities.csv', conflict = False):
         """
         Initializes the ExamSchedulingTool object with the given input files and creates the empty schedule and classroom capacities dataframes
+
+        Parameters
+        ----------
+        class_list_file_path: str
+            The path of the class list file (default: 'student_exam_list.csv')
+        classroom_capacities_file_path: str
+            The path of the classroom capacities file (default: 'classroom_and_capacities.csv')
+
+        Returns
+        -------
+        ExamSchedulingTool object
+            The ExamSchedulingTool object with the given input files and empty schedule and classroom capacities dataframes
         """
 
         self.class_list, self.classroom_capacity_list = self.read_input_files(class_list_file_path, classroom_capacities_file_path)
@@ -37,6 +62,20 @@ class ExamSchedulingTool:
     def read_input_files(self, class_list_file_path, classroom_capacities_file_path):
         """
         Reads the input files and returns the dataframes of the files
+
+        Parameters
+        ----------
+        class_list_file_path: str
+            The path of the class list file
+        classroom_capacities_file_path: str
+            The path of the classroom capacities file
+
+        Returns
+        -------
+        class_list: pandas.DataFrame
+            The dataframe of the class list file
+        classroom_capacity_list: pandas.DataFrame
+            The dataframe of the classroom capacities file
         """
 
         # Check if the input files exist
@@ -83,6 +122,15 @@ class ExamSchedulingTool:
     def handle_blocked_hours(self, day, start_time, duration):
         """
         Handles the blocked hours input
+
+        Parameters
+        ----------
+        day: str
+            The day of the blocked hours
+        start_time: str
+            The start time of the blocked hours
+        duration: str
+            The duration of the blocked hours
         """
 
         # Check if the day is valid
@@ -142,6 +190,20 @@ class ExamSchedulingTool:
     def student_has_two_exams_at_same_time(self, student_id, course1, course2):
         """
         Returns True if the student has two exams at the same time on the same day
+
+        Parameters
+        ----------
+        student_id: str
+            The student id
+        course1: str
+            The first course id
+        course2: str
+            The second course id
+        
+        Returns
+        -------
+        bool
+            True if the student has two exams at the same time on the same day, False otherwise
         """
 
         student_courses = self.get_all_courses_of_student(student_id)
@@ -153,6 +215,10 @@ class ExamSchedulingTool:
     def get_all_courses_of_student(self, student_id):
         """
         Returns all the courses of the given student
+
+        Parameters
+        ----------
+        student_id: str
         """
 
         return self.class_list[self.class_list["StudentID"] == student_id]["CourseID"].tolist()
@@ -160,6 +226,20 @@ class ExamSchedulingTool:
     def professor_has_two_exams_at_same_time(self, professor_name, courseID1, courseID2):
         """
         Returns True if the professor has two exams at the same time on the same day
+
+        Parameters
+        ----------
+        professor_name: str
+            The professor name
+        courseID1: str
+            The first course id
+        courseID2: str
+            The second course id
+
+        Returns
+        -------
+        bool
+            True if the professor has two exams at the same time on the same day, False otherwise
         """
 
         professor_courses = self.get_all_courses_of_professor(professor_name)
@@ -171,6 +251,15 @@ class ExamSchedulingTool:
     def get_all_courses_of_professor(self, professor_name):
         """
         Returns all the courses of the given professor
+
+        Parameters
+        ----------
+        professor_name: str
+
+        Returns
+        -------
+        list
+            All the courses of the given professor
         """
 
         return self.class_list[self.class_list["Professor Name"] == professor_name]["CourseID"].unique().tolist()
@@ -178,6 +267,15 @@ class ExamSchedulingTool:
     def get_num_students_take_course(self, courseID):
         """
         Returns the number of students take the given course
+
+        Parameters
+        ----------
+        courseID: str
+        
+        Returns
+        -------
+        int
+            The number of students take the given course
         """
 
         return self.class_list[self.class_list["CourseID"] == courseID]["CourseID"].count()
@@ -186,6 +284,16 @@ class ExamSchedulingTool:
     def first_random_state(self, schedule):
         """
         Creates the first random state of the schedule
+
+        Parameters
+        ----------
+        schedule: dict
+            The schedule dictionary
+
+        Returns
+        -------
+        temp_schedule: dict
+            The updated schedule dictionary
         """
 
         temp_schedule = copy.deepcopy(schedule)
@@ -218,6 +326,11 @@ class ExamSchedulingTool:
     def print_schedule(self, schedule):
         """
         Prints the schedule to the console
+
+        Parameters
+        ----------
+        schedule: dict
+            The schedule dictionary
         """
 
         #print(course, random_day, random_time, end_time.strftime("%H.%M"), "exam duration: ", exam_duration)
@@ -229,6 +342,16 @@ class ExamSchedulingTool:
     def cost(self, schedule):
         """
         Returns the cost of the given schedule based on the constraints
+
+        Parameters
+        ----------
+        schedule: dict
+            The schedule dictionary
+
+        Returns
+        -------
+        cost: int
+            The cost of the given schedule
         """
 
         cost = 0
@@ -272,6 +395,16 @@ class ExamSchedulingTool:
     def successor_move(self, old_schedule):
         """
         Returns a successor move of the given schedule
+
+        Parameters
+        ----------
+        old_schedule: dict
+            The schedule dictionary
+
+        Returns
+        -------
+        original_schedule: dict
+            The original schedule dictionary before the move
         """
 
         original_schedule = copy.deepcopy(old_schedule)
@@ -315,9 +448,29 @@ class ExamSchedulingTool:
 
         return original_schedule
 
-    def simulated_annealing_scheduler(self, temp_max, temp_min, cooling_rate, max_iter, K, add_extra_day_after_iter=1000):
+    def simulated_annealing_scheduler(self, temp_max, temp_min, cooling_rate, max_iter, K=1, add_extra_day_after_iter=1000):
         """
         Simulated annealing scheduler
+
+        Parameters
+        ----------
+        temp_max: float
+            The maximum temperature
+        temp_min: float
+            The minimum temperature
+        cooling_rate: float
+            The cooling rate
+        max_iter: int
+            The maximum iteration number for each temperature
+        K: int
+            The K value (default: 1)
+        add_extra_day_after_iter: int
+            The iteration number to add an extra day to the schedule (default: 1000)
+        
+        Returns
+        -------
+        schedule: dict
+            The schedule dictionary that contains the courses, rooms and times. It is the final schedule.
         """
 
         print("\n\nStarting simulated annealing scheduler...\n")
@@ -373,7 +526,13 @@ class ExamSchedulingTool:
     def add_extra_day(self, schedule):
         """
         Adds an extra day to the schedule named "Sunday"
+
+        Parameters
+        ----------
+        schedule: dict
+            The schedule dictionary
         """
+        
         # Add an extra day named "Sunday"
         schedule["Sunday"] = {"09.00":{"course":"", "room":"", "end time":""}}
         # Add the rest of the times - every 30 minutes
@@ -389,10 +548,16 @@ class ExamSchedulingTool:
         """
         self.classroom_real_capacities["Occupied"] = False
 
-    def set_exam_classrooms(self, schedule):
+    def set_up_exam_classrooms(self, schedule):
         """
         Assigns classrooms to courses
+
+        Parameters
+        ----------
+        schedule: dict
+            The final schedule dictionary
         """
+
         # Assign classrooms to courses
         for day in schedule:
             for time in schedule[day]:
@@ -446,6 +611,16 @@ class ExamSchedulingTool:
     def get_first_occured_digit(self, course_name):
         """
         Returns the first occured digit in the course name if there is any 
+
+        Parameters
+        ----------
+        course_name: str
+            The course name
+
+        Returns
+        -------
+        str
+            The first occured digit in the course name if there is any, 0 otherwise
         """
         for c in course_name:
             if c.isdigit():
@@ -454,9 +629,19 @@ class ExamSchedulingTool:
             if c == " ":
                 return "0"
                 
-    def show_schedule(self, schedule):
+    def get_schedule_as_table(self, schedule):
         """
         Prints the schedule to the console in a readable format
+
+        Parameters
+        ----------
+        schedule: dict
+            The final schedule dictionary
+
+        Returns
+        -------
+        general_message: str
+            The schedule in a readable format as a string that looks like a table
         """
 
         # Get the courses of each year
@@ -492,26 +677,38 @@ class ExamSchedulingTool:
 
         # Print the schedule to the console in a readable format
         input("\nPress Enter to show the schedule...")
-        print("\n\n--------------------------------------------- THE SCHEDULE -------------------------------------------")
-        print("\n       Course Code \t | \t   Day \t\t | \t    Time  \t  | \t     Classes")
-        print("------------------------------------------------------------------------------------------------------")
-        print(first_year_course_schedule, end="")
-        print("------------------------------------------------------------------------------------------------------")
-        print(second_year_course_schedule, end="")
-        print("------------------------------------------------------------------------------------------------------")
-        print(third_year_course_schedule, end="")
-        print("------------------------------------------------------------------------------------------------------")
-        print(fourth_year_course_schedule, end="")
-        print("------------------------------------------------------------------------------------------------------")
-        print("\n------------------------------------------- BLOCKED HOURS --------------------------------------------")
-        print(blocked_hourse_courses, end="")
-        print("------------------------------------------------------------------------------------------------------"),
+
+        general_message = ""
+        general_message += "\n\n--------------------------------------------- THE SCHEDULE -------------------------------------------"
+        general_message += "\n       Course Code \t | \t   Day \t\t | \t    Time  \t  | \t     Classes"
+        general_message += "\n------------------------------------------------------------------------------------------------------\n"
+        general_message += first_year_course_schedule
+        general_message += "------------------------------------------------------------------------------------------------------\n"
+        general_message += second_year_course_schedule
+        general_message += "------------------------------------------------------------------------------------------------------\n"
+        general_message += third_year_course_schedule
+        general_message += "------------------------------------------------------------------------------------------------------\n"
+        general_message += fourth_year_course_schedule
+        general_message += "------------------------------------------------------------------------------------------------------\n"
+        general_message += "\n------------------------------------------- BLOCKED HOURS --------------------------------------------\n"
+        general_message += blocked_hourse_courses
+        general_message += "------------------------------------------------------------------------------------------------------\n"
+
+        return general_message
 
 def print_welcome_message():
+    """
+    Prints the welcome message to the console
+    """
+
     os.system('cls||clear')
     print("---------------------------------- WELCOME TO THE EXAM SCHEDULER TOOL --------------------------------\n")
 
 def main():
+    """
+    The main function of the program that runs the scheduler tool with simulated annealing algorithm and prints the schedule to the console in a readable format 
+    """
+
     # Print welcome message
     print_welcome_message()
 
@@ -529,9 +726,9 @@ def main():
     # Start the simulated annealing scheduler
     schedule = scheduler_tool.simulated_annealing_scheduler(temp_max, temp_min, cooling_rate, max_iter, K, add_extra_day_after_iter)
     # Set the classrooms to the courses
-    scheduler_tool.set_exam_classrooms(schedule)
+    scheduler_tool.set_up_exam_classrooms(schedule)
     # Print the schedule to the console in a readable format
-    scheduler_tool.show_schedule(schedule)
+    print(scheduler_tool.get_schedule_as_table(schedule))
 
 if __name__ == "__main__":
     main()    
