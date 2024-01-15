@@ -233,16 +233,18 @@ class ExamSchedulingTool:
 
         cost = 0
 
-        # Check if a course time is overlapping with another course
-        for day in schedule:
-            for time in schedule[day]:
-                if schedule[day][time]["course"] != "":
-                    end_time = schedule[day][time]["end time"]
-                    for other_time in schedule[day]:
-                        if other_time != time:
-                            if schedule[day][other_time]["course"] != "":
-                                if pd.to_datetime(time, format="%H.%M") < pd.to_datetime(other_time, format="%H.%M") < pd.to_datetime(end_time, format="%H.%M"):
-                                    cost += 1
+        # Default mode
+        if not self.conflict:
+            # Check if a course time is overlapping with another course
+            for day in schedule:
+                for time in schedule[day]:
+                    if schedule[day][time]["course"] != "":
+                        end_time = schedule[day][time]["end time"]
+                        for other_time in schedule[day]:
+                            if other_time != time:
+                                if schedule[day][other_time]["course"] != "":
+                                    if pd.to_datetime(time, format="%H.%M") < pd.to_datetime(other_time, format="%H.%M") < pd.to_datetime(end_time, format="%H.%M"):
+                                        cost += 1
     
         # If user let the program for exam conflicts. However, we need to check student and professor conflicts
         if self.conflict:
